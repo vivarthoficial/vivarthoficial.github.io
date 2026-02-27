@@ -33,10 +33,10 @@
   .pix-code {background:#111; color:#fff; padding:15px; border-radius:12px; width:100%; word-break:break-all; margin-bottom:10px;}
   .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer;}
 
-  /* WhatsApp / Motivacional */
-  .whatsapp-section {display:flex; flex-direction:column; align-items:center; background:#222; padding:30px 20px; border-radius:12px; max-width:600px; margin:20px auto;}
-  .whatsapp-section p {margin:10px 0;}
-  .whatsapp-number {color:#00FF00; font-weight:bold; font-size:1.2em;}
+  /* WhatsApp / Mensagem de agradecimento */
+  .whatsapp-section {display:none; background:#222; padding:30px 20px; margin-top:20px; border-radius:12px; max-width:600px; margin-left:auto; margin-right:auto;}
+  .whatsapp-section p {margin-bottom:10px; line-height:1.5;}
+  .whatsapp-number {color:#00FF00; font-weight:bold; font-size:18px;}
 
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
@@ -61,11 +61,21 @@
 <section class="section" style="background-color:#111;">
   <h1>Quais são os seus sonhos?</h1>
   <div class="carousel-container">
-    <div class="box"><h2>Aposentadoria confortável</h2></div>
-    <div class="box"><h2>Viajar pelo mundo</h2></div>
-    <div class="box"><h2>Comprar casa própria</h2></div>
-    <div class="box"><h2>Ter um carro de luxo</h2></div>
-    <div class="box"><h2>Liberdade financeira</h2></div>
+    <div class="box">
+      <h2>Aposentadoria confortável</h2>
+    </div>
+    <div class="box">
+      <h2>Viajar pelo mundo</h2>
+    </div>
+    <div class="box">
+      <h2>Comprar casa própria</h2>
+    </div>
+    <div class="box">
+      <h2>Ter um carro de luxo</h2>
+    </div>
+    <div class="box">
+      <h2>Liberdade financeira</h2>
+    </div>
   </div>
 </section>
 
@@ -73,11 +83,26 @@
 <section class="section" style="background-color:#111;">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
-    <div class="box"><h2>100% de lucro</h2><p>Vendendo produtos, você garante lucro total.</p></div>
-    <div class="box"><h2>Bônus por indicação</h2><p>Indique amigos e aumente seus ganhos instantaneamente.</p></div>
-    <div class="box"><h2>Bonificações por metas</h2><p>Alcance metas e receba premiações incríveis.</p></div>
-    <div class="box"><h2>Prêmios mensais</h2><p>Participe de sorteios exclusivos e viagens incríveis.</p></div>
-    <div class="box"><h2>Pontos que valem dinheiro</h2><p>Acumule pontos com suas vendas e equipe.</p></div>
+    <div class="box">
+      <h2>100% de lucro</h2>
+      <p>Vendendo produtos, você garante lucro total.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus por indicação</h2>
+      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
+    </div>
+    <div class="box">
+      <h2>Bonificações por metas</h2>
+      <p>Alcance metas e receba premiações incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Prêmios mensais</h2>
+      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Pontos que valem dinheiro</h2>
+      <p>Acumule pontos com suas vendas e equipe.</p>
+    </div>
   </div>
 </section>
 
@@ -213,12 +238,12 @@
   <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
 </section>
 
-<!-- WhatsApp / Motivacional -->
+<!-- WhatsApp / Mensagem final (aparece por último) -->
 <section class="whatsapp-section" id="whatsapp-section">
-  <p>🎉 Parabéns! Você acaba de dar o primeiro passo rumo ao sucesso!</p>
-  <p>Entre em contato para suporte ou dúvidas diretamente via WhatsApp:</p>
-  <p class="whatsapp-number">+55 51 92001-2441</p>
-  <p>Fale diretamente com a equipe Vivart e garanta todo o suporte necessário.</p>
+  <p>🎉 Obrigado por fazer parte da Vivarte! Você acaba de dar o primeiro passo rumo ao sucesso.</p>
+  <p>Agora você tem <strong>contato direto com o suporte</strong>.</p>
+  <p>Entre em contato via WhatsApp: <span class="whatsapp-number">+55 51 92001-2441</span></p>
+  <p>Nosso time entrará em contato com você em até 24 horas. Sua confirmação será enviada no seu e-mail.</p>
 </section>
 
 <script>
@@ -237,9 +262,9 @@ document.getElementById('consultor').addEventListener('change', function(){
 function showPayment(){
   const nome = document.getElementById('nome').value;
   if(!nome){alert('Preencha seu nome antes de prosseguir.'); return;}
+  
   document.getElementById('form-section').style.display='none';
   document.getElementById('payment-section').style.display='flex';
-  window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior:'smooth' });
 
   const pixImage = document.getElementById('pix-image');
   const pixCode = document.getElementById('pix-code');
@@ -254,6 +279,10 @@ function showPayment(){
     pixImage.src='pagamento03.jpeg';
     pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
   }
+
+  // Exibe a mensagem do WhatsApp por último
+  document.getElementById('whatsapp-section').style.display='flex';
+  window.scrollTo({ top: document.getElementById('whatsapp-section').offsetTop, behavior:'smooth' });
 }
 
 function copyPix(){
