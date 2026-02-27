@@ -1,87 +1,56 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivarth</title>
+<title>Vivarth - Apresentação do Negócio</title>
 
 <style>
-body{
-    margin:0;
-    background:black;
-    font-family:Arial, sans-serif;
-    color:white;
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #000;
+    color: #fff;
 }
 
-header{
-    background: url("banner2.jpeg") center center / cover no-repeat;
-    height:100vh;
+.banner {
+    background: url('banner2.jpeg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 20px;
 }
 
-/* Seções */
-.section{
-    padding:100px 20px;
-    text-align:center;
+.banner-content {
+    background-color: rgba(0,0,0,0.6);
+    padding: 40px;
+    border-radius: 10px;
 }
 
-.section h2{
-    font-size:38px;
-    color:#FFD700;
-    margin-bottom:25px;
+.banner h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
 }
 
-.section p{
-    font-size:22px;
-    max-width:800px;
-    margin:auto;
-    line-height:1.7;
-}
-
-/* Fundo alternado */
-.dark{
-    background:#111;
-}
-
-.black{
-    background:black;
+.banner p {
+    font-size: 20px;
+    font-weight: bold;
 }
 </style>
 </head>
+
 <body>
 
-<header></header>
-
-<!-- FRASE 1 -->
-<div class="section black">
-    <h2>Não é apenas um perfume.</h2>
-    <p>
-        É a primeira impressão que ninguém esquece.
-    </p>
-</div>
-
-<!-- FRASE 2 -->
-<div class="section dark">
-    <h2>Presença não se explica.</h2>
-    <p>
-        Se sente.
-    </p>
-</div>
-
-<!-- FRASE 3 -->
-<div class="section black">
-    <h2>Quem usa Vivarth não passa despercebido.</h2>
-    <p>
-        Marca o ambiente. Marca pessoas. Marca momentos.
-    </p>
-</div>
-
-<!-- FRASE 4 -->
-<div class="section dark">
-    <h2>Elegância é escolha.</h2>
-    <p>
-        E você acabou de escolher o nível mais alto.
-    </p>
-</div>
+<section class="banner">
+    <div class="banner-content">
+        <h1>Você já imaginou transformar sua vida?<br>
+        Conquistar viagens, prêmios e lucros de 100% vendendo produtos de luxo?</h1>
+        <p>Na Vivarth é possível.</p>
+    </div>
+</section>
 
 </body>
 </html>
