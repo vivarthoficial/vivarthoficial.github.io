@@ -9,7 +9,7 @@
   h1,h2 {color:#FFD700; margin-bottom:15px;}
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
-  
+
   /* Carrossel e caixas */
   .carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
@@ -21,7 +21,7 @@
   .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
-  
+
   /* Formulário */
   .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
   .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
@@ -37,10 +37,11 @@
   /* WhatsApp */
   .whatsapp-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
   .whatsapp-section button {padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer; font-size:18px;}
-  
+
+  /* Ajustes responsivos */
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
-    .box, .profit-box, .kit-box{min-width:150px;}
+    .box, .profit-box, .kit-box{min-width:200px;}
     .products-container img{width:80%;}
   }
 </style>
@@ -161,17 +162,17 @@
   <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
   <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
   <div class="kits-container">
-    <div class="kit-box" onclick="selectKit('kit1')">
+    <div class="kit-box" onclick="openForm('kit1')">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
       <p>R$300 - Ganhe 500 pontos - Pontos acumulativos, rumo ao sucesso!</p>
     </div>
-    <div class="kit-box" onclick="selectKit('kit2')">
+    <div class="kit-box" onclick="openForm('kit2')">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
       <p>R$500 - Ganhe 700 pontos - Pontos acumulativos, continue crescendo!</p>
     </div>
-    <div class="kit-box" onclick="selectKit('kit3')">
+    <div class="kit-box" onclick="openForm('kit3')">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
       <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder e aproveite todos os benefícios!</p>
@@ -234,14 +235,13 @@
 </section>
 
 <script>
-  // Mostra campo do consultor
   document.getElementById('consultor').addEventListener('change', function(){
     document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
   });
 
   let selectedKit = '';
 
-  function selectKit(kit){
+  function openForm(kit){
     selectedKit = kit;
     document.getElementById('form-section').style.display = 'flex';
     window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
@@ -280,7 +280,7 @@
     else if(selectedKit==='kit2') kitText='Kit Intermediário';
     else if(selectedKit==='kit3') kitText='Kit Avançado';
     const mensagem = Olá, meu nome é ${nome}, adquiri o ${kitText}, quero mais informações.;
-    window.open(https://wa.me/51920012441?text=${encodeURIComponent(mensagem)}, '_blank');
+    window.open(https://wa.me/5551920012441?text=${encodeURIComponent(mensagem)}, '_blank');
   }
 </script>
 
