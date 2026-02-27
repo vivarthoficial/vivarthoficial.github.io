@@ -11,7 +11,8 @@
   .section {padding:60px 20px; text-align:center;}
   .carousel-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar{display:none;}
-  .box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px;}
+  .box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
+  .box img {width:100%; border-radius:12px; margin-bottom:10px;}
   .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
@@ -42,17 +43,34 @@
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Quais são os seus sonhos? -->
+<!-- Parte 2 – Quais são os seus sonhos? (Atualizada com caixinhas) -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
+  
   <div class="carousel-container">
-    <div class="box">Aposentadoria confortável</div>
-    <div class="box">Viajar pelo mundo</div>
-    <div class="box">Comprar casa própria</div>
-    <div class="box">Ter um carro de luxo</div>
-    <div class="box">Liberdade financeira</div>
+    <div class="box">
+      <img src="sonho1.jpeg" alt="Aposentadoria">
+      <p>Aposentadoria confortável</p>
+    </div>
+    <div class="box">
+      <img src="sonho2.jpeg" alt="Viagem">
+      <p>Viajar pelo mundo</p>
+    </div>
+    <div class="box">
+      <img src="sonho3.jpeg" alt="Casa">
+      <p>Comprar casa própria</p>
+    </div>
+    <div class="box">
+      <img src="sonho4.jpeg" alt="Carro">
+      <p>Ter um carro de luxo</p>
+    </div>
+    <div class="box">
+      <img src="sonho5.jpeg" alt="Liberdade">
+      <p>Liberdade financeira</p>
+    </div>
   </div>
+  
   <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
@@ -88,7 +106,6 @@
   <h1>Sobre a Vivarth</h1>
   <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
 
-  <!-- Comparativo Modelo Convencional x Vivarth -->
   <div class="comparison-box">
     <div class="comparison-item">
       <img src="modeloconvencional.jpeg" alt="Modelo Tradicional">
