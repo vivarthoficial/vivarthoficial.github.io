@@ -6,15 +6,15 @@
 <title>Vivarth - Transforme sua Vida</title>
 <style>
   body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
-  h1,h2 {color:#FFD700; margin-bottom:20px;}
+  h1,h2 {color:#FFD700; margin-bottom:15px;}
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
-  button {cursor:pointer; background:#FFD700; border:none; border-radius:8px; padding:10px 20px; color:#111; font-weight:bold;}
   
-  /* Carrosséis e caixas */
+  /* Scroll horizontal para carrosséis */
   .carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
-  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar {display:none;}
   
+  /* Caixas */
   .box, .profit-box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
   .box img, .profit-box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
   
@@ -23,14 +23,20 @@
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
   
-  /* Formulário */
-  #form-section {display:none; background:#222; padding:40px; border-radius:12px; max-width:600px; margin:20px auto;}
-  #form-section input {width:90%; padding:10px; margin:8px 0; border-radius:8px; border:none;}
+  /* Botões kits */
+  .kit-button {background:#FFD700; color:#111; padding:10px 20px; border-radius:8px; text-decoration:none; font-weight:bold; display:inline-block; margin-bottom:10px; cursor:pointer;}
   
-  /* Pagamento Pix */
-  #payment-section {display:none; text-align:center; padding:40px;}
-  #payment-section img {width:250px; border-radius:12px; margin-bottom:10px;}
-  #pix-code {background:#111; color:#FFD700; padding:10px; border-radius:8px; word-break:break-all; margin-bottom:10px;}
+  /* Formulário */
+  form {max-width:600px; margin:0 auto; background:#222; padding:20px; border-radius:12px; text-align:left;}
+  form label {display:block; margin-top:10px; margin-bottom:5px;}
+  form input, form select {width:100%; padding:8px; border-radius:6px; border:none; margin-bottom:10px;}
+  form button {background:#FFD700; color:#111; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; font-weight:bold;}
+  
+  /* Pagamento */
+  .pix-section {background:#222; padding:40px 20px; border-radius:12px; max-width:500px; margin:0 auto;}
+  .pix-section img {width:250px; border-radius:12px; margin-bottom:15px;}
+  .pix-code {background:#111; padding:10px; border-radius:6px; word-break:break-all; margin-bottom:10px;}
+  .copy-button {background:#FFD700; color:#111; border:none; padding:8px 16px; border-radius:6px; cursor:pointer; font-weight:bold;}
   
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
@@ -52,8 +58,21 @@
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Benefícios e Formas de Ganho -->
+<!-- Parte 2 – Seus sonhos (caixa fixa) -->
 <section class="section" style="background-color:#222;">
+  <h1>Quais são os seus sonhos?</h1>
+  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
+  <div class="carousel-container">
+    <div class="box">Aposentadoria confortável</div>
+    <div class="box">Viajar pelo mundo</div>
+    <div class="box">Comprar casa própria</div>
+    <div class="box">Ter um carro de luxo</div>
+    <div class="box">Liberdade financeira</div>
+  </div>
+</section>
+
+<!-- Parte 3 – Benefícios e Formas de Ganho -->
+<section class="section">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
     <div class="box">
@@ -79,11 +98,10 @@
   </div>
 </section>
 
-<!-- Parte 3 – Sobre a Empresa e Comparativo -->
+<!-- Parte 4 – Sobre a Empresa e Comparativo -->
 <section class="section">
   <h1>Sobre a Vivarth</h1>
   <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
-
   <div class="comparison-box">
     <div class="comparison-item">
       <img src="modeloconvencional.jpeg" alt="Modelo Tradicional">
@@ -96,7 +114,7 @@
   </div>
 </section>
 
-<!-- Parte 4 – Produtos (Perfumes) -->
+<!-- Parte 5 – Produtos (Perfumes) -->
 <section class="section" style="background-color:#111;">
   <h1>Perfumes de Alto Luxo</h1>
   <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
@@ -107,28 +125,28 @@
   </div>
 </section>
 
-<!-- Parte 5 – Estrutura de Níveis -->
+<!-- Parte 6 – Estrutura de Níveis -->
 <section class="section">
   <h1>Estrutura de Níveis</h1>
-  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <img src="pins01.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
-<!-- Parte 6 – Bônus Inteligente -->
+<!-- Parte 7 – Bônus Inteligente -->
 <section class="section" style="background-color:#222;">
   <h1>Bônus Inteligente</h1>
   <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
 </section>
 
-<!-- Parte 7 – Bônus da Equipe -->
+<!-- Parte 8 – Bônus da Equipe -->
 <section class="section">
   <h1>Bônus da Equipe</h1>
   <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
 </section>
 
-<!-- Parte 8 – Premiações e Conquistas -->
+<!-- Parte 9 – Premiações e Conquistas -->
 <section class="section" style="background-color:#222;">
   <h1>Premiações e Conquistas</h1>
   <div class="products-container">
@@ -147,102 +165,152 @@
   </div>
 </section>
 
-<!-- Parte 9 – Kits -->
-<section class="section" style="background-color:#111;">
-  <h1>Escolha seu Kit e Comece Hoje Mesmo</h1>
-  <p>Aproveite a oportunidade: frete grátis para todo o Brasil!</p>
-  <div class="kits-container">
-    <div class="kit-box">
-      <h2>Kit Inicial</h2>
-      <img src="kit01.jpeg" alt="Kit 1">
-      <p>Valor: R$300 – Receba R$500 em produtos</p>
-      <p>Pontuação: 500 pontos – Pontos acumulativos rumo ao sucesso</p>
-      <button onclick="showForm('kit01')">Escolher Kit 1</button>
+<!-- Parte 10 – Ganhos Reais com Perfumes -->
+<section class="section">
+  <h1>Ganhos Reais Vendendo Perfumes</h1>
+  <div class="profit-carousel">
+    <div class="profit-box">
+      <h2>1 perfume/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p>
     </div>
+    <div class="profit-box">
+      <h2>2 perfumes/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p>
+    </div>
+    <div class="profit-box">
+      <h2>3 perfumes/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p>
+    </div>
+  </div>
+</section>
+
+<!-- Parte 11 – Cursos e Treinamentos -->
+<section class="section" style="background-color:#111;">
+  <h1>Na Vivarth você não está sozinho</h1>
+  <p>Temos cursos e treinamentos todas as semanas para guiar você até o sucesso.</p>
+</section>
+
+<!-- Parte 12 – Kits -->
+<section class="section">
+  <h1>Escolha seu kit e comece a mudar de vida hoje mesmo</h1>
+  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil</strong></p>
+  <div class="kits-container">
+    <!-- Kit 1 -->
+    <div class="kit-box">
+      <h2>Kit Início</h2>
+      <img src="kit01.jpeg" alt="Kit 1">
+      <p>Compra R$300 em produtos e ganhe 500 pontos</p>
+      <p>Pontos acumulativos rumo ao sucesso</p>
+      <span class="kit-button" onclick="showForm('kit1')">Escolha seu kit</span>
+    </div>
+    <!-- Kit 2 -->
     <div class="kit-box">
       <h2>Kit Intermediário</h2>
       <img src="kit02.jpeg" alt="Kit 2">
-      <p>Valor: R$500 – Receba R$700 em produtos</p>
-      <p>Pontuação: 700 pontos – Pontos acumulativos rumo ao sucesso</p>
-      <button onclick="showForm('kit02')">Escolher Kit 2</button>
+      <p>Compra R$500 em produtos e ganhe 700 pontos</p>
+      <p>Pontos acumulativos rumo ao sucesso</p>
+      <span class="kit-button" onclick="showForm('kit2')">Escolha seu kit</span>
     </div>
+    <!-- Kit 3 -->
     <div class="kit-box">
       <h2>Kit Top</h2>
       <img src="kit03.jpeg" alt="Kit 3">
-      <p>Valor: R$1.000 – Receba R$1.300 em produtos</p>
-      <p>Pontuação: 1.100 pontos – Já entra como líder e aproveita todos os benefícios</p>
-      <button onclick="showForm('kit03')">Escolher Kit 3</button>
+      <p>Compra R$1.000 em produtos e ganhe 1.100 pontos</p>
+      <p>Já entra como líder e aproveita todos os benefícios</p>
+      <span class="kit-button" onclick="showForm('kit3')">Escolha seu kit</span>
     </div>
   </div>
 </section>
 
-<!-- Parte 10 – Formulário de Cadastro -->
-<section id="form-section">
+<!-- Parte 13 – Formulário -->
+<section class="section" id="form-section" style="display:none;">
   <h1>Preencha seus dados</h1>
-  <label>Teve indicação de algum consultor?</label><br>
-  <input type="radio" name="indicacao" value="sim" onclick="showConsultor(true)"> Sim
-  <input type="radio" name="indicacao" value="nao" onclick="showConsultor(false)"> Não
-  <div id="consultor" style="display:none;">
-    <input type="text" placeholder="Digite o nome ou código do consultor">
-  </div>
-  <input type="text" placeholder="Nome completo" required>
-  <input type="date" placeholder="Data de nascimento" required>
-  <input type="text" placeholder="CPF" required>
-  <input type="text" placeholder="Endereço completo" required>
-  <input type="text" placeholder="CEP" required>
-  <input type="text" placeholder="Cidade" required>
-  <input type="text" placeholder="Telefone" required>
-  <input type="email" placeholder="E-mail" required>
-  <button onclick="showPayment()">Continuar para Pagamento</button>
+  <form id="kit-form">
+    <label>Teve indicação de algum consultor?</label>
+    <select id="indicacao">
+      <option value="nao">Não</option>
+      <option value="sim">Sim</option>
+    </select>
+    <div id="nome-consultor" style="display:none;">
+      <label>Nome ou código do consultor</label>
+      <input type="text" name="consultor">
+    </div>
+
+    <label>Nome Completo</label>
+    <input type="text" name="nome" required>
+
+    <label>Data de Nascimento</label>
+    <input type="date" name="nascimento" required>
+
+    <label>CPF</label>
+    <input type="text" name="cpf" required>
+
+    <label>Endereço (Rua, Número, Cidade, CEP)</label>
+    <input type="text" name="endereco" required>
+
+    <label>Telefone</label>
+    <input type="text" name="telefone" required>
+
+    <label>E-mail</label>
+    <input type="email" name="email" required>
+
+    <button type="button" onclick="showPayment()">Continuar para pagamento</button>
+  </form>
 </section>
 
-<!-- Parte 11 – Pagamento Pix -->
-<section id="payment-section">
+<!-- Parte 14 – Pagamento -->
+<section class="section" id="payment-section" style="display:none;">
   <h1>Pagamento via Pix</h1>
   <p>Pagamento direto para o CNPJ da Vivarth</p>
-  <div id="pix01" style="display:none;">
+
+  <div id="pix1" class="pix-section" style="display:none;">
     <img src="pagamento01.jpeg" alt="Pix Kit 1">
-    <div id="pix-code">00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1</div>
-    <button onclick="copyCode('pix-code')">Copiar Código</button>
+    <div class="pix-code" id="pixcode1">00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1</div>
+    <button class="copy-button" onclick="copyPix('pixcode1')">Copiar código</button>
   </div>
-  <div id="pix02" style="display:none;">
+
+  <div id="pix2" class="pix-section" style="display:none;">
     <img src="pagamento02.jpeg" alt="Pix Kit 2">
-    <div id="pix-code-2">00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB</div>
-    <button onclick="copyCode('pix-code-2')">Copiar Código</button>
+    <div class="pix-code" id="pixcode2">00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB</div>
+    <button class="copy-button" onclick="copyPix('pixcode2')">Copiar código</button>
   </div>
-  <div id="pix03" style="display:none;">
+
+  <div id="pix3" class="pix-section" style="display:none;">
     <img src="pagamento03.jpeg" alt="Pix Kit 3">
-    <div id="pix-code-3">00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E</div>
-    <button onclick="copyCode('pix-code-3')">Copiar Código</button>
+    <div class="pix-code" id="pixcode3">00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E</div>
+    <button class="copy-button" onclick="copyPix('pixcode3')">Copiar código</button>
   </div>
 </section>
 
 <script>
-function showConsultor(show){
-  document.getElementById('consultor').style.display = show ? 'block' : 'none';
-}
+  function showForm(kit) {
+    document.getElementById('form-section').style.display = 'block';
+    localStorage.setItem('selectedKit', kit);
+    window.scrollTo({top: document.getElementById('form-section').offsetTop, behavior:'smooth'});
+  }
 
-let selectedKit = '';
-function showForm(kit){
-  selectedKit = kit;
-  document.getElementById('form-section').style.display = 'block';
-  window.scrollTo({top: document.getElementById('form-section').offsetTop, behavior: 'smooth'});
-}
+  document.getElementById('indicacao').addEventListener('change', function() {
+    if(this.value==='sim'){
+      document.getElementById('nome-consultor').style.display='block';
+    } else {
+      document.getElementById('nome-consultor').style.display='none';
+    }
+  });
 
-function showPayment(){
-  document.getElementById('form-section').style.display = 'none';
-  document.getElementById('payment-section').style.display = 'block';
-  // Exibir Pix correto
-  document.getElementById('pix01').style.display = selectedKit=='kit01'?'block':'none';
-  document.getElementById('pix02').style.display = selectedKit=='kit02'?'block':'none';
-  document.getElementById('pix03').style.display = selectedKit=='kit03'?'block':'none';
-  window.scrollTo({top: document.getElementById('payment-section').offsetTop, behavior: 'smooth'});
-}
+  function showPayment() {
+    var kit = localStorage.getItem('selectedKit');
+    document.getElementById('payment-section').style.display='block';
+    if(kit==='kit1'){ document.getElementById('pix1').style.display='block'; }
+    if(kit==='kit2'){ document.getElementById('pix2').style.display='block'; }
+    if(kit==='kit3'){ document.getElementById('pix3').style.display='block'; }
+    window.scrollTo({top: document.getElementById('payment-section').offsetTop, behavior:'smooth'});
+  }
 
-function copyCode(id){
-  const code = document.getElementById(id).innerText;
-  navigator.clipboard.writeText(code).then(()=>alert('Código Pix copiado!'));
-}
+  function copyPix(id){
+    var text = document.getElementById(id).innerText;
+    navigator.clipboard.writeText(text);
+    alert('Código Pix copiado!');
+  }
 </script>
 
 </body>
