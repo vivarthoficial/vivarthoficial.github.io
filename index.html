@@ -217,6 +217,66 @@
     window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
   }
 </script>
+<!-- Seção de pagamento (Pix) -->
+<section class="payment-section" id="payment-section" style="display:none;">
+  <h1>Pagamento via Pix</h1>
+  <p>Use o QR Code ou copie o código abaixo para pagar diretamente para a Vivarth.</p>
+  <img id="pix-image" src="" alt="QR Code" style="width:200px; border-radius:12px; margin-bottom:10px;">
+  <div class="pix-code" id="pix-code"></div>
+  <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
+</section>
 
+<script>
+  // Pix de cada kit
+  const pixData = {
+    kit1: {
+      image: 'pagamento01.jpeg',
+      code: '00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1'
+    },
+    kit2: {
+      image: 'pagamento02.jpeg',
+      code: '00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB'
+    },
+    kit3: {
+      image: 'pagamento03.jpeg',
+      code: '00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E'
+    }
+  };
+
+  let selectedKit = '';
+
+  // Quando o usuário seleciona o kit
+  function selectKit(kit){
+    selectedKit = kit;
+    document.getElementById('form-section').style.display = 'flex';
+    window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
+  }
+
+  // Após preencher o formulário → mostrar pagamento
+  function showPayment(){
+    if(!selectedKit){
+      alert('Selecione um kit primeiro!');
+      return;
+    }
+    const pixImage = document.getElementById('pix-image');
+    const pixCode = document.getElementById('pix-code');
+    const paymentSection = document.getElementById('payment-section');
+
+    pixImage.src = pixData[selectedKit].image;
+    pixCode.textContent = pixData[selectedKit].code;
+
+    paymentSection.style.display = 'block';
+    window.scrollTo({ top: paymentSection.offsetTop, behavior: 'smooth' });
+  }
+
+  // Copiar Pix
+  function copyPix(){
+    const code = document.getElementById('pix-code').textContent;
+    navigator.clipboard.writeText(code).then(()=>{alert('Código Pix copiado!');});
+  }
+</script>
+
+<!-- Alteração no botão do formulário -->
+<button onclick="showPayment()">Prosseguir para Pagamento</button>
 </body>
 </html>
