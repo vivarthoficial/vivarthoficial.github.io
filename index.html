@@ -45,8 +45,8 @@ body{
     color:#FFD700;
 }
 
-/* Carrossel Parte 3 */
-.benefit-container{
+/* Carrossel Parte 2 e Parte 3 */
+.carousel-container{
     display:flex;
     overflow-x:auto;
     gap:20px;
@@ -54,6 +54,18 @@ body{
     scroll-snap-type:x mandatory;
 }
 
+.carousel-item{
+    flex:0 0 250px;
+    scroll-snap-align:start;
+    background-color:#111;
+    border:2px solid #FFD700;
+    border-radius:12px;
+    padding:20px;
+    text-align:center;
+    font-size:18px;
+}
+
+/* Parte 3 – caixas de benefício */
 .benefit-box{
     flex:0 0 300px;
     scroll-snap-align:start;
@@ -83,10 +95,22 @@ body{
   <p><strong>Na Vivarth é possível!</strong></p>
 </section>
 
-<!-- Parte 2 – Pergunta persuasiva -->
+<!-- Parte 2 – Pergunta persuasiva com carrossel de sonhos -->
 <section class="section" style="background-color:#111; padding-top:80px;">
   <h1>Quais são os seus sonhos?</h1>
-  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
+  <p>Escolha o que você deseja alcançar:</p>
+
+  <div class="carousel-container">
+    <div class="carousel-item">Viajar pelo mundo</div>
+    <div class="carousel-item">Ter uma aposentadoria confortável</div>
+    <div class="carousel-item">Comprar uma casa própria</div>
+    <div class="carousel-item">Ter um carro de luxo</div>
+    <div class="carousel-item">Realizar estudos ou cursos</div>
+    <div class="carousel-item">Construir um negócio próprio</div>
+    <div class="carousel-item">Ganhar liberdade financeira</div>
+    <div class="carousel-item">Surpreender a família com conquistas</div>
+  </div>
+
   <p>Na <strong>Vivarth</strong> você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
@@ -94,7 +118,7 @@ body{
 <section class="section" style="background-color:#111; padding:80px 20px;">
   <h1 style="font-size:36px; margin-bottom:40px;">Benefícios e Formas de Ganho</h1>
   
-  <div class="benefit-container">
+  <div class="carousel-container">
 
     <!-- Caixa 1 -->
     <div class="benefit-box">
