@@ -14,7 +14,7 @@
   .carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
 
-  .box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
+  .box, .kit-box, .info-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
   .box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
 
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
@@ -35,7 +35,7 @@
 
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
-    .box, .kit-box{min-width:150px;}
+    .box, .kit-box, .info-box{min-width:150px;}
     .products-container img{width:80%;}
   }
 </style>
@@ -156,10 +156,18 @@
   </div>
 </section>
 
+<!-- Nova Caixinha Persuasiva -->
+<section class="section" style="background-color:#111;">
+  <div class="info-box">
+    <h2>Acompanhamento Completo</h2>
+    <p style="color:#FFD700;">Aqui na Vivart você tem acompanhamento do início ao fim e a oportunidade de participar de eventos exclusivos, online e presenciais, além de treinamentos semanais que te ajudam a alcançar resultados reais.</p>
+  </div>
+</section>
+
 <!-- Kits -->
 <section class="section" style="background-color:#111;">
-  <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
-  <p>Aproveite a oportunidade para todo o Brasil!</p>
+  <h1>Escolha um dos três kits e comece a mudar a sua vida ainda hoje</h1>
+  <p>Aproveite a oportunidade! Frete grátis para todo o Brasil.</p>
   <div class="kits-container">
     <div class="kit-box" onclick="selectKit('kit1')">
       <img src="kit01.jpeg" alt="Kit 1">
