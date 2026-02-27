@@ -1,115 +1,59 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vivarth - Transforme sua Vida</title>
-  <style>
-    body {
-      margin:0;
-      font-family: Arial, sans-serif;
-      background-color:#111;
-      color:#fff;
-    }
-    h1,h2 {
-      color:#FFD700;
-    }
-    .section {
-      padding:80px 20px;
-      text-align:center;
-    }
-    .benefit-box {
-      background-color:#222;
-      border-radius:12px;
-      padding:20px;
-      margin:10px;
-      min-width:200px;
-      flex:0 0 auto;
-    }
-    .carousel-container {
-      display:flex;
-      overflow-x:auto;
-      scroll-behavior:smooth;
-      padding:20px 0;
-    }
-    .carousel-container::-webkit-scrollbar{
-      display:none;
-    }
-    .products-container, .awards-container {
-      display:flex;
-      overflow-x:auto;
-      gap:20px;
-      padding:20px 0;
-    }
-    .product-item, .award-item {
-      flex:0 0 auto;
-      width:300px;
-      text-align:center;
-    }
-    .product-item img, .award-item img {
-      width:100%;
-      border-radius:12px;
-    }
-    @media(max-width:768px){
-      .benefit-box{min-width:150px;}
-      .product-item, .award-item{width:80%;}
-      .comparison-box {flex-direction:column; gap:20px;}
-    }
-    .company-box {
-      background-color:#111; 
-      border:2px solid #FFD700; 
-      border-radius:12px; 
-      padding:40px 30px; 
-      max-width:800px; 
-      margin:0 auto 60px auto;
-    }
-    .comparison-box {
-      display:flex;
-      justify-content:center;
-      gap:20px;
-      flex-wrap:wrap;
-    }
-    .comparison-item {
-      flex:0 0 300px;
-      text-align:center;
-    }
-    .profit-box {
-      background-color:#222;
-      border-radius:12px;
-      padding:20px;
-      margin:10px auto;
-      max-width:600px;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vivarth - Transforme sua Vida</title>
+<style>
+  body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
+  h1,h2 {color:#FFD700; margin-bottom:20px;}
+  .section {padding:60px 20px; text-align:center;}
+  .carousel-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar{display:none;}
+  .product-item, .award-item, .benefit-box, .comparison-item {flex:0 0 auto;}
+  .product-item img, .award-item img, .comparison-item img {width:100%; border-radius:12px;}
+  .benefit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:200px;}
+  .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
+  .comparison-item {flex:0 0 300px; text-align:center;}
+  .company-box {background:#111; border:2px solid #FFD700; border-radius:12px; padding:40px 30px; max-width:800px; margin:0 auto 60px auto;}
+  .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px auto; max-width:600px;}
+  .products-container, .awards-container {display:flex; overflow-x:auto; gap:20px; padding:20px 0;}
+  .products-container::-webkit-scrollbar, .awards-container::-webkit-scrollbar{display:none;}
+  @media(max-width:768px){
+    .benefit-box{min-width:150px;}
+    .product-item, .award-item{width:80%;}
+    .comparison-box {flex-direction:column; gap:20px;}
+  }
+</style>
 </head>
 <body>
 
-<!-- Parte 0 – Comparativo Modelo Tradicional x Vivarth -->
+<!-- Banner Principal -->
+<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
+</section>
+
+<!-- Parte Inicial – Comparativo Modelo Tradicional x Vivarth -->
 <section class="section">
-  <h1>Como funciona o modelo tradicional x Modelo Vivarth</h1>
+  <h1>Vivarth no mercado desde 2021</h1>
   <p style="max-width:900px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
     Descubra como a Vivarth facilita suas vendas e maximiza seus lucros.
   </p>
-  <div class="comparison-box">
+  <div class="carousel-container">
     <div class="comparison-item">
-      <img src="modelo convencional.jpeg" alt="Modelo Tradicional" style="width:100%; border-radius:12px;">
+      <img src="modelo convencional.jpeg" alt="Modelo Tradicional">
       <p>Modelo Tradicional</p>
       <p style="font-size:14px; max-width:300px; margin:10px auto;">
-        Passa por fábrica → galpão → logística → distribuição → cliente final. Complexo, demora e reduz lucro.
+        Passa por fábrica → galpão → logística → distribuição → cliente final. Mais lento e reduz lucro.
       </p>
     </div>
     <div class="comparison-item">
-      <img src="modelovivarth.jpeg" alt="Modelo Vivarth" style="width:100%; border-radius:12px;">
+      <img src="modelovivarth.jpeg" alt="Modelo Vivarth">
       <p>Modelo Vivarth</p>
       <p style="font-size:14px; max-width:300px; margin:10px auto;">
-        Compra direto da fábrica → consultor → cliente. Menos etapas, maior lucro e mais rapidez.
+        Compra direto da fábrica → consultor → cliente. Mais rápido, simples e maior lucro.
       </p>
     </div>
   </div>
-</section>
-
-<!-- Parte 1 – Banner Principal -->
-<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
 </section>
 
 <!-- Parte 2 – Frase Chamativa -->
