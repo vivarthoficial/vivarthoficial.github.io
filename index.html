@@ -5,42 +5,52 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth - Transforme sua Vida</title>
 <style>
-  body { margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff; }
-  h1,h2 { color:#FFD700; margin-bottom:20px; }
-  p { margin-bottom:15px; }
-  .section { padding:60px 20px; text-align:center; }
+  body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
+  h1,h2 {color:#FFD700; margin-bottom:20px;}
+  p {margin-bottom:15px;}
+  .section {padding:60px 20px; text-align:center;}
+  
+  /* Carrosséis e layouts */
+  .carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
 
-  /* Scroll horizontal para carrossel de caixinhas */
-  .carousel-container, .products-container, .profit-carousel, .kits-container { 
-    display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0; 
-  }
-  .carousel-container::-webkit-scrollbar, 
-  .products-container::-webkit-scrollbar, 
-  .profit-carousel::-webkit-scrollbar,
-  .kits-container::-webkit-scrollbar{ display:none; }
+  .box, .profit-box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
+  .box img, .profit-box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  .products-container img {width:250px; border-radius:12px; margin-right:20px;}
+  .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
+  .comparison-item {flex:0 0 300px; text-align:center;}
+  .comparison-item img {width:100%; border-radius:12px;}
+  .kits-container {justify-content:center; flex-wrap:wrap;}
+  .kit-box {flex:0 0 300px;}
 
-  .box, .profit-box, .kit-box { 
-    background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;
-  }
-  .box img, .profit-box img, .kit-box img { width:100%; border-radius:12px; margin-bottom:10px; }
-  .products-container img { width:250px; border-radius:12px; margin-right:20px; }
-  .comparison-box { display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px; }
-  .comparison-item { flex:0 0 300px; text-align:center; }
-  .comparison-item img { width:100%; border-radius:12px; }
-
-  .kits-container { justify-content:center; flex-wrap:wrap; }
-  .kit-box { flex:0 0 250px; background:#222; border-radius:12px; padding:20px; margin:10px; text-align:center; }
-  .kit-box h2 { margin-bottom:10px; }
-  .kit-box p { font-size:14px; }
-
+  /* Formulário interno */
+  #formulario {display:none; background:#222; padding:30px; border-radius:12px; margin-top:40px;}
+  #formulario input, #formulario select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+  #formulario label {display:block; margin-top:10px; text-align:left;}
+  #formulario button {padding:15px 30px; margin-top:20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer;}
+  
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
-    .box{min-width:150px;}
-    .profit-box{min-width:150px;}
+    .box, .profit-box, .kit-box{min-width:80%;}
     .products-container img{width:80%;}
-    .kit-box { flex:0 0 80%; }
   }
 </style>
+<script>
+  function mostrarFormulario(kit) {
+    document.getElementById('formulario').style.display = 'block';
+    document.getElementById('kitSelecionado').value = kit;
+    window.scrollTo({ top: document.getElementById('formulario').offsetTop - 20, behavior: 'smooth' });
+  }
+
+  function toggleIndicacao(value) {
+    const campo = document.getElementById('nomeConsultorDiv');
+    if(value === 'sim') {
+      campo.style.display = 'block';
+    } else {
+      campo.style.display = 'none';
+    }
+  }
+</script>
 </head>
 <body>
 
@@ -55,26 +65,16 @@
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Quais são os seus sonhos? -->
+<!-- Parte 2 – Quais são os seus sonhos? (caixa fixa) -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
-    <div class="box">
-      <p>Aposentadoria confortável</p>
-    </div>
-    <div class="box">
-      <p>Viajar pelo mundo</p>
-    </div>
-    <div class="box">
-      <p>Comprar casa própria</p>
-    </div>
-    <div class="box">
-      <p>Ter um carro de luxo</p>
-    </div>
-    <div class="box">
-      <p>Liberdade financeira</p>
-    </div>
+    <div class="box"><p>Aposentadoria confortável</p></div>
+    <div class="box"><p>Viajar pelo mundo</p></div>
+    <div class="box"><p>Comprar casa própria</p></div>
+    <div class="box"><p>Ter um carro de luxo</p></div>
+    <div class="box"><p>Liberdade financeira</p></div>
   </div>
   <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
@@ -83,26 +83,11 @@
 <section class="section">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
-    <div class="box">
-      <h2>100% de lucro</h2>
-      <p>Vendendo produtos de luxo, você garante lucro total.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus por indicação</h2>
-      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
-    </div>
-    <div class="box">
-      <h2>Bonificações por metas</h2>
-      <p>Alcance metas e receba premiações incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Prêmios mensais</h2>
-      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Pontos que valem dinheiro</h2>
-      <p>Acumule pontos com suas vendas e equipe.</p>
-    </div>
+    <div class="box"><h2>100% de lucro</h2><p>Vendendo produtos de luxo, você garante lucro total.</p></div>
+    <div class="box"><h2>Bônus por indicação</h2><p>Indique amigos e aumente seus ganhos instantaneamente.</p></div>
+    <div class="box"><h2>Bonificações por metas</h2><p>Alcance metas e receba premiações incríveis.</p></div>
+    <div class="box"><h2>Prêmios mensais</h2><p>Participe de sorteios exclusivos e viagens incríveis.</p></div>
+    <div class="box"><h2>Pontos que valem dinheiro</h2><p>Acumule pontos com suas vendas e equipe.</p></div>
   </div>
 </section>
 
@@ -167,28 +152,16 @@
   <p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p>
   <p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p>
   <p>Último nível: viagem para Disney totalmente gratuita.</p>
-  <div class="box" style="margin-top:20px;">
-    <h2>Em breve:</h2>
-    <p>Novas conquistas e sorteios mensais com prêmios e viagens.</p>
-  </div>
+  <div class="box" style="margin-top:20px;"><h2>Em breve:</h2><p>Novas conquistas e sorteios mensais com prêmios e viagens.</p></div>
 </section>
 
-<!-- Parte 10 – Ganhos Reais com Perfumes -->
+<!-- Parte 10 – Ganhos Reais -->
 <section class="section">
   <h1>Ganhos Reais Vendendo Perfumes</h1>
   <div class="profit-carousel">
-    <div class="profit-box">
-      <h2>1 perfume/dia</h2>
-      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p>
-    </div>
-    <div class="profit-box">
-      <h2>2 perfumes/dia</h2>
-      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p>
-    </div>
-    <div class="profit-box">
-      <h2>3 perfumes/dia</h2>
-      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p>
-    </div>
+    <div class="profit-box"><h2>1 perfume/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p></div>
+    <div class="profit-box"><h2>2 perfumes/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p></div>
+    <div class="profit-box"><h2>3 perfumes/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p></div>
   </div>
 </section>
 
@@ -197,29 +170,17 @@
   <h1>Outras formas de ganhar na Vivarth</h1>
   <p>Além dos lucros com vendas, você também pode ganhar assim:</p>
   <div class="carousel-container">
-    <div class="box">
-      <h2>Comissão por equipe</h2>
-      <p>Ganhe uma porcentagem do total que sua equipe vende mensalmente.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus por metas alcançadas</h2>
-      <p>Ao atingir metas mensais ou trimestrais, receba bonificações extras.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus de crescimento</h2>
-      <p>Quanto maior sua equipe e resultados, maiores os bônus que você recebe.</p>
-    </div>
-    <div class="box">
-      <h2>Premiações especiais</h2>
-      <p>Viagens, eletrônicos e reconhecimento para os melhores desempenhos.</p>
-    </div>
+    <div class="box"><h2>Comissão por equipe</h2><p>Ganhe uma porcentagem do total que sua equipe vende mensalmente.</p></div>
+    <div class="box"><h2>Bônus por metas alcançadas</h2><p>Ao atingir metas mensais ou trimestrais, receba bonificações extras.</p></div>
+    <div class="box"><h2>Bônus de crescimento</h2><p>Quanto maior sua equipe e resultados, maiores os bônus que você recebe.</p></div>
+    <div class="box"><h2>Premiações especiais</h2><p>Viagens, eletrônicos e reconhecimento para os melhores desempenhos.</p></div>
   </div>
 </section>
 
 <!-- Parte 12 – Cursos e Treinamentos -->
 <section class="section">
-  <h1>Treinamentos e Suporte</h1>
-  <p>Na Vivarth, você não está sozinho. Temos cursos e treinamentos todas as semanas para guiar você até o seu sucesso!</p>
+  <h1>Na Vivarth você não está sozinho</h1>
+  <p>Temos cursos e treinamentos todas as semanas para guiar você até o seu sucesso.</p>
 </section>
 
 <!-- Parte 13 – Kits de Início -->
@@ -228,25 +189,66 @@
   <p>Aproveite a oportunidade de frete grátis para todo o Brasil!</p>
   <div class="kits-container">
     <div class="kit-box">
+      <img src="kit01.jpeg" alt="Kit Inicial">
       <h2>Kit Inicial</h2>
       <p>Compra: R$300 → Produtos: R$500</p>
       <p>Pontos: 500 pontos acumulativos, rumo ao sucesso</p>
-      <button>Escolha seu kit</button>
+      <button onclick="mostrarFormulario('Kit Inicial')">Escolha seu kit</button>
     </div>
     <div class="kit-box">
+      <img src="kit02.jpeg" alt="Kit Intermediário">
       <h2>Kit Intermediário</h2>
       <p>Compra: R$500 → Produtos: R$700</p>
       <p>Pontos: 700 pontos acumulativos, rumo ao sucesso</p>
-      <button>Escolha seu kit</button>
+      <button onclick="mostrarFormulario('Kit Intermediário')">Escolha seu kit</button>
     </div>
     <div class="kit-box">
+      <img src="kit03.jpeg" alt="Kit Avançado">
       <h2>Kit Avançado</h2>
       <p>Compra: R$1.000 → Produtos: R$1.300</p>
       <p>Pontos: 1.100 pontos. Já entra como líder e tem benefícios exclusivos!</p>
-      <button>Escolha seu kit</button>
+      <button onclick="mostrarFormulario('Kit Avançado')">Escolha seu kit</button>
     </div>
   </div>
   <p>Venda os produtos e ganhe 100% de lucro investido!</p>
+</section>
+
+<!-- Parte 14 – Formulário -->
+<section id="formulario" class="section">
+  <h1>Cadastro para seu kit</h1>
+  <form>
+    <label>Teve indicação de algum consultor?</label>
+    <select onchange="toggleIndicacao(this.value)">
+      <option value="nao">Não</option>
+      <option value="sim">Sim</option>
+    </select>
+    <div id="nomeConsultorDiv" style="display:none;">
+      <label>Nome ou código do consultor:</label>
+      <input type="text" name="consultor" placeholder="Digite aqui">
+    </div>
+
+    <label>Nome Completo</label>
+    <input type="text" name="nome" required>
+
+    <label>Data de Nascimento</label>
+    <input type="date" name="nascimento" required>
+
+    <label>CPF</label>
+    <input type="text" name="cpf" required>
+
+    <label>Endereço Completo</label>
+    <input type="text" name="endereco" placeholder="Rua, Número, Bairro, Cidade, CEP" required>
+
+    <label>Telefone</label>
+    <input type="tel" name="telefone" required>
+
+    <label>E-mail</label>
+    <input type="email" name="email" required>
+
+    <input type="hidden" id="kitSelecionado" name="kitSelecionado">
+
+    <button type="submit">Enviar e continuar para pagamento</button>
+  </form>
 </section>
 
 </body>
