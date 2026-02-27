@@ -3,95 +3,213 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivarth Oficial</title>
+<title>Vivarth - Transforme sua Vida</title>
 <style>
-body {margin:0; font-family: Arial,sans-serif; background:#0a0a0a; color:#fff;}
-h1,h2,h3{color:#FFD700; margin-bottom:20px;}
-p{margin-bottom:10px;}
-.section{padding:60px 20px; text-align:center;}
-.slider{display:flex; overflow-x:auto; gap:20px; padding:20px 0; scroll-behavior:smooth;}
-.slider::-webkit-scrollbar{display:none;}
-.card{background:#111; border-radius:15px; padding:20px; flex:0 0 280px; box-shadow:0 5px 20px rgba(0,0,0,0.5);}
-.card img{width:100%; border-radius:12px; margin-bottom:15px;}
-img.full{width:70%; max-width:600px; border-radius:15px; display:block; margin:20px auto;}
-img.banner{width:100%; height:400px; object-fit:cover; display:block;}
-.btn{background:#FFD700; color:#000; border:none; padding:12px 18px; border-radius:10px; font-weight:bold; cursor:pointer;}
+  body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
+  h1,h2 {color:#FFD700; margin-bottom:20px;}
+  p {margin-bottom:15px;}
+  .section {padding:60px 20px; text-align:center;}
+  
+  /* Scroll horizontal para carrossel de caixinhas */
+  .carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
+  
+  .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
+  .box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  
+  .products-container img {width:250px; border-radius:12px; margin-right:20px;}
+  .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
+  .comparison-item {flex:0 0 300px; text-align:center;}
+  .comparison-item img {width:100%; border-radius:12px;}
+  
+  @media(max-width:768px){
+    .comparison-item{flex:0 0 80%;}
+    .box{min-width:150px;}
+    .profit-box{min-width:150px;}
+    .products-container img{width:80%;}
+  }
 </style>
 </head>
 <body>
 
-<!-- 1. Banner Principal -->
+<!-- Banner Principal -->
+<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
+</section>
+
+<!-- Parte 1 – Frase Chamativa -->
 <section class="section">
-  <img src="banner.jpeg" alt="Banner Vivarth" class="banner">
   <h1>Você já imaginou transformar sua vida?</h1>
   <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de luxo?</p>
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- 2. Pergunta Persuasiva -->
-<section class="section" style="background:#111;">
-<h2>Quais são os seus sonhos?</h2>
-<p>Quanto tempo você acha que vai levar para realizá-los?</p>
-<p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
+<!-- Parte 2 – Quais são os seus sonhos? -->
+<section class="section" style="background-color:#222;">
+  <h1>Quais são os seus sonhos?</h1>
+  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
+  
+  <div class="carousel-container">
+    <div class="box">
+      <img src="sonho1.jpeg" alt="Aposentadoria">
+      <p>Aposentadoria confortável</p>
+    </div>
+    <div class="box">
+      <img src="sonho2.jpeg" alt="Viagem">
+      <p>Viajar pelo mundo</p>
+    </div>
+    <div class="box">
+      <img src="sonho3.jpeg" alt="Casa">
+      <p>Comprar casa própria</p>
+    </div>
+    <div class="box">
+      <img src="sonho4.jpeg" alt="Carro">
+      <p>Ter um carro de luxo</p>
+    </div>
+    <div class="box">
+      <img src="sonho5.jpeg" alt="Liberdade">
+      <p>Liberdade financeira</p>
+    </div>
+  </div>
+  
+  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
-<!-- 3. Benefícios e Formas de Ganho -->
+<!-- Parte 3 – Benefícios e Formas de Ganho -->
 <section class="section">
-<h2>Benefícios e Formas de Ganho</h2>
-<div class="slider">
-  <div class="card"><h3>100% de lucro</h3><p>Vendendo produtos exclusivos</p></div>
-  <div class="card"><h3>Bônus por indicação</h3><p>Indique amigos e ganhe recompensas</p></div>
-  <div class="card"><h3>Bonificações de equipe</h3><p>Alcance metas de equipe e aumente seus ganhos</p></div>
-  <div class="card"><h3>Premiações mensais</h3><p>Ganhe prêmios incríveis todo mês</p></div>
-  <div class="card"><h3>Pontos que valem dinheiro</h3><p>Acumule pontos e transforme em ganhos reais</p></div>
-</div>
+  <h1>Benefícios e Formas de Ganho</h1>
+  <div class="carousel-container">
+    <div class="box">
+      <h2>100% de lucro</h2>
+      <p>Vendendo produtos de luxo, você garante lucro total.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus por indicação</h2>
+      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
+    </div>
+    <div class="box">
+      <h2>Bonificações por metas</h2>
+      <p>Alcance metas e receba premiações incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Prêmios mensais</h2>
+      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Pontos que valem dinheiro</h2>
+      <p>Acumule pontos com suas vendas e equipe.</p>
+    </div>
+  </div>
 </section>
 
-<!-- 4. Sobre a Empresa -->
+<!-- Parte 4 – Sobre a Empresa e Comparativo -->
 <section class="section">
-<h2>Sobre a Vivarth</h2>
-<p>Vivarth é uma empresa brasileira no setor de cosméticos desde 2021. Entrando agora no ramo de marketing de venda direta, sólida, confiável e pronta para transformar vidas.</p>
+  <h1>Sobre a Vivarth</h1>
+  <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
+
+  <div class="comparison-box">
+    <div class="comparison-item">
+      <img src="modeloconvencional.jpeg" alt="Modelo Tradicional">
+      <p>Modelo Convencional</p>
+    </div>
+    <div class="comparison-item">
+      <img src="modelovivarth.jpeg" alt="Modelo Vivarth">
+      <p>Modelo Vivarth – Muito mais simples, rápido e eficaz</p>
+    </div>
+  </div>
 </section>
 
-<!-- 5. Produtos -->
-<section class="section">
-<h2>Conheça nossos perfumes</h2>
-<p>Perfumes de luxo, alta perfumaria, aroma incomparável, produtos de alta procura. Qualidade que encanta você e seu cliente.</p>
-<div class="slider">
-  <div class="card"><img src="01.jpeg" alt="Perfume 1"></div>
-  <div class="card"><img src="02.jpeg" alt="Perfume 2"></div>
-  <div class="card"><img src="03.jpeg" alt="Perfume 3"></div>
-</div>
+<!-- Parte 5 – Produtos (Perfumes) -->
+<section class="section" style="background-color:#111;">
+  <h1>Perfumes de Alto Luxo</h1>
+  <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
+  <div class="products-container">
+    <img src="01.jpeg" alt="Perfume 1">
+    <img src="02.jpeg" alt="Perfume 2">
+    <img src="03.jpeg" alt="Perfume 3">
+  </div>
 </section>
 
-<!-- 6. Estrutura de Níveis -->
+<!-- Parte 6 – Estrutura de Níveis -->
 <section class="section">
-<img src="pins01.jpeg" alt="Níveis Vivarth" class="full">
-<p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
+  <h1>Estrutura de Níveis</h1>
+  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
-<!-- 7. Bônus Inteligente -->
-<section class="section">
-<img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" class="full">
-<p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
+<!-- Parte 7 – Bônus Inteligente -->
+<section class="section" style="background-color:#222;">
+  <h1>Bônus Inteligente</h1>
+  <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
 </section>
 
-<!-- 8. Bônus da Equipe -->
+<!-- Parte 8 – Bônus da Equipe -->
 <section class="section">
-<img src="pontos01.jpeg" alt="Bônus da Equipe" class="full">
-<p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
+  <h1>Bônus da Equipe</h1>
+  <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
 </section>
 
-<!-- 9. Premiações e Conquistas -->
+<!-- Parte 9 – Premiações e Conquistas -->
+<section class="section" style="background-color:#222;">
+  <h1>Premiações e Conquistas</h1>
+  <div class="products-container">
+    <img src="cruzeiro01.jpeg" alt="Cruzeiro">
+    <img src="viagens07.jpeg" alt="Viagem">
+    <img src="carro01.jpeg" alt="Carro">
+    <img src="disney01.jpeg" alt="Disney">
+  </div>
+  <p>Chegando ao nível Diamante, você ganha um cruzeiro com acompanhante totalmente pago.</p>
+  <p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p>
+  <p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p>
+  <p>Último nível: viagem para Disney totalmente gratuita.</p>
+  <div class="box" style="margin-top:20px;">
+    <h2>Em breve:</h2>
+    <p>Novas conquistas e sorteios mensais com prêmios e viagens.</p>
+  </div>
+</section>
+
+<!-- NOVO: Parte 10 – Ganhos Reais com Perfumes -->
 <section class="section">
-<h2>Premiações e Conquistas</h2>
-<div class="slider">
-  <div class="card"><img src="cruzeiro01.jpeg" alt="Cruzeiro"><p>Chegando ao nível Diamante, você ganha um cruzeiro com acompanhante totalmente pago.</p></div>
-  <div class="card"><img src="viagens07.jpeg" alt="Maldivas"><p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p></div>
-  <div class="card"><img src="carro01.jpeg" alt="Carro"><p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p></div>
-  <div class="card"><img src="disney01.jpeg" alt="Disney"><p>Último nível: viagem para Disney totalmente gratuita.</p></div>
-</div>
-<p>Em breve: novas conquistas e sorteios mensais com prêmios e viagens.</p>
+  <h1>Ganhos Reais Vendendo Perfumes</h1>
+  <div class="profit-carousel">
+    <div class="profit-box">
+      <h2>1 perfume/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p>
+    </div>
+    <div class="profit-box">
+      <h2>2 perfumes/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p>
+    </div>
+    <div class="profit-box">
+      <h2>3 perfumes/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p>
+    </div>
+  </div>
+</section>
+
+<!-- NOVO: Parte 11 – Outras Formas de Ganho -->
+<section class="section" style="background-color:#111;">
+  <h1>Outras formas de ganhar na Vivarth</h1>
+  <p>Além dos lucros com vendas, você também pode ganhar assim:</p>
+  <div class="carousel-container">
+    <div class="box">
+      <h2>Comissão por equipe</h2>
+      <p>Ganhe uma porcentagem do total que sua equipe vende mensalmente.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus por metas alcançadas</h2>
+      <p>Ao atingir metas mensais ou trimestrais, receba bonificações extras.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus de crescimento</h2>
+      <p>Quanto maior sua equipe e resultados, maiores os bônus que você recebe.</p>
+    </div>
+    <div class="box">
+      <h2>Premiações especiais</h2>
+      <p>Viagens, eletrônicos e reconhecimento para os melhores desempenhos.</p>
+    </div>
+  </div>
 </section>
 
 </body>
