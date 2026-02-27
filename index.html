@@ -31,12 +31,12 @@
   .payment-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
   .payment-section img {width:200px; margin:20px 0;}
   .pix-code {background:#111; color:#fff; padding:15px; border-radius:12px; width:100%; word-break:break-all; margin-bottom:10px;}
-  .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-bottom:20px;}
+  .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer;}
 
-  /* WhatsApp / aba final */
-  .whatsapp-section {display:none; flex-direction:column; align-items:center; padding:30px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-  .whatsapp-btn {padding:15px 25px; background:#00FF00; color:#111; border:none; border-radius:12px; cursor:pointer; font-size:16px; margin-bottom:15px;}
-  .whatsapp-text {color:#FFD700; font-weight:bold; text-align:center;}
+  /* WhatsApp / Motivacional */
+  .whatsapp-section {display:flex; flex-direction:column; align-items:center; background:#222; padding:30px 20px; border-radius:12px; max-width:600px; margin:20px auto;}
+  .whatsapp-section p {margin:10px 0;}
+  .whatsapp-number {color:#00FF00; font-weight:bold; font-size:1.2em;}
 
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
@@ -61,21 +61,11 @@
 <section class="section" style="background-color:#111;">
   <h1>Quais são os seus sonhos?</h1>
   <div class="carousel-container">
-    <div class="box">
-      <h2>Aposentadoria confortável</h2>
-    </div>
-    <div class="box">
-      <h2>Viajar pelo mundo</h2>
-    </div>
-    <div class="box">
-      <h2>Comprar casa própria</h2>
-    </div>
-    <div class="box">
-      <h2>Ter um carro de luxo</h2>
-    </div>
-    <div class="box">
-      <h2>Liberdade financeira</h2>
-    </div>
+    <div class="box"><h2>Aposentadoria confortável</h2></div>
+    <div class="box"><h2>Viajar pelo mundo</h2></div>
+    <div class="box"><h2>Comprar casa própria</h2></div>
+    <div class="box"><h2>Ter um carro de luxo</h2></div>
+    <div class="box"><h2>Liberdade financeira</h2></div>
   </div>
 </section>
 
@@ -83,26 +73,11 @@
 <section class="section" style="background-color:#111;">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
-    <div class="box">
-      <h2>100% de lucro</h2>
-      <p>Vendendo produtos, você garante lucro total.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus por indicação</h2>
-      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
-    </div>
-    <div class="box">
-      <h2>Bonificações por metas</h2>
-      <p>Alcance metas e receba premiações incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Prêmios mensais</h2>
-      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Pontos que valem dinheiro</h2>
-      <p>Acumule pontos com suas vendas e equipe.</p>
-    </div>
+    <div class="box"><h2>100% de lucro</h2><p>Vendendo produtos, você garante lucro total.</p></div>
+    <div class="box"><h2>Bônus por indicação</h2><p>Indique amigos e aumente seus ganhos instantaneamente.</p></div>
+    <div class="box"><h2>Bonificações por metas</h2><p>Alcance metas e receba premiações incríveis.</p></div>
+    <div class="box"><h2>Prêmios mensais</h2><p>Participe de sorteios exclusivos e viagens incríveis.</p></div>
+    <div class="box"><h2>Pontos que valem dinheiro</h2><p>Acumule pontos com suas vendas e equipe.</p></div>
   </div>
 </section>
 
@@ -238,10 +213,12 @@
   <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
 </section>
 
-<!-- WhatsApp / aba final -->
+<!-- WhatsApp / Motivacional -->
 <section class="whatsapp-section" id="whatsapp-section">
-  <button class="whatsapp-btn" onclick="openWhatsApp()">Clique aqui</button>
-  <p class="whatsapp-text">Você acaba de dar o primeiro passo rumo ao sucesso! Obrigado por fazer parte da Vivart.</p>
+  <p>🎉 Parabéns! Você acaba de dar o primeiro passo rumo ao sucesso!</p>
+  <p>Entre em contato para suporte ou dúvidas diretamente via WhatsApp:</p>
+  <p class="whatsapp-number">+55 51 92001-2441</p>
+  <p>Fale diretamente com a equipe Vivart e garanta todo o suporte necessário.</p>
 </section>
 
 <script>
@@ -277,20 +254,10 @@ function showPayment(){
     pixImage.src='pagamento03.jpeg';
     pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
   }
-
-  // Exibe a aba WhatsApp
-  document.getElementById('whatsapp-section').style.display='flex';
-  window.scrollTo({ top: document.getElementById('whatsapp-section').offsetTop, behavior:'smooth' });
 }
 
 function copyPix(){
   navigator.clipboard.writeText(document.getElementById('pix-code').textContent).then(()=>{alert('Código Pix copiado!');});
-}
-
-function openWhatsApp(){
-  const numero = '5511999999999'; // coloque o número do WhatsApp aqui
-  const mensagem = encodeURIComponent('Olá, acabei de realizar meu pedido na Vivart!');
-  window.open(https://wa.me/${numero}?text=${mensagem}, '_blank');
 }
 </script>
 
