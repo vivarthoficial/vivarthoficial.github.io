@@ -5,35 +5,143 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth - Transforme sua Vida</title>
 <style>
-  body {margin:0; font-family: Arial, sans-serif; background:#111; color:#fff; text-align:center;}
-  h1,h2 {color:#FFD700;}
-  p {margin:10px 0;}
-  .section {padding:40px;}
+  body {margin:0; font-family: Arial, sans-serif; background:#111; color:#fff;}
+  h1,h2 {color:#FFD700; margin-bottom:15px;}
+  p {margin-bottom:15px;}
+  .section {padding:60px 20px; text-align:center;}
 
-  /* Kits */
-  .kit-btn {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer; margin:10px; width:80%; max-width:300px;}
+  /* Containers */
+  .carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
+
+  /* Boxes */
+  .box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
+  .box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+
+  .products-container img {width:250px; border-radius:12px; margin-right:20px;}
+  .comparison-item {flex:0 0 300px; text-align:center;}
+  .comparison-item img {width:100%; border-radius:12px;}
 
   /* Formulário */
-  #form-section {display:none; flex-direction:column; align-items:center; padding:20px; margin-top:20px;}
-  #form-section input {width:80%; padding:10px; margin:8px 0; border-radius:5px; border:none;}
-  #form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer; margin-top:10px;}
+  #form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  #form-section input {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+  #form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+  #form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
 
   /* Pagamento */
-  #payment-section {display:none; padding:20px; margin-top:20px;}
+  #payment-section {display:none; padding:40px 20px; max-width:600px; margin:20px auto; background:#222; border-radius:12px;}
   #payment-section img {width:250px; border-radius:12px; margin-bottom:15px;}
-  .pix-code {background:#222; color:#FFD700; padding:15px; border-radius:8px; font-family:monospace; margin:10px 0;}
-  #payment-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer; margin-top:10px;}
+  .pix-code {background:#111; color:#FFD700; padding:15px; border-radius:8px; font-family:monospace; margin:10px 0;}
+  #payment-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:10px;}
+
+  @media(max-width:768px){
+    .comparison-item{flex:0 0 80%;}
+    .box, .kit-box{min-width:150px;}
+    .products-container img{width:80%;}
+  }
 </style>
 </head>
 <body>
 
-<!-- Kits -->
+<!-- Banner Principal -->
+<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;"></section>
+
+<!-- Frase Chamativa -->
 <section class="section">
-  <h1>Escolha seu Kit</h1>
-  <p>Aproveite frete grátis para todo o Brasil!</p>
-  <button class="kit-btn" onclick="selectKit('kit1')">Kit Inicial (R$300 – 500 pontos)</button><br>
-  <button class="kit-btn" onclick="selectKit('kit2')">Kit Intermediário (R$500 – 700 pontos)</button><br>
-  <button class="kit-btn" onclick="selectKit('kit3')">Kit Avançado (R$1.000 – 1.100 pontos)</button>
+  <h1>Você já imaginou transformar sua vida?</h1>
+  <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de luxo?</p>
+  <p>Na Vivarth é possível!</p>
+</section>
+
+<!-- Pergunta Persuasiva -->
+<section class="section" style="background-color:#222;">
+  <h1>Quais são os seus sonhos?</h1>
+  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
+  <div class="carousel-container">
+    <div class="box">Aposentadoria confortável</div>
+    <div class="box">Viajar pelo mundo</div>
+    <div class="box">Comprar casa própria</div>
+    <div class="box">Ter um carro de luxo</div>
+    <div class="box">Liberdade financeira</div>
+  </div>
+  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
+</section>
+
+<!-- Benefícios -->
+<section class="section">
+  <h1>Benefícios e Formas de Ganho</h1>
+  <div class="carousel-container">
+    <div class="box">
+      <h2>100% de lucro</h2>
+      <p>Vendendo produtos de luxo, você garante lucro total.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus por indicação</h2>
+      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
+    </div>
+    <div class="box">
+      <h2>Bonificações por metas</h2>
+      <p>Alcance metas e receba premiações incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Prêmios mensais</h2>
+      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Pontos que valem dinheiro</h2>
+      <p>Acumule pontos com suas vendas e equipe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Sobre a Empresa -->
+<section class="section">
+  <h1>Sobre a Vivarth</h1>
+  <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
+</section>
+
+<!-- Produtos (Perfumes) -->
+<section class="section" style="background-color:#111;">
+  <h1>Perfumes de Alto Luxo</h1>
+  <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
+  <div class="products-container">
+    <img src="01.jpeg" alt="Perfume 1">
+    <img src="02.jpeg" alt="Perfume 2">
+    <img src="03.jpeg" alt="Perfume 3">
+  </div>
+</section>
+
+<!-- Estrutura de Níveis -->
+<section class="section">
+  <h1>Estrutura de Níveis</h1>
+  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
+</section>
+
+<!-- Kits -->
+<section class="section" style="background-color:#111;">
+  <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
+  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
+  <div class="kits-container">
+    <div class="kit-box">
+      <img src="kit01.jpeg" alt="Kit 1">
+      <h2>Kit Inicial</h2>
+      <p>R$300 - Ganhe 500 pontos</p>
+      <button onclick="selectKit('kit1')">Escolher Kit Inicial</button>
+    </div>
+    <div class="kit-box">
+      <img src="kit02.jpeg" alt="Kit 2">
+      <h2>Kit Intermediário</h2>
+      <p>R$500 - Ganhe 700 pontos</p>
+      <button onclick="selectKit('kit2')">Escolher Kit Intermediário</button>
+    </div>
+    <div class="kit-box">
+      <img src="kit03.jpeg" alt="Kit 3">
+      <h2>Kit Avançado</h2>
+      <p>R$1.000 - Ganhe 1.100 pontos</p>
+      <button onclick="selectKit('kit3')">Escolher Kit Avançado</button>
+    </div>
+  </div>
 </section>
 
 <!-- Formulário -->
@@ -69,7 +177,6 @@ function selectKit(kit){
 }
 
 function showPayment(){
-  // simples validação
   const nome = document.getElementById('nome').value;
   if(!nome){ alert('Preencha seu nome'); return; }
 
