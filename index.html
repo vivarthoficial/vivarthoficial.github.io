@@ -18,21 +18,6 @@
       padding:80px 20px;
       text-align:center;
     }
-    .carousel-auto-container{
-      overflow:hidden;
-      max-width:100%;
-      margin:0 auto;
-    }
-    .carousel-auto-track{
-      display:flex;
-      width:300%;
-      transition: transform 0.5s ease-in-out;
-    }
-    .carousel-auto-item{
-      flex:0 0 33.3333%;
-      text-align:center;
-      padding:0 10px;
-    }
     .benefit-box {
       background-color:#222;
       border-radius:12px;
@@ -50,9 +35,25 @@
     .carousel-container::-webkit-scrollbar{
       display:none;
     }
+    .products-container {
+      display:flex;
+      overflow-x:auto;
+      gap:20px;
+      padding:20px 0;
+    }
+    .product-item {
+      flex:0 0 auto;
+      width:300px;
+      text-align:center;
+    }
+    .product-item img{
+      width:100%;
+      border-radius:12px;
+      margin-bottom:10px;
+    }
     @media(max-width:768px){
-      .carousel-auto-item{flex:0 0 100%;}
       .benefit-box{min-width:150px;}
+      .product-item{width:80%;}
     }
   </style>
 </head>
@@ -118,48 +119,33 @@
   </div>
 </section>
 
-<!-- Parte 5 – Produtos: Carrossel Automático -->
+<!-- Parte 5 – Produtos: Três Imagens Lado a Lado -->
 <section class="section">
   <h1 style="font-size:36px; margin-bottom:20px;">Nossos Perfumes de Luxo</h1>
   <p style="max-width:800px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
     Perfumes de luxo com inspiração árabe, aromas incomparáveis e alta perfumaria. Produtos exclusivos que encantam você e seu cliente.
   </p>
 
-  <div class="carousel-auto-container">
-    <div class="carousel-auto-track" id="carousel-track">
+  <div class="products-container">
+    <div class="product-item">
+      <img src="01.jpeg" alt="Perfume 1">
+      <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 1</h2>
+      <p>Fragrância elegante, exclusiva e sofisticada.</p>
+    </div>
 
-      <div class="carousel-auto-item">
-        <img src="01.jpeg" alt="Perfume 1" style="width:100%; border-radius:12px; margin-bottom:10px;">
-        <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 1</h2>
-        <p>Fragrância elegante, exclusiva e sofisticada.</p>
-      </div>
+    <div class="product-item">
+      <img src="02.jpeg" alt="Perfume 2">
+      <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 2</h2>
+      <p>Alta perfumaria com inspiração árabe, aroma intenso e marcante.</p>
+    </div>
 
-      <div class="carousel-auto-item">
-        <img src="02.jpeg" alt="Perfume 2" style="width:100%; border-radius:12px; margin-bottom:10px;">
-        <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 2</h2>
-        <p>Alta perfumaria com inspiração árabe, aroma intenso e marcante.</p>
-      </div>
-
-      <div class="carousel-auto-item">
-        <img src="03.jpeg" alt="Perfume 3" style="width:100%; border-radius:12px; margin-bottom:10px;">
-        <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 3</h2>
-        <p>Produto premium, ideal para clientes exigentes que buscam sofisticação.</p>
-      </div>
-
+    <div class="product-item">
+      <img src="03.jpeg" alt="Perfume 3">
+      <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 3</h2>
+      <p>Produto premium, ideal para clientes exigentes que buscam sofisticação.</p>
     </div>
   </div>
 </section>
-
-<script>
-// Carrossel automático suave
-const track = document.getElementById('carousel-track');
-let index = 0;
-setInterval(() => {
-  index++;
-  if(index > 2) index = 0;
-  track.style.transform = translateX(-${index * 33.3333}%);
-}, 3000);
-</script>
 
 </body>
 </html>
