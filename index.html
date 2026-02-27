@@ -53,6 +53,7 @@
     @media(max-width:768px){
       .benefit-box{min-width:150px;}
       .product-item, .award-item{width:80%;}
+      .comparison-box {flex-direction:column; gap:20px;}
     }
     .company-box {
       background-color:#111; 
@@ -62,36 +63,77 @@
       max-width:800px; 
       margin:0 auto 60px auto;
     }
+    .comparison-box {
+      display:flex;
+      justify-content:center;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+    .comparison-item {
+      flex:0 0 300px;
+      text-align:center;
+    }
+    .profit-box {
+      background-color:#222;
+      border-radius:12px;
+      padding:20px;
+      margin:10px auto;
+      max-width:600px;
+    }
   </style>
 </head>
 <body>
 
-<!-- Banner Principal -->
+<!-- Parte 0 – Comparativo Modelo Tradicional x Vivarth -->
+<section class="section">
+  <h1>Como funciona o modelo tradicional x Modelo Vivarth</h1>
+  <p style="max-width:900px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
+    Descubra como a Vivarth facilita suas vendas e maximiza seus lucros.
+  </p>
+  <div class="comparison-box">
+    <div class="comparison-item">
+      <img src="modelo convencional.jpeg" alt="Modelo Tradicional" style="width:100%; border-radius:12px;">
+      <p>Modelo Tradicional</p>
+      <p style="font-size:14px; max-width:300px; margin:10px auto;">
+        Passa por fábrica → galpão → logística → distribuição → cliente final. Complexo, demora e reduz lucro.
+      </p>
+    </div>
+    <div class="comparison-item">
+      <img src="modelovivarth.jpeg" alt="Modelo Vivarth" style="width:100%; border-radius:12px;">
+      <p>Modelo Vivarth</p>
+      <p style="font-size:14px; max-width:300px; margin:10px auto;">
+        Compra direto da fábrica → consultor → cliente. Menos etapas, maior lucro e mais rapidez.
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Parte 1 – Banner Principal -->
 <section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
 </section>
 
-<!-- Parte 1 – Frase Chamativa -->
+<!-- Parte 2 – Frase Chamativa -->
 <section class="section">
   <h1>Você já imaginou transformar sua vida?</h1>
   <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de luxo?</p>
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Pergunta Persuasiva (caixinhas padronizadas) -->
+<!-- Parte 3 – Quais são os seus sonhos? -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
-    <div class="benefit-box" style="background-color:#333; box-shadow:0 4px 8px rgba(0,0,0,0.5);">Aposentadoria confortável</div>
-    <div class="benefit-box" style="background-color:#333; box-shadow:0 4px 8px rgba(0,0,0,0.5);">Viajar pelo mundo</div>
-    <div class="benefit-box" style="background-color:#333; box-shadow:0 4px 8px rgba(0,0,0,0.5);">Comprar casa própria</div>
-    <div class="benefit-box" style="background-color:#333; box-shadow:0 4px 8px rgba(0,0,0,0.5);">Ter um carro de luxo</div>
-    <div class="benefit-box" style="background-color:#333; box-shadow:0 4px 8px rgba(0,0,0,0.5);">Liberdade financeira</div>
+    <div class="benefit-box">Aposentadoria confortável</div>
+    <div class="benefit-box">Viajar pelo mundo</div>
+    <div class="benefit-box">Comprar casa própria</div>
+    <div class="benefit-box">Ter um carro de luxo</div>
+    <div class="benefit-box">Liberdade financeira</div>
   </div>
   <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
-<!-- Parte 3 – Benefícios e Formas de Ganho -->
+<!-- Parte 4 – Benefícios e Formas de Ganho -->
 <section class="section">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
@@ -118,68 +160,53 @@
   </div>
 </section>
 
-<!-- Parte 4 – Sobre a Empresa -->
+<!-- Parte 5 – Sobre a Empresa -->
 <section class="section">
   <div class="company-box">
     <h1>Sobre a Vivarth</h1>
-    <p>Vivarth é uma empresa brasileira de 2021, entrando agora no ramo de vendas diretas. Sólida, confiável e pronta para transformar vidas.</p>
+    <p>Vivarth é uma empresa brasileira de 2021, especializada em marketing de rede. Trabalhamos diretamente com consultores para oferecer produtos de alto valor com lucro real e rápido.</p>
   </div>
 </section>
 
-<!-- Parte 5 – Produtos: Imagens apenas, descrição geral -->
+<!-- Parte 6 – Produtos -->
 <section class="section">
-  <h1 style="font-size:36px; margin-bottom:20px;">Perfumes de Alto Luxo</h1>
-  <p style="max-width:800px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
-    Perfumes de perfumaria de alto luxo, difíceis de encontrar, com inspiração árabe. Exclusivos e sofisticados.
-  </p>
-
+  <h1>Perfumes de Alto Luxo</h1>
+  <p style="max-width:800px; margin:0 auto 40px auto;">Perfumes de perfumaria de alto luxo, difíceis de encontrar, com inspiração árabe. Exclusivos e sofisticados.</p>
   <div class="products-container">
-    <div class="product-item">
-      <img src="01.jpeg" alt="Perfume 1">
-    </div>
-    <div class="product-item">
-      <img src="02.jpeg" alt="Perfume 2">
-    </div>
-    <div class="product-item">
-      <img src="03.jpeg" alt="Perfume 3">
-    </div>
+    <div class="product-item"><img src="01.jpeg" alt="Perfume 1"></div>
+    <div class="product-item"><img src="02.jpeg" alt="Perfume 2"></div>
+    <div class="product-item"><img src="03.jpeg" alt="Perfume 3"></div>
   </div>
 </section>
 
-<!-- Parte 6 – Estrutura de Níveis (imagem maior e centralizada) -->
+<!-- Parte 7 – Estrutura de Níveis -->
 <section class="section" style="background-color:#222;">
   <h1>Estrutura de Níveis</h1>
-  <p style="max-width:900px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
-    Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.
-  </p>
+  <p style="max-width:900px; margin:0 auto 40px auto;">Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
   <div style="display:flex; justify-content:center;">
     <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:90%; max-width:900px; border-radius:12px; display:block;">
   </div>
 </section>
 
-<!-- Parte 7 – Bônus Inteligente -->
+<!-- Parte 8 – Bônus Inteligente -->
 <section class="section">
   <h1>Bônus Inteligente</h1>
-  <p style="max-width:900px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
-    Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.
-  </p>
+  <p style="max-width:900px; margin:0 auto 40px auto;">Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
   <div style="display:flex; justify-content:center;">
-    <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:90%; max-width:900px; border-radius:12px; display:block;">
+    <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:90%; max-width:900px; border-radius:12px;">
   </div>
 </section>
 
-<!-- Parte 8 – Bônus da Equipe -->
+<!-- Parte 9 – Bônus da Equipe -->
 <section class="section" style="background-color:#222;">
   <h1>Bônus da Equipe</h1>
-  <p style="max-width:900px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
-    Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.
-  </p>
+  <p style="max-width:900px; margin:0 auto 40px auto;">Toda sua equipe gera pontos. Quanto mais pessoas entrarem, mais você ganha.</p>
   <div style="display:flex; justify-content:center;">
-    <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:90%; max-width:900px; border-radius:12px; display:block;">
+    <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:90%; max-width:900px; border-radius:12px;">
   </div>
 </section>
 
-<!-- Parte 9 – Premiações e Conquistas -->
+<!-- Parte 10 – Premiações e Conquistas -->
 <section class="section">
   <h1>Premiações e Conquistas</h1>
   <div class="awards-container">
@@ -195,6 +222,17 @@
     Último nível → viagem Disney totalmente gratuita.<br><br>
     <strong>Em breve: novas conquistas e sorteios mensais com prêmios e viagens.</strong>
   </p>
+</section>
+
+<!-- Lucro Diário -->
+<section class="section" style="background-color:#222;">
+  <h1>Ganhos Reais com Vivarth</h1>
+  <div class="profit-box">
+    <p>Vender 1 perfume por dia: compra R$60, vende R$120 → lucro R$60/dia</p>
+    <p>Vender 2 perfumes por dia: lucro R$120/dia</p>
+    <p>Vender 3 perfumes por dia: lucro R$180/dia</p>
+    <p>Ganhos consistentes e reais desde o primeiro dia.</p>
+  </div>
 </section>
 
 </body>
