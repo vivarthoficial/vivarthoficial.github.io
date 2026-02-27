@@ -8,7 +8,7 @@
   body {margin:0; font-family: Arial, sans-serif; background:#111; color:#fff;}
   h1,h2 {color:#FFD700; margin-bottom:15px;}
   p {margin-bottom:15px;}
-  .section {padding:60px 20px; text-align:center;}
+  .section {padding:60px 20px; text-align:center; background:#111;} /* fundo preto para todas as seções */
 
   /* Containers */
   .carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
@@ -24,14 +24,23 @@
 
   /* Formulário */
   #form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-  #form-section input {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
-  #form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+  #form-section input, #form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
   #form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
 
   /* Pagamento */
   #payment-section {display:none; padding:40px 20px; max-width:600px; margin:20px auto; background:#222; border-radius:12px;}
   #payment-section img {width:250px; border-radius:12px; margin-bottom:15px;}
-  .pix-code {background:#111; color:#FFD700; padding:15px; border-radius:8px; font-family:monospace; margin:10px 0;}
+  .pix-code {
+    background:#111;
+    color:#FFD700;
+    padding:15px;
+    border-radius:8px;
+    font-family:monospace;
+    margin:10px 0;
+    overflow-x:auto; /* permite rolagem horizontal para códigos grandes */
+    white-space:nowrap; /* não quebra linhas */
+    max-width:100%; /* não ultrapassa a largura da seção */
+  }
   #payment-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:10px;}
 
   @media(max-width:768px){
@@ -54,7 +63,7 @@
 </section>
 
 <!-- Pergunta Persuasiva -->
-<section class="section" style="background-color:#222;">
+<section class="section">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
@@ -101,7 +110,7 @@
 </section>
 
 <!-- Produtos (Perfumes) -->
-<section class="section" style="background-color:#111;">
+<section class="section">
   <h1>Perfumes de Alto Luxo</h1>
   <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
   <div class="products-container">
@@ -111,17 +120,9 @@
   </div>
 </section>
 
-<!-- Estrutura de Níveis -->
-<section class="section">
-  <h1>Estrutura de Níveis</h1>
-  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
-</section>
-
 <!-- Kits -->
-<section class="section" style="background-color:#111;">
-  <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
-  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
+<section class="section">
+  <h1>Escolha seu Kit</h1>
   <div class="kits-container">
     <div class="kit-box">
       <img src="kit01.jpeg" alt="Kit 1">
@@ -161,7 +162,7 @@
 <!-- Pagamento -->
 <section id="payment-section">
   <h1>Pagamento via Pix</h1>
-  <p>Use o QR Code abaixo ou copie o código para pagar:</p>
+  <p>Use o QR Code abaixo ou copie o código:</p>
   <img id="pix-image" src="" alt="QR Code">
   <div id="pix-code" class="pix-code"></div>
   <button onclick="copyPix()">Copiar Código Pix</button>
