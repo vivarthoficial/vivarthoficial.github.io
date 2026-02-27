@@ -45,23 +45,30 @@ body{
     color:#FFD700;
 }
 
-/* Caixas da Parte 3 */
+/* Carrossel Parte 3 */
+.benefit-container{
+    display:flex;
+    overflow-x:auto;
+    gap:20px;
+    padding-bottom:20px;
+    scroll-snap-type:x mandatory;
+}
+
 .benefit-box{
+    flex:0 0 300px;
+    scroll-snap-align:start;
     background-color:#000;
     border:2px solid #FFD700;
     border-radius:12px;
     padding:30px;
-    width:280px;
     text-align:center;
 }
 
-.benefit-container{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
+.benefit-box h2{
+    font-size:24px;
+    color:#FFD700;
+    margin-bottom:15px;
 }
-
 </style>
 </head>
 <body>
@@ -83,7 +90,7 @@ body{
   <p>Na <strong>Vivarth</strong> você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
-<!-- Parte 3 – Benefícios e Formas de Ganho -->
+<!-- Parte 3 – Benefícios e Formas de Ganho (Carrossel) -->
 <section class="section" style="background-color:#111; padding:80px 20px;">
   <h1 style="font-size:36px; margin-bottom:40px;">Benefícios e Formas de Ganho</h1>
   
@@ -91,29 +98,35 @@ body{
 
     <!-- Caixa 1 -->
     <div class="benefit-box">
-      <h2 class="gold" style="font-size:24px; margin-bottom:15px;">100% de Lucro</h2>
+      <h2>100% de Lucro</h2>
       <p>Venda nossos produtos de luxo e ganhe <strong>100% de lucro</strong> sobre cada venda.</p>
     </div>
 
     <!-- Caixa 2 -->
     <div class="benefit-box">
-      <h2 class="gold" style="font-size:24px; margin-bottom:15px;">Bônus por Indicação</h2>
+      <h2>Bônus por Indicação</h2>
       <p>Indique novos membros e receba <strong>bonificações diretas</strong> para sua conta.</p>
     </div>
 
     <!-- Caixa 3 -->
     <div class="benefit-box">
-      <h2 class="gold" style="font-size:24px; margin-bottom:15px;">Premiações Mensais</h2>
+      <h2>Premiações Mensais</h2>
       <p>Participe de metas e conquiste <strong>prêmios exclusivos</strong> todo mês.</p>
     </div>
 
-  </div>
-</section>
+    <!-- Caixa 4 -->
+    <div class="benefit-box">
+      <h2>Pontos que Valem Dinheiro</h2>
+      <p>Acumule pontos e transforme cada conquista em <strong>dinheiro real</strong>.</p>
+    </div>
 
-<!-- Parte 4 – Sobre a Empresa -->
-<section class="section" style="background-color:#111; padding:80px 20px;">
-  <h1>Sobre a Vivarth</h1>
-  <p>Vivarth é uma empresa brasileira no setor de cosméticos desde 2021. Entrando agora no ramo de marketing de venda direta, sólida, confiável e pronta para transformar vidas.</p>
+    <!-- Caixa 5 -->
+    <div class="benefit-box">
+      <h2>Premiações Exclusivas</h2>
+      <p>Alcance metas e ganhe <strong>prêmios luxuosos</strong> todo mês, surpreendendo-se a cada nível.</p>
+    </div>
+
+  </div>
 </section>
 
 </body>
