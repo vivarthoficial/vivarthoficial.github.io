@@ -10,47 +10,32 @@
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
   
-  /* Carrosséis e layouts */
-  .carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
-  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
-
-  .box, .profit-box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
-  .box img, .profit-box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  /* Containers */
+  .carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
+  
+  .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
+  .box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
   .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
-  .kits-container {justify-content:center; flex-wrap:wrap;}
-  .kit-box {flex:0 0 300px;}
-
-  /* Formulário interno */
-  #formulario {display:none; background:#222; padding:30px; border-radius:12px; margin-top:40px;}
-  #formulario input, #formulario select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
-  #formulario label {display:block; margin-top:10px; text-align:left;}
-  #formulario button {padding:15px 30px; margin-top:20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer;}
+  
+  /* Kits */
+  .kits-container {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
+  .kit-box {background:#222; border-radius:12px; padding:20px; text-align:center; width:250px;}
+  .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  .kit-box button {background:#FFD700; color:#111; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-top:10px; font-weight:bold;}
   
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
-    .box, .profit-box, .kit-box{min-width:80%;}
+    .box{min-width:150px;}
+    .profit-box{min-width:150px;}
     .products-container img{width:80%;}
+    .kit-box{width:80%;}
   }
 </style>
-<script>
-  function mostrarFormulario(kit) {
-    document.getElementById('formulario').style.display = 'block';
-    document.getElementById('kitSelecionado').value = kit;
-    window.scrollTo({ top: document.getElementById('formulario').offsetTop - 20, behavior: 'smooth' });
-  }
-
-  function toggleIndicacao(value) {
-    const campo = document.getElementById('nomeConsultorDiv');
-    if(value === 'sim') {
-      campo.style.display = 'block';
-    } else {
-      campo.style.display = 'none';
-    }
-  }
-</script>
 </head>
 <body>
 
@@ -65,52 +50,42 @@
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Quais são os seus sonhos? (caixa fixa) -->
+<!-- Parte 2 – Quais são os seus sonhos? (Imagem fixa) -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
-  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
-  <div class="carousel-container">
-    <div class="box"><p>Aposentadoria confortável</p></div>
-    <div class="box"><p>Viajar pelo mundo</p></div>
-    <div class="box"><p>Comprar casa própria</p></div>
-    <div class="box"><p>Ter um carro de luxo</p></div>
-    <div class="box"><p>Liberdade financeira</p></div>
+  <div class="box" style="max-width:400px; margin:0 auto;">
+    <p>Aposentadoria confortável, Viajar pelo mundo, Comprar casa própria, Ter um carro de luxo, Liberdade financeira</p>
   </div>
-  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
 <!-- Parte 3 – Benefícios e Formas de Ganho -->
 <section class="section">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
-    <div class="box"><h2>100% de lucro</h2><p>Vendendo produtos de luxo, você garante lucro total.</p></div>
-    <div class="box"><h2>Bônus por indicação</h2><p>Indique amigos e aumente seus ganhos instantaneamente.</p></div>
-    <div class="box"><h2>Bonificações por metas</h2><p>Alcance metas e receba premiações incríveis.</p></div>
-    <div class="box"><h2>Prêmios mensais</h2><p>Participe de sorteios exclusivos e viagens incríveis.</p></div>
-    <div class="box"><h2>Pontos que valem dinheiro</h2><p>Acumule pontos com suas vendas e equipe.</p></div>
+    <div class="box">
+      <h2>100% de lucro</h2>
+      <p>Vendendo produtos de luxo, você garante lucro total.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus por indicação</h2>
+      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
+    </div>
+    <div class="box">
+      <h2>Bonificações por metas</h2>
+      <p>Alcance metas e receba premiações incríveis.</p>
+    </div>
   </div>
 </section>
 
-<!-- Parte 4 – Sobre a Empresa e Comparativo -->
-<section class="section">
+<!-- Parte 4 – Sobre a Empresa -->
+<section class="section" style="background-color:#222;">
   <h1>Sobre a Vivarth</h1>
   <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
-  <div class="comparison-box">
-    <div class="comparison-item">
-      <img src="modeloconvencional.jpeg" alt="Modelo Tradicional">
-      <p>Modelo Convencional</p>
-    </div>
-    <div class="comparison-item">
-      <img src="modelovivarth.jpeg" alt="Modelo Vivarth">
-      <p>Modelo Vivarth – Muito mais simples, rápido e eficaz</p>
-    </div>
-  </div>
 </section>
 
 <!-- Parte 5 – Produtos (Perfumes) -->
-<section class="section" style="background-color:#111;">
+<section class="section">
   <h1>Perfumes de Alto Luxo</h1>
-  <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
   <div class="products-container">
     <img src="01.jpeg" alt="Perfume 1">
     <img src="02.jpeg" alt="Perfume 2">
@@ -118,137 +93,33 @@
   </div>
 </section>
 
-<!-- Parte 6 – Estrutura de Níveis -->
-<section class="section">
-  <h1>Estrutura de Níveis</h1>
-  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
-</section>
-
-<!-- Parte 7 – Bônus Inteligente -->
-<section class="section" style="background-color:#222;">
-  <h1>Bônus Inteligente</h1>
-  <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
-</section>
-
-<!-- Parte 8 – Bônus da Equipe -->
-<section class="section">
-  <h1>Bônus da Equipe</h1>
-  <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
-</section>
-
-<!-- Parte 9 – Premiações e Conquistas -->
-<section class="section" style="background-color:#222;">
-  <h1>Premiações e Conquistas</h1>
-  <div class="products-container">
-    <img src="cruzeiro01.jpeg" alt="Cruzeiro">
-    <img src="viagens07.jpeg" alt="Viagem">
-    <img src="carro01.jpeg" alt="Carro">
-    <img src="disney01.jpeg" alt="Disney">
-  </div>
-  <p>Chegando ao nível Diamante, você ganha um cruzeiro com acompanhante totalmente pago.</p>
-  <p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p>
-  <p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p>
-  <p>Último nível: viagem para Disney totalmente gratuita.</p>
-  <div class="box" style="margin-top:20px;"><h2>Em breve:</h2><p>Novas conquistas e sorteios mensais com prêmios e viagens.</p></div>
-</section>
-
-<!-- Parte 10 – Ganhos Reais -->
-<section class="section">
-  <h1>Ganhos Reais Vendendo Perfumes</h1>
-  <div class="profit-carousel">
-    <div class="profit-box"><h2>1 perfume/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p></div>
-    <div class="profit-box"><h2>2 perfumes/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p></div>
-    <div class="profit-box"><h2>3 perfumes/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p></div>
-  </div>
-</section>
-
-<!-- Parte 11 – Outras Formas de Ganho -->
+<!-- Parte 6 – Kits (Apenas Kit 1 para teste) -->
 <section class="section" style="background-color:#111;">
-  <h1>Outras formas de ganhar na Vivarth</h1>
-  <p>Além dos lucros com vendas, você também pode ganhar assim:</p>
-  <div class="carousel-container">
-    <div class="box"><h2>Comissão por equipe</h2><p>Ganhe uma porcentagem do total que sua equipe vende mensalmente.</p></div>
-    <div class="box"><h2>Bônus por metas alcançadas</h2><p>Ao atingir metas mensais ou trimestrais, receba bonificações extras.</p></div>
-    <div class="box"><h2>Bônus de crescimento</h2><p>Quanto maior sua equipe e resultados, maiores os bônus que você recebe.</p></div>
-    <div class="box"><h2>Premiações especiais</h2><p>Viagens, eletrônicos e reconhecimento para os melhores desempenhos.</p></div>
-  </div>
-</section>
-
-<!-- Parte 12 – Cursos e Treinamentos -->
-<section class="section">
-  <h1>Na Vivarth você não está sozinho</h1>
-  <p>Temos cursos e treinamentos todas as semanas para guiar você até o seu sucesso.</p>
-</section>
-
-<!-- Parte 13 – Kits de Início -->
-<section class="section" style="background-color:#222;">
-  <h1>Escolha seu kit e comece a mudar sua vida hoje mesmo</h1>
-  <p>Aproveite a oportunidade de frete grátis para todo o Brasil!</p>
+  <h1>Escolha seu kit e comece a mudar de vida hoje mesmo!</h1>
+  <p>Aproveite a oportunidade de frete grátis para todo o Brasil</p>
+  
   <div class="kits-container">
+    <!-- Kit 1 -->
     <div class="kit-box">
-      <img src="kit01.jpeg" alt="Kit Inicial">
+      <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
-      <p>Compra: R$300 → Produtos: R$500</p>
-      <p>Pontos: 500 pontos acumulativos, rumo ao sucesso</p>
-      <button onclick="mostrarFormulario('Kit Inicial')">Escolha seu kit</button>
-    </div>
-    <div class="kit-box">
-      <img src="kit02.jpeg" alt="Kit Intermediário">
-      <h2>Kit Intermediário</h2>
-      <p>Compra: R$500 → Produtos: R$700</p>
-      <p>Pontos: 700 pontos acumulativos, rumo ao sucesso</p>
-      <button onclick="mostrarFormulario('Kit Intermediário')">Escolha seu kit</button>
-    </div>
-    <div class="kit-box">
-      <img src="kit03.jpeg" alt="Kit Avançado">
-      <h2>Kit Avançado</h2>
-      <p>Compra: R$1.000 → Produtos: R$1.300</p>
-      <p>Pontos: 1.100 pontos. Já entra como líder e tem benefícios exclusivos!</p>
-      <button onclick="mostrarFormulario('Kit Avançado')">Escolha seu kit</button>
+      <p>Investimento: R$300</p>
+      <p>Você ganha R$500 em produtos</p>
+      <p>500 pontos acumulativos – rumo ao sucesso!</p>
+      <button onclick="document.getElementById('pagamento1').scrollIntoView({behavior:'smooth'});">Pagar com Pix</button>
     </div>
   </div>
-  <p>Venda os produtos e ganhe 100% de lucro investido!</p>
 </section>
 
-<!-- Parte 14 – Formulário -->
-<section id="formulario" class="section">
-  <h1>Cadastro para seu kit</h1>
-  <form>
-    <label>Teve indicação de algum consultor?</label>
-    <select onchange="toggleIndicacao(this.value)">
-      <option value="nao">Não</option>
-      <option value="sim">Sim</option>
-    </select>
-    <div id="nomeConsultorDiv" style="display:none;">
-      <label>Nome ou código do consultor:</label>
-      <input type="text" name="consultor" placeholder="Digite aqui">
-    </div>
-
-    <label>Nome Completo</label>
-    <input type="text" name="nome" required>
-
-    <label>Data de Nascimento</label>
-    <input type="date" name="nascimento" required>
-
-    <label>CPF</label>
-    <input type="text" name="cpf" required>
-
-    <label>Endereço Completo</label>
-    <input type="text" name="endereco" placeholder="Rua, Número, Bairro, Cidade, CEP" required>
-
-    <label>Telefone</label>
-    <input type="tel" name="telefone" required>
-
-    <label>E-mail</label>
-    <input type="email" name="email" required>
-
-    <input type="hidden" id="kitSelecionado" name="kitSelecionado">
-
-    <button type="submit">Enviar e continuar para pagamento</button>
-  </form>
+<!-- Parte Pagamento (QR Code Kit 1) -->
+<section class="section" id="pagamento1" style="background-color:#222;">
+  <h1>Pagamento Kit 1</h1>
+  <p>Escaneie o QR Code abaixo ou copie o código Pix para realizar o pagamento:</p>
+  <img src="pagamento01.jpeg" alt="QR Code Kit 1" style="width:200px; border-radius:12px; margin-bottom:10px;">
+  <p style="word-break:break-word; background:#111; padding:10px; border-radius:8px;">
+00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1
+  </p>
+  <p>Após realizar o pagamento, envie o comprovante para o WhatsApp de atendimento.</p>
 </section>
 
 </body>
