@@ -217,5 +217,110 @@
   }
 </script>
 
+<!-- Formulário -->
+<section class="form-section" id="form-section">
+  <h1>Preencha seus dados</h1>
+  <label>Teve indicação de algum consultor?</label>
+  <select id="consultor">
+    <option value="nao">Não</option>
+    <option value="sim">Sim</option>
+  </select>
+  <input type="text" id="nome-consultor" placeholder="Nome ou código do consultor" style="display:none;">
+  
+  <label>Nome completo</label>
+  <input type="text" id="nome" required>
+  
+  <label>Data de nascimento</label>
+  <input type="date" id="nascimento" required>
+  
+  <label>CPF</label>
+  <input type="text" id="cpf" required>
+  
+  <label>Endereço completo</label>
+  <input type="text" id="endereco" placeholder="Rua, número, complemento" required>
+  
+  <label>CEP</label>
+  <input type="text" id="cep" required>
+  
+  <label>Cidade</label>
+  <input type="text" id="cidade" required>
+  
+  <label>Telefone</label>
+  <input type="tel" id="telefone" required>
+  
+  <label>E-mail</label>
+  <input type="email" id="email" required>
+  
+  <button onclick="showPayment()">Enviar e Prosseguir</button>
+</section>
+
+<!-- Pagamento -->
+<section class="payment-section" id="payment-section" style="display:none;">
+  <h1>Pagamento via Pix</h1>
+  <p>Use o QR Code ou copie o código abaixo para pagar diretamente para a Vivarth.</p>
+  <img id="pix-image" src="" alt="QR Code">
+  <div class="pix-code" id="pix-code"></div>
+  <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
+  
+  <p style="margin-top:20px;">Após copiar o código ou concluir o pagamento, clique no botão abaixo para enviar seus dados pelo WhatsApp:</p>
+  <button onclick="openWhatsApp()" style="padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer;">Clique aqui</button>
+</section>
+
+<script>
+let selectedKit = 'kit1'; // Por padrão, ou você define quando clicar no kit
+
+function selectKit(kit){
+  selectedKit = kit;
+  document.getElementById('form-section').style.display = 'flex';
+  window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
+}
+
+// Exibir campo consultor
+document.getElementById('consultor').addEventListener('change', function(){
+  document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
+});
+
+// Função para mostrar pagamento
+function showPayment(){
+  // Valida campos obrigatórios (opcional)
+  const nome = document.getElementById('nome').value;
+  if(!nome){
+    alert('Preencha seu nome antes de prosseguir.');
+    return;
+  }
+
+  document.getElementById('form-section').style.display='none';
+  document.getElementById('payment-section').style.display='block';
+  window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior: 'smooth' });
+
+  const pixImage = document.getElementById('pix-image');
+  const pixCode = document.getElementById('pix-code');
+
+  if(selectedKit==='kit1'){
+    pixImage.src='pagamento01.jpeg';
+    pixCode.textContent='00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1';
+  } else if(selectedKit==='kit2'){
+    pixImage.src='pagamento02.jpeg';
+    pixCode.textContent='00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB';
+  } else if(selectedKit==='kit3'){
+    pixImage.src='pagamento03.jpeg';
+    pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
+  }
+}
+
+// Copiar Pix
+function copyPix(){
+  const code = document.getElementById('pix-code').textContent;
+  navigator.clipboard.writeText(code).then(()=>{alert('Código Pix copiado!');});
+}
+
+// WhatsApp
+function openWhatsApp(){
+  const nome = document.getElementById('nome').value;
+  let kitText = selectedKit==='kit1'?'Kit Inicial': selectedKit==='kit2'?'Kit Intermediário':'Kit Avançado';
+  const mensagem = Olá, meu nome é ${nome}, adquiri o ${kitText}, quero mais informações.;
+  window.open(https://wa.me/55191920012441?text=${encodeURIComponent(mensagem)}, '_blank');
+}
+</script>
 </body>
 </html>
