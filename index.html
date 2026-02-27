@@ -234,7 +234,6 @@
 </section>
 
 <script>
-  // Mostra campo do consultor
   document.getElementById('consultor').addEventListener('change', function(){
     document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
   });
@@ -244,6 +243,8 @@
   function selectKit(kit){
     selectedKit = kit;
     document.getElementById('form-section').style.display = 'flex';
+    document.getElementById('payment-section').style.display = 'none';
+    document.getElementById('whatsapp-section').style.display = 'none';
     window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
   }
 
