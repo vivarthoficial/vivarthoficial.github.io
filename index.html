@@ -7,71 +7,71 @@
 <style>
   body {margin:0; font-family: Arial, sans-serif; background:#111; color:#fff; text-align:center;}
   h1,h2 {color:#FFD700;}
-  .kit-btn, .form-btn, .copy-btn {padding:15px 25px; border:none; border-radius:8px; cursor:pointer; margin:10px;}
-  .kit-btn {background:#FFD700; color:#111;}
-  .form-btn {background:#FFD700; color:#111;}
-  .copy-btn {background:#FFD700; color:#111;}
+  p {margin:10px 0;}
   .section {padding:40px;}
-  input, select {width:80%; padding:10px; margin:5px 0; border-radius:5px; border:none;}
-  #form-section, #payment-section {display:none; background:#222; padding:20px; border-radius:10px; margin:20px auto; max-width:500px;}
-  .pix-code {background:#111; color:#FFD700; padding:10px; border-radius:5px; font-family:monospace; margin:10px 0;}
+
+  /* Kits */
+  .kit-btn {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer; margin:10px; width:80%; max-width:300px;}
+
+  /* Formulário */
+  #form-section {display:none; flex-direction:column; align-items:center; padding:20px; margin-top:20px;}
+  #form-section input {width:80%; padding:10px; margin:8px 0; border-radius:5px; border:none;}
+  #form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer; margin-top:10px;}
+
+  /* Pagamento */
+  #payment-section {display:none; padding:20px; margin-top:20px;}
+  #payment-section img {width:250px; border-radius:12px; margin-bottom:15px;}
+  .pix-code {background:#222; color:#FFD700; padding:15px; border-radius:8px; font-family:monospace; margin:10px 0;}
+  #payment-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer; margin-top:10px;}
 </style>
 </head>
 <body>
 
-<h1>Escolha seu Kit e Comece a Transformar sua Vida</h1>
-
-<div>
-  <button class="kit-btn" onclick="selectKit('kit1')">Escolher Kit Inicial</button>
-  <button class="kit-btn" onclick="selectKit('kit2')">Escolher Kit Intermediário</button>
-  <button class="kit-btn" onclick="selectKit('kit3')">Escolher Kit Avançado</button>
-</div>
+<!-- Kits -->
+<section class="section">
+  <h1>Escolha seu Kit</h1>
+  <p>Aproveite frete grátis para todo o Brasil!</p>
+  <button class="kit-btn" onclick="selectKit('kit1')">Kit Inicial (R$300 – 500 pontos)</button><br>
+  <button class="kit-btn" onclick="selectKit('kit2')">Kit Intermediário (R$500 – 700 pontos)</button><br>
+  <button class="kit-btn" onclick="selectKit('kit3')">Kit Avançado (R$1.000 – 1.100 pontos)</button>
+</section>
 
 <!-- Formulário -->
-<div id="form-section">
-  <h2>Preencha seus Dados</h2>
-  <label>Nome completo</label>
-  <input type="text" id="nome" placeholder="Seu nome" required>
-  <label>Data de nascimento</label>
+<section id="form-section">
+  <h1>Preencha seus dados</h1>
+  <input type="text" id="nome" placeholder="Nome completo" required>
   <input type="date" id="nascimento" required>
-  <label>CPF</label>
-  <input type="text" id="cpf" placeholder="000.000.000-00" required>
-  <label>Endereço completo</label>
-  <input type="text" id="endereco" placeholder="Rua, número, complemento" required>
-  <label>CEP</label>
-  <input type="text" id="cep" placeholder="00000-000" required>
-  <label>Cidade</label>
-  <input type="text" id="cidade" required>
-  <label>Telefone</label>
-  <input type="tel" id="telefone" placeholder="(00) 00000-0000" required>
-  <label>E-mail</label>
-  <input type="email" id="email" placeholder="seu@email.com" required>
-  <button class="form-btn" onclick="showPayment()">Enviar e Prosseguir</button>
-</div>
+  <input type="text" id="cpf" placeholder="CPF" required>
+  <input type="text" id="endereco" placeholder="Endereço completo" required>
+  <input type="text" id="cep" placeholder="CEP" required>
+  <input type="text" id="cidade" placeholder="Cidade" required>
+  <input type="tel" id="telefone" placeholder="Telefone" required>
+  <input type="email" id="email" placeholder="E-mail" required>
+  <button onclick="showPayment()">Enviar e Prosseguir</button>
+</section>
 
 <!-- Pagamento -->
-<div id="payment-section">
-  <h2>Pagamento via Pix</h2>
-  <img id="pix-image" src="" alt="QR Code" style="width:200px; border-radius:10px;">
-  <div class="pix-code" id="pix-code"></div>
-  <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
-</div>
+<section id="payment-section">
+  <h1>Pagamento via Pix</h1>
+  <p>Use o QR Code abaixo ou copie o código para pagar:</p>
+  <img id="pix-image" src="" alt="QR Code">
+  <div id="pix-code" class="pix-code"></div>
+  <button onclick="copyPix()">Copiar Código Pix</button>
+</section>
 
 <script>
 let selectedKit = '';
 
 function selectKit(kit){
   selectedKit = kit;
-  document.getElementById('form-section').style.display = 'block';
+  document.getElementById('form-section').style.display = 'flex';
   window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
 }
 
 function showPayment(){
-  // Verifica se o nome foi preenchido
-  if(!document.getElementById('nome').value){
-    alert('Preencha seu nome antes de prosseguir.');
-    return;
-  }
+  // simples validação
+  const nome = document.getElementById('nome').value;
+  if(!nome){ alert('Preencha seu nome'); return; }
 
   document.getElementById('form-section').style.display = 'none';
   document.getElementById('payment-section').style.display = 'block';
@@ -82,13 +82,13 @@ function showPayment(){
 
   if(selectedKit==='kit1'){
     pixImage.src='pagamento01.jpeg';
-    pixCode.textContent='PIX KIT 1 - 000201...';
+    pixCode.textContent='00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1';
   } else if(selectedKit==='kit2'){
     pixImage.src='pagamento02.jpeg';
-    pixCode.textContent='PIX KIT 2 - 000202...';
+    pixCode.textContent='00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB';
   } else if(selectedKit==='kit3'){
     pixImage.src='pagamento03.jpeg';
-    pixCode.textContent='PIX KIT 3 - 000203...';
+    pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
   }
 }
 
