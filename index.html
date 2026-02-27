@@ -16,50 +16,70 @@ body{
 header{
     background: url("banner2.jpeg") center center / cover no-repeat;
     height:100vh;
-    display:flex;
-    align-items:flex-end;
-    justify-content:center;
-    padding-bottom:80px;
-    text-align:center;
 }
 
-header h1{
-    color:#FFD700;
-    font-size:42px;
-    text-shadow:2px 2px 10px black;
-}
-
+/* Seções */
 .section{
-    padding:80px 20px;
+    padding:100px 20px;
     text-align:center;
 }
 
 .section h2{
-    font-size:32px;
+    font-size:38px;
     color:#FFD700;
-    margin-bottom:20px;
+    margin-bottom:25px;
 }
 
 .section p{
-    font-size:20px;
+    font-size:22px;
     max-width:800px;
     margin:auto;
-    line-height:1.6;
+    line-height:1.7;
+}
+
+/* Fundo alternado */
+.dark{
+    background:#111;
+}
+
+.black{
+    background:black;
 }
 </style>
 </head>
 <body>
 
-<header>
-    <h1>Você já imaginou transformar sua vida?</h1>
-</header>
+<header></header>
 
-<div class="section">
-    <h2>Vivarth não é apenas um perfume.</h2>
+<!-- FRASE 1 -->
+<div class="section black">
+    <h2>Não é apenas um perfume.</h2>
     <p>
-        É presença. É poder. É elegância.
-        Cada fragrância foi pensada para marcar momentos,
-        criar memórias e elevar sua confiança ao próximo nível.
+        É a primeira impressão que ninguém esquece.
+    </p>
+</div>
+
+<!-- FRASE 2 -->
+<div class="section dark">
+    <h2>Presença não se explica.</h2>
+    <p>
+        Se sente.
+    </p>
+</div>
+
+<!-- FRASE 3 -->
+<div class="section black">
+    <h2>Quem usa Vivarth não passa despercebido.</h2>
+    <p>
+        Marca o ambiente. Marca pessoas. Marca momentos.
+    </p>
+</div>
+
+<!-- FRASE 4 -->
+<div class="section dark">
+    <h2>Elegância é escolha.</h2>
+    <p>
+        E você acabou de escolher o nível mais alto.
     </p>
 </div>
 
