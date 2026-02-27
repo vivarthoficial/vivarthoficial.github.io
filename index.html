@@ -35,24 +35,24 @@
     .carousel-container::-webkit-scrollbar{
       display:none;
     }
-    .products-container {
+    .products-container, .awards-container {
       display:flex;
       overflow-x:auto;
       gap:20px;
       padding:20px 0;
     }
-    .product-item {
+    .product-item, .award-item {
       flex:0 0 auto;
       width:300px;
       text-align:center;
     }
-    .product-item img{
+    .product-item img, .award-item img {
       width:100%;
       border-radius:12px;
     }
     @media(max-width:768px){
       .benefit-box{min-width:150px;}
-      .product-item{width:80%;}
+      .product-item, .award-item{width:80%;}
     }
     .company-box {
       background-color:#111; 
@@ -166,6 +166,35 @@
   <div style="display:flex; justify-content:center;">
     <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:90%; max-width:900px; border-radius:12px; display:block;">
   </div>
+</section>
+
+<!-- Parte 8 – Bônus da Equipe -->
+<section class="section" style="background-color:#222;">
+  <h1>Bônus da Equipe</h1>
+  <p style="max-width:900px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
+    Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.
+  </p>
+  <div style="display:flex; justify-content:center;">
+    <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:90%; max-width:900px; border-radius:12px; display:block;">
+  </div>
+</section>
+
+<!-- Parte 9 – Premiações e Conquistas -->
+<section class="section">
+  <h1>Premiações e Conquistas</h1>
+  <div class="awards-container">
+    <div class="award-item"><img src="cruzeiro01.jpeg" alt="Cruzeiro"></div>
+    <div class="award-item"><img src="viagens07.jpeg" alt="Viagem Maldivas"></div>
+    <div class="award-item"><img src="carro01.jpeg" alt="Carro"></div>
+    <div class="award-item"><img src="disney01.jpeg" alt="Disney"></div>
+  </div>
+  <p style="max-width:900px; margin:40px auto 0 auto; font-size:18px; line-height:1.5;">
+    Chegando ao nível Diamante → cruzeiro com acompanhante totalmente pago.<br>
+    Próximo nível → viagem Maldivas + iPhone topo de linha.<br>
+    Nível superior → carro elétrico automático sedã, 100% gratuito.<br>
+    Último nível → viagem Disney totalmente gratuita.<br><br>
+    <strong>Em breve: novas conquistas e sorteios mensais com prêmios e viagens.</strong>
+  </p>
 </section>
 
 </body>
