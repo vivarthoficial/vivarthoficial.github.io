@@ -26,24 +26,20 @@
     .carousel-auto-track{
       display:flex;
       width:300%;
-      animation: slide 9s infinite;
+      transition: transform 0.5s ease-in-out;
     }
     .carousel-auto-item{
       flex:0 0 33.3333%;
       text-align:center;
       padding:0 10px;
     }
-    @keyframes slide{
-      0% {transform:translateX(0);}
-      33% {transform:translateX(-33.3333%);}
-      66% {transform:translateX(-66.6666%);}
-      100% {transform:translateX(0);}
-    }
     .benefit-box {
       background-color:#222;
       border-radius:12px;
       padding:20px;
       margin:10px;
+      min-width:200px;
+      flex:0 0 auto;
     }
     .carousel-container {
       display:flex;
@@ -53,6 +49,10 @@
     }
     .carousel-container::-webkit-scrollbar{
       display:none;
+    }
+    @media(max-width:768px){
+      .carousel-auto-item{flex:0 0 100%;}
+      .benefit-box{min-width:150px;}
     }
   </style>
 </head>
@@ -74,11 +74,11 @@
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
-    <div class="benefit-box">Ter uma aposentadoria confortável</div>
+    <div class="benefit-box">Aposentadoria confortável</div>
     <div class="benefit-box">Viajar pelo mundo</div>
-    <div class="benefit-box">Comprar sua casa própria</div>
+    <div class="benefit-box">Comprar casa própria</div>
     <div class="benefit-box">Ter um carro de luxo</div>
-    <div class="benefit-box">Ter liberdade financeira</div>
+    <div class="benefit-box">Liberdade financeira</div>
   </div>
   <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
@@ -110,13 +110,11 @@
   </div>
 </section>
 
-<!-- Parte 4 – Sobre a Empresa e Imprensa -->
+<!-- Parte 4 – Sobre a Empresa -->
 <section class="section">
   <div class="company-box" style="background-color:#111; border:2px solid #FFD700; border-radius:12px; padding:40px 30px; max-width:800px; margin:0 auto 60px auto;">
     <h1>Sobre a Vivarth</h1>
-    <p>Vivarth é uma empresa brasileira no setor de cosméticos desde 2021. Entrando agora no ramo de marketing de venda direta, sólida, confiável e pronta para transformar vidas.</p>
-    <p>Somos reconhecidos na imprensa por nosso compromisso com qualidade e resultados reais. Nossos produtos e modelos de negócio já foram destaque em revistas e sites especializados, reforçando nossa credibilidade e confiança.</p>
-    <p>Escolher a Vivarth é investir em um futuro de sucesso, com suporte, transparência e oportunidades reais de crescimento.</p>
+    <p>Vivarth é uma empresa brasileira de 2021, entrando agora no ramo de vendas diretas. Sólida, confiável e pronta para transformar vidas.</p>
   </div>
 </section>
 
@@ -128,23 +126,20 @@
   </p>
 
   <div class="carousel-auto-container">
-    <div class="carousel-auto-track">
+    <div class="carousel-auto-track" id="carousel-track">
 
-      <!-- Produto 1 -->
       <div class="carousel-auto-item">
         <img src="01.jpeg" alt="Perfume 1" style="width:100%; border-radius:12px; margin-bottom:10px;">
         <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 1</h2>
         <p>Fragrância elegante, exclusiva e sofisticada.</p>
       </div>
 
-      <!-- Produto 2 -->
       <div class="carousel-auto-item">
         <img src="02.jpeg" alt="Perfume 2" style="width:100%; border-radius:12px; margin-bottom:10px;">
         <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 2</h2>
         <p>Alta perfumaria com inspiração árabe, aroma intenso e marcante.</p>
       </div>
 
-      <!-- Produto 3 -->
       <div class="carousel-auto-item">
         <img src="03.jpeg" alt="Perfume 3" style="width:100%; border-radius:12px; margin-bottom:10px;">
         <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 3</h2>
@@ -154,6 +149,17 @@
     </div>
   </div>
 </section>
+
+<script>
+// Carrossel automático suave
+const track = document.getElementById('carousel-track');
+let index = 0;
+setInterval(() => {
+  index++;
+  if(index > 2) index = 0;
+  track.style.transform = translateX(-${index * 33.3333}%);
+}, 3000);
+</script>
 
 </body>
 </html>
