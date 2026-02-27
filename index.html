@@ -9,19 +9,19 @@
   h1,h2 {color:#FFD700; margin-bottom:20px;}
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
-
-  /* Carrossel horizontal */
+  
+  /* Scroll horizontal para carrossel de caixinhas */
   .carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
-
+  
   .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
   .box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-
+  
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
   .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
-
+  
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
     .box{min-width:150px;}
@@ -43,31 +43,31 @@
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Quais são os seus sonhos? (Corrigido) -->
+<!-- Parte 2 – Quais são os seus sonhos? -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   
   <div class="carousel-container">
     <div class="box">
-      <h2>Aposentadoria digna</h2>
-      <p>Ter uma aposentadoria confortável e segura para o futuro.</p>
+      <img src="sonho1.jpeg" alt="Aposentadoria">
+      <p>Aposentadoria confortável</p>
     </div>
     <div class="box">
-      <h2>Viajar pelo mundo</h2>
-      <p>Conhecer novos lugares e experiências inesquecíveis.</p>
+      <img src="sonho2.jpeg" alt="Viagem">
+      <p>Viajar pelo mundo</p>
     </div>
     <div class="box">
-      <h2>Casa própria</h2>
-      <p>Ter um lar para chamar de seu, com segurança e conforto.</p>
+      <img src="sonho3.jpeg" alt="Casa">
+      <p>Comprar casa própria</p>
     </div>
     <div class="box">
-      <h2>Carro de luxo</h2>
-      <p>Dirigir um carro confortável, seguro e sofisticado.</p>
+      <img src="sonho4.jpeg" alt="Carro">
+      <p>Ter um carro de luxo</p>
     </div>
     <div class="box">
-      <h2>Liberdade financeira</h2>
-      <p>Ter independência financeira para viver como deseja.</p>
+      <img src="sonho5.jpeg" alt="Liberdade">
+      <p>Liberdade financeira</p>
     </div>
   </div>
   
@@ -167,6 +167,79 @@
     <h2>Em breve:</h2>
     <p>Novas conquistas e sorteios mensais com prêmios e viagens.</p>
   </div>
+</section>
+
+<!-- Parte 10 – Ganhos Reais com Perfumes -->
+<section class="section">
+  <h1>Ganhos Reais Vendendo Perfumes</h1>
+  <div class="profit-carousel">
+    <div class="profit-box">
+      <h2>1 perfume/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p>
+    </div>
+    <div class="profit-box">
+      <h2>2 perfumes/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p>
+    </div>
+    <div class="profit-box">
+      <h2>3 perfumes/dia</h2>
+      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p>
+    </div>
+  </div>
+</section>
+
+<!-- Parte 11 – Outras Formas de Ganho -->
+<section class="section" style="background-color:#111;">
+  <h1>Outras formas de ganhar na Vivarth</h1>
+  <p>Além dos lucros com vendas, você também pode ganhar assim:</p>
+  <div class="carousel-container">
+    <div class="box">
+      <h2>Comissão por equipe</h2>
+      <p>Ganhe uma porcentagem do total que sua equipe vende mensalmente.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus por metas alcançadas</h2>
+      <p>Ao atingir metas mensais ou trimestrais, receba bonificações extras.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus de crescimento</h2>
+      <p>Quanto maior sua equipe e resultados, maiores os bônus que você recebe.</p>
+    </div>
+    <div class="box">
+      <h2>Premiações especiais</h2>
+      <p>Viagens, eletrônicos e reconhecimento para os melhores desempenhos.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Parte 12 – Kits de Início -->
+<section class="section" style="background-color:#111;">
+  <h1>Escolha seu kit e comece a mudar de vida hoje mesmo</h1>
+  
+  <div class="carousel-container">
+    <!-- Kit 1 -->
+    <div class="box">
+      <img src="kit01.jpeg" alt="Kit 1">
+      <h2>Kit Inicial</h2>
+      <p>Invista R$300 e receba R$500 em produtos</p>
+    </div>
+    
+    <!-- Kit 2 -->
+    <div class="box">
+      <img src="kit02.jpeg" alt="Kit 2">
+      <h2>Kit Intermediário</h2>
+      <p>Invista R$500 e receba R$700 em produtos</p>
+    </div>
+    
+    <!-- Kit 3 -->
+    <div class="box">
+      <img src="kit03.jpeg" alt="Kit 3">
+      <h2>Kit Avançado</h2>
+      <p>Invista R$1.000 e receba R$1.300 em produtos</p>
+    </div>
+  </div>
+  
+  <p style="margin-top:20px; font-size:18px;">Venda os produtos e ganhe 100% de lucro sobre o valor investido!</p>
 </section>
 
 </body>
