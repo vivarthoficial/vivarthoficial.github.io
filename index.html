@@ -8,6 +8,11 @@
 body {margin:0; font-family:Arial,sans-serif; background:#0a0a0a; color:#fff;}
 h1,h2,h3{color:#FFD700; margin-bottom:20px;}
 .section{padding:60px 20px; text-align:center;}
+.slider{display:flex; overflow-x:auto; gap:20px; padding:20px 0; scroll-behavior:smooth;}
+.slider::-webkit-scrollbar{display:none;}
+.card{background:#111; border-radius:15px; padding:20px; flex:0 0 280px; box-shadow:0 5px 20px rgba(0,0,0,0.5);}
+.card img{width:100%; border-radius:12px; margin-bottom:15px;}
+.btn{background:#FFD700; color:#000; border:none; padding:12px 18px; border-radius:10px; font-weight:bold; cursor:pointer;}
 </style>
 </head>
 <body>
@@ -21,26 +26,79 @@ h1,h2,h3{color:#FFD700; margin-bottom:20px;}
 <p>Descubra perfumes de luxo e oportunidades de negócios exclusivas</p>
 </section>
 
+<!-- 3. Benefícios iniciais / caixinhas -->
+<section class="section">
+<h2>Por que escolher Vivarth?</h2>
+<div class="slider">
+  <div class="card"><h3>Lucro Garantido</h3><p>Venda perfumes exclusivos e aumente seus ganhos.</p></div>
+  <div class="card"><h3>Produtos Raros</h3><p>Perfumes difíceis de encontrar, com inspiração árabe.</p></div>
+  <div class="card"><h3>Facilidade</h3><p>Simples, rápido e direto ao consumidor.</p></div>
+</div>
+</section>
+
 <!-- 4. Quais são os seus sonhos -->
 <section class="section">
 <h2>Quais são os seus sonhos?</h2>
-<div style="display:flex; overflow-x:auto; gap:20px; padding:20px 0; scroll-behavior:smooth;">
-  <div style="background:#111; border-radius:15px; padding:20px; flex:0 0 280px; box-shadow:0 5px 20px rgba(0,0,0,0.5);">
-    <img src="cruzeiro01.jpeg" alt="Cruzeiro" style="width:100%; border-radius:12px; margin-bottom:10px;">
-    <p>Fazer um cruzeiro</p>
+<div class="slider">
+  <div class="card"><img src="cruzeiro01.jpeg" alt=""><p>Fazer um cruzeiro</p></div>
+  <div class="card"><img src="viagens07.jpeg" alt=""><p>Viajar pelo mundo</p></div>
+  <div class="card"><img src="carro01.jpeg" alt=""><p>Comprar um carro</p></div>
+  <div class="card"><img src="disney01.jpeg" alt=""><p>Visitar a Disney</p></div>
+</div>
+</section>
+
+<!-- 5. Perfumes -->
+<section class="section">
+<h2>Perfumes de alto luxo</h2>
+<p>Produtos exclusivos com inspiração árabe.</p>
+<div class="slider">
+  <div class="card"><img src="01.jpeg" alt=""></div>
+  <div class="card"><img src="02.jpeg" alt=""></div>
+  <div class="card"><img src="03.jpeg" alt=""></div>
+</div>
+</section>
+
+<!-- 6. Destaque PIN -->
+<section class="section">
+<img src="pins.jpeg" alt="Destaque PIN" style="width:70%; max-width:600px; border-radius:15px;">
+</section>
+
+<!-- 7. Modelo de negócios -->
+<section class="section">
+<h2>Como funciona a Vivarth</h2>
+<p>Vivarth está no mercado desde 2021 e atua no modelo de vendas diretas.</p>
+<div style="display:flex; justify-content:center; flex-wrap:wrap; gap:30px;">
+  <div class="card">
+    <img src="modeloconvencional.jpeg" alt="Modelo Convencional">
+    <h3>Modelo Convencional</h3>
+    <p>Lento e burocrático.</p>
   </div>
-  <div style="background:#111; border-radius:15px; padding:20px; flex:0 0 280px; box-shadow:0 5px 20px rgba(0,0,0,0.5);">
-    <img src="viagens07.jpeg" alt="Viagens" style="width:100%; border-radius:12px; margin-bottom:10px;">
-    <p>Viajar pelo mundo</p>
-  </div>
-  <div style="background:#111; border-radius:15px; padding:20px; flex:0 0 280px; box-shadow:0 5px 20px rgba(0,0,0,0.5);">
-    <img src="carro01.jpeg" alt="Carro" style="width:100%; border-radius:12px; margin-bottom:10px;">
-    <p>Comprar um carro</p>
-  </div>
-  <div style="background:#111; border-radius:15px; padding:20px; flex:0 0 280px; box-shadow:0 5px 20px rgba(0,0,0,0.5);">
-    <img src="disney01.jpeg" alt="Disney" style="width:100%; border-radius:12px; margin-bottom:10px;">
-    <p>Visitar a Disney</p>
+  <div class="card">
+    <img src="modelovivarth.jpeg" alt="Modelo Vivarth">
+    <h3>Modelo Vivarth</h3>
+    <p>Rápido, simples e eficaz.</p>
   </div>
 </div>
-</section></body>
+</section>
+
+<!-- 8. Ganhos reais -->
+<section class="section">
+<h2>Ganhos Reais</h2>
+<div class="slider">
+  <div class="card">
+    <h3>1 Perfume por dia</h3>
+    <p>Lucro mensal: R$1.800</p>
+  </div>
+  <div class="card">
+    <h3>2 Perfumes por dia</h3>
+    <p>Lucro mensal: R$3.600</p>
+  </div>
+  <div class="card">
+    <h3>3 Perfumes por dia</h3>
+    <p>Lucro mensal: R$5.400</p>
+  </div>
+</div>
+</section>
+
+</body>
 </html>
