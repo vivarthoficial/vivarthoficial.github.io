@@ -9,23 +9,25 @@
   h1,h2 {color:#FFD700; margin-bottom:20px;}
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
-  
-  /* Scroll horizontal para carrossel de caixinhas */
+
+  /* Carrosséis padronizados */
   .carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
-  
-  .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
+
+  .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:220px; text-align:center; flex-shrink:0;}
   .box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-  
+
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
+
   .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
-  
+
+  /* Responsividade */
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
-    .box{min-width:150px;}
-    .profit-box{min-width:150px;}
+    .box{min-width:180px;}
+    .profit-box{min-width:180px;}
     .products-container img{width:80%;}
   }
 </style>
@@ -49,28 +51,13 @@
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   
   <div class="carousel-container">
-    <div class="box">
-      <img src="sonho1.jpeg" alt="Aposentadoria">
-      <p>Aposentadoria confortável</p>
-    </div>
-    <div class="box">
-      <img src="sonho2.jpeg" alt="Viagem">
-      <p>Viajar pelo mundo</p>
-    </div>
-    <div class="box">
-      <img src="sonho3.jpeg" alt="Casa">
-      <p>Comprar casa própria</p>
-    </div>
-    <div class="box">
-      <img src="sonho4.jpeg" alt="Carro">
-      <p>Ter um carro de luxo</p>
-    </div>
-    <div class="box">
-      <img src="sonho5.jpeg" alt="Liberdade">
-      <p>Liberdade financeira</p>
-    </div>
+    <div class="box"><img src="sonho1.jpeg" alt="Aposentadoria"><p>Aposentadoria confortável</p></div>
+    <div class="box"><img src="sonho2.jpeg" alt="Viagem"><p>Viajar pelo mundo</p></div>
+    <div class="box"><img src="sonho3.jpeg" alt="Casa"><p>Comprar casa própria</p></div>
+    <div class="box"><img src="sonho4.jpeg" alt="Carro"><p>Ter um carro de luxo</p></div>
+    <div class="box"><img src="sonho5.jpeg" alt="Liberdade"><p>Liberdade financeira</p></div>
   </div>
-  
+
   <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
@@ -78,26 +65,11 @@
 <section class="section">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
-    <div class="box">
-      <h2>100% de lucro</h2>
-      <p>Vendendo produtos de luxo, você garante lucro total.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus por indicação</h2>
-      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
-    </div>
-    <div class="box">
-      <h2>Bonificações por metas</h2>
-      <p>Alcance metas e receba premiações incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Prêmios mensais</h2>
-      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Pontos que valem dinheiro</h2>
-      <p>Acumule pontos com suas vendas e equipe.</p>
-    </div>
+    <div class="box"><h2>100% de lucro</h2><p>Vendendo produtos de luxo, você garante lucro total.</p></div>
+    <div class="box"><h2>Bônus por indicação</h2><p>Indique amigos e aumente seus ganhos instantaneamente.</p></div>
+    <div class="box"><h2>Bonificações por metas</h2><p>Alcance metas e receba premiações incríveis.</p></div>
+    <div class="box"><h2>Prêmios mensais</h2><p>Participe de sorteios exclusivos e viagens incríveis.</p></div>
+    <div class="box"><h2>Pontos que valem dinheiro</h2><p>Acumule pontos com suas vendas e equipe.</p></div>
   </div>
 </section>
 
@@ -107,14 +79,8 @@
   <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
 
   <div class="comparison-box">
-    <div class="comparison-item">
-      <img src="modeloconvencional.jpeg" alt="Modelo Tradicional">
-      <p>Modelo Convencional</p>
-    </div>
-    <div class="comparison-item">
-      <img src="modelovivarth.jpeg" alt="Modelo Vivarth">
-      <p>Modelo Vivarth – Muito mais simples, rápido e eficaz</p>
-    </div>
+    <div class="comparison-item"><img src="modeloconvencional.jpeg" alt="Modelo Tradicional"><p>Modelo Convencional</p></div>
+    <div class="comparison-item"><img src="modelovivarth.jpeg" alt="Modelo Vivarth"><p>Modelo Vivarth – Muito mais simples, rápido e eficaz</p></div>
   </div>
 </section>
 
@@ -169,46 +135,24 @@
   </div>
 </section>
 
-<!-- NOVO: Parte 10 – Ganhos Reais com Perfumes -->
+<!-- Parte 10 – Ganhos Reais -->
 <section class="section">
   <h1>Ganhos Reais Vendendo Perfumes</h1>
   <div class="profit-carousel">
-    <div class="profit-box">
-      <h2>1 perfume/dia</h2>
-      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p>
-    </div>
-    <div class="profit-box">
-      <h2>2 perfumes/dia</h2>
-      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p>
-    </div>
-    <div class="profit-box">
-      <h2>3 perfumes/dia</h2>
-      <p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p>
-    </div>
+    <div class="profit-box"><h2>1 perfume/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$1.800</p></div>
+    <div class="profit-box"><h2>2 perfumes/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$3.600</p></div>
+    <div class="profit-box"><h2>3 perfumes/dia</h2><p>Pagando R$60 e vendendo por R$120 → lucro mensal: R$5.400</p></div>
   </div>
 </section>
 
-<!-- NOVO: Parte 11 – Outras Formas de Ganho -->
+<!-- Parte 11 – Outras formas de Ganho -->
 <section class="section" style="background-color:#111;">
   <h1>Outras formas de ganhar na Vivarth</h1>
-  <p>Além dos lucros com vendas, você também pode ganhar assim:</p>
   <div class="carousel-container">
-    <div class="box">
-      <h2>Comissão por equipe</h2>
-      <p>Ganhe uma porcentagem do total que sua equipe vende mensalmente.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus por metas alcançadas</h2>
-      <p>Ao atingir metas mensais ou trimestrais, receba bonificações extras.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus de crescimento</h2>
-      <p>Quanto maior sua equipe e resultados, maiores os bônus que você recebe.</p>
-    </div>
-    <div class="box">
-      <h2>Premiações especiais</h2>
-      <p>Viagens, eletrônicos e reconhecimento para os melhores desempenhos.</p>
-    </div>
+    <div class="box"><h2>Comissão por equipe</h2><p>Ganhe uma porcentagem do total que sua equipe vende mensalmente.</p></div>
+    <div class="box"><h2>Bônus por metas</h2><p>Ao atingir metas mensais ou trimestrais, receba bonificações extras.</p></div>
+    <div class="box"><h2>Bônus de crescimento</h2><p>Quanto maior sua equipe e resultados, maiores os bônus que você recebe.</p></div>
+    <div class="box"><h2>Premiações especiais</h2><p>Viagens, eletrônicos e reconhecimento para os melhores desempenhos.</p></div>
   </div>
 </section>
 
