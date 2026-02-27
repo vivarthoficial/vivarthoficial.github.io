@@ -5,128 +5,50 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth Oficial</title>
 <style>
-  body {
-    margin:0;
-    font-family: Arial, sans-serif;
-    background-color:#0a0a0a;
-    color:#fff;
-  }
-  h2, h3 {
-    font-family: 'Arial Black', Arial, sans-serif;
-  }
-  .section {
-    padding:60px 20px;
-    text-align:center;
-  }
-  .flex-center {
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    gap:30px;
-  }
-  .card {
-    background-color:#111;
-    border-radius:15px;
-    padding:20px;
-    width:300px;
-    box-shadow:0 5px 20px rgba(0,0,0,0.5);
-    text-align:center;
-    flex:0 0 auto;
-  }
-  .card img {
-    width:100%;
-    border-radius:15px;
-    margin-bottom:20px;
-  }
-  .btn {
-    background-color:#FFD700;
-    color:#000;
-    border:none;
-    padding:12px 20px;
-    border-radius:10px;
-    font-weight:bold;
-    cursor:pointer;
-  }
-  .slider-container {
-    display:flex;
-    overflow-x:auto;
-    gap:20px;
-    padding:20px 0;
-    scroll-behavior:smooth;
-  }
-  .slider-item {
-    flex:0 0 auto;
-    background-color:#111;
-    border-radius:15px;
-    padding:20px;
-    width:250px;
-    box-shadow:0 5px 15px rgba(0,0,0,0.5);
-    text-align:center;
-  }
-  .slider-item img {
-    width:100%;
-    border-radius:10px;
-    margin-bottom:15px;
-  }
+  body {margin:0;font-family:Arial,sans-serif;background:#0a0a0a;color:#fff;}
+  h1,h2,h3{color:#FFD700;margin-bottom:20px;}
+  .section{padding:60px 20px;text-align:center;}
+  .slider{display:flex;overflow-x:auto;gap:20px;padding:20px 0;scroll-behavior:smooth;}
+  .slider::-webkit-scrollbar{display:none;}
+  .card{background:#111;border-radius:15px;padding:20px;flex:0 0 auto;width:280px;box-shadow:0 5px 20px rgba(0,0,0,0.5);}
+  .card img{width:100%;border-radius:12px;margin-bottom:15px;}
+  .btn{background:#FFD700;color:#000;border:none;padding:12px 18px;border-radius:10px;font-weight:bold;cursor:pointer;}
 </style>
 </head>
 <body>
 
 <!-- Banner -->
-<section class="section" style="padding:100px 20px; background:url('banner.jpeg') no-repeat center/cover;">
-  <!-- Banner sem texto -->
-</section>
+<section class="section" style="background:url('banner.jpeg')center/cover no-repeat;height:350px;"></section>
 
-<!-- Quais são os seus sonhos -->
+<!-- Sonhos -->
 <section class="section">
   <h2>Quais são os seus sonhos?</h2>
-  <div class="slider-container">
-    <div class="slider-item">
-      <img src="cruzeiro01.jpeg" alt="Cruzeiro">
-      <p>Fazer um cruzeiro</p>
-    </div>
-    <div class="slider-item">
-      <img src="viagens07.jpeg" alt="Viajar">
-      <p>Viajar pelo mundo</p>
-    </div>
-    <div class="slider-item">
-      <img src="carro01.jpeg" alt="Carro">
-      <p>Comprar um carro</p>
-    </div>
-    <div class="slider-item">
-      <img src="disney01.jpeg" alt="Disney">
-      <p>Visitar a Disney</p>
-    </div>
+  <div class="slider">
+    <div class="card"><img src="cruzeiro01.jpeg" alt=""><p>Fazer um cruzeiro</p></div>
+    <div class="card"><img src="viagens07.jpeg" alt=""><p>Viajar pelo mundo</p></div>
+    <div class="card"><img src="carro01.jpeg" alt=""><p>Comprar um carro</p></div>
+    <div class="card"><img src="disney01.jpeg" alt=""><p>Visitar a Disney</p></div>
   </div>
 </section>
 
-<!-- Benefícios / formas de ganho -->
+<!-- Benefícios -->
 <section class="section">
   <h2>Benefícios Vivarth</h2>
-  <div class="slider-container">
-    <div class="slider-item">
-      <h3>Ganhe com suas vendas</h3>
-      <p>Venda produtos e receba lucros imediatos</p>
-    </div>
-    <div class="slider-item">
-      <h3>Monte sua equipe</h3>
-      <p>Ganhe bônus ao desenvolver sua equipe de consultores</p>
-    </div>
-    <div class="slider-item">
-      <h3>Ganhos ilimitados</h3>
-      <p>Quanto mais você se dedica, mais você ganha</p>
-    </div>
+  <div class="slider">
+    <div class="card"><h3>Lucro com vendas</h3><p>Venda perfumes e ganhe!</p></div>
+    <div class="card"><h3>Bônus por equipe</h3><p>Ganhe ainda mais montando sua equipe.</p></div>
+    <div class="card"><h3>Ganhos ilimitados</h3><p>Quanto mais, mais você potencializa.</p></div>
   </div>
 </section>
 
 <!-- Perfumes -->
 <section class="section">
   <h2>Perfumes de alto luxo</h2>
-  <p>Perfumes difíceis de encontrar, inspirados na perfumaria árabe</p>
-  <div class="slider-container">
-    <div class="slider-item"><img src="01.jpeg" alt="Perfume 01"></div>
-    <div class="slider-item"><img src="02.jpeg" alt="Perfume 02"></div>
-    <div class="slider-item"><img src="03.jpeg" alt="Perfume 03"></div>
+  <p>Produtos exclusivos com inspiração árabe.</p>
+  <div class="slider">
+    <div class="card"><img src="01.jpeg" alt=""></div>
+    <div class="card"><img src="02.jpeg" alt=""></div>
+    <div class="card"><img src="03.jpeg" alt=""></div>
   </div>
 </section>
 
@@ -139,7 +61,7 @@
 <section class="section">
   <h2>Como funciona a Vivarth</h2>
   <p>Vivarth está no mercado desde 2021 e atua no modelo de vendas diretas</p>
-  <div class="flex-center">
+  <div style="display:flex;justify-content:center;flex-wrap:wrap;gap:30px;">
     <div class="card">
       <img src="modeloconvencional.jpeg" alt="Modelo Convencional">
       <h3>Modelo Convencional</h3>
@@ -156,49 +78,49 @@
 <!-- Ganhos reais -->
 <section class="section">
   <h2>Ganhos Reais</h2>
-  <div class="slider-container">
-    <div class="slider-item">
+  <div class="slider">
+    <div class="card">
       <h3>1 Perfume por dia</h3>
       <p>Lucro mensal: R$1.800</p>
     </div>
-    <div class="slider-item">
+    <div class="card">
       <h3>2 Perfumes por dia</h3>
       <p>Lucro mensal: R$3.600</p>
     </div>
-    <div class="slider-item">
+    <div class="card">
       <h3>3 Perfumes por dia</h3>
       <p>Lucro mensal: R$5.400</p>
     </div>
   </div>
 </section>
 
-<!-- Kits iniciais (slider horizontal) -->
-<section id="kits-iniciais" class="section">
+<!-- Kits Iniciais -->
+<section class="section">
   <h2>Escolha seu Kit Inicial</h2>
-  <p>Comece seu negócio Vivarth hoje mesmo! Kits com produtos de alto valor para começar a vender desde o primeiro dia.</p>
-  <div class="slider-container">
+  <p>Kits com produtos de alto valor para começar a vender e ganhar!</p>
+  <div class="slider">
     <!-- Kit 1 -->
     <div class="card">
-      <img src="Kit01.jpeg" alt="Kit Inicial 300">
-      <h3>Kit Inicial 300</h3>
+      <img src="kit01.jpeg" alt="">
+      <h3>Kit 300</h3>
       <p>Preço: R$300</p>
-      <p>Conteúdo: R$500 em produtos</p>
+      <p>Produtos: R$500</p>
       <button class="btn">Escolher Kit</button>
     </div>
     <!-- Kit 2 -->
     <div class="card">
-      <img src="Kit02.jpeg" alt="Kit Inicial 500">
-      <h3>Kit Inicial 500</h3>
+      <img src="kit02.jpeg" alt="">
+      <h3>Kit 500</h3>
       <p>Preço: R$500</p>
-      <p>Conteúdo: R$700 em produtos</p>
+      <p>Produtos: R$700</p>
       <button class="btn">Escolher Kit</button>
     </div>
     <!-- Kit 3 -->
     <div class="card">
-      <img src="Kit03.jpeg" alt="Kit Inicial 1000">
-      <h3>Kit Inicial 1000</h3>
+      <img src="kit03.jpeg" alt="">
+      <h3>Kit 1000</h3>
       <p>Preço: R$1.000</p>
-      <p>Conteúdo: R$1.300 em produtos</p>
+      <p>Produtos: R$1.300</p>
       <button class="btn">Escolher Kit</button>
     </div>
   </div>
