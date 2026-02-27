@@ -1,168 +1,157 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivarth</title>
-
-<style>
-body{
-    margin:0;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color:#000;
-    color:#fff;
-}
-
-/* Banner principal */
-.banner{
-    width:100%;
-    height:100vh;
-    background-image:url('banner2.jpeg');
-    background-size:cover;
-    background-position:center;
-}
-
-/* Sections */
-.section{
-    padding:60px 20px;
-    text-align:center;
-}
-
-.section h1{
-    font-size:36px;
-    margin-bottom:20px;
-}
-
-.section p{
-    font-size:20px;
-    max-width:800px;
-    margin:0 auto 15px auto;
-    line-height:1.6;
-}
-
-/* Cores e destaque */
-.gold{
-    color:#FFD700;
-}
-
-/* Carrossel Parte 2 e Parte 3 */
-.carousel-container{
-    display:flex;
-    overflow-x:auto;
-    gap:20px;
-    padding-bottom:20px;
-    scroll-snap-type:x mandatory;
-}
-
-.carousel-item{
-    flex:0 0 250px;
-    scroll-snap-align:start;
-    background-color:#111;
-    border:2px solid #FFD700;
-    border-radius:12px;
-    padding:20px;
-    text-align:center;
-    font-size:18px;
-}
-
-/* Parte 3 – caixas de benefício */
-.benefit-box{
-    flex:0 0 300px;
-    scroll-snap-align:start;
-    background-color:#000;
-    border:2px solid #FFD700;
-    border-radius:12px;
-    padding:30px;
-    text-align:center;
-}
-
-.benefit-box h2{
-    font-size:24px;
-    color:#FFD700;
-    margin-bottom:15px;
-}
-
-/* Parte 4 – Sobre a empresa */
-.company-box{
-    background-color:#111;
-    border:2px solid #FFD700;
-    border-radius:12px;
-    padding:40px 30px;
-    max-width:800px;
-    margin:0 auto 60px auto;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vivarth - Transforme sua Vida</title>
+  <style>
+    body {
+      margin:0;
+      font-family: Arial, sans-serif;
+      background-color:#111;
+      color:#fff;
+    }
+    h1,h2 {
+      color:#FFD700;
+    }
+    .section {
+      padding:80px 20px;
+      text-align:center;
+    }
+    .carousel-auto-container{
+      overflow:hidden;
+      max-width:100%;
+      margin:0 auto;
+    }
+    .carousel-auto-track{
+      display:flex;
+      width:300%;
+      animation: slide 9s infinite;
+    }
+    .carousel-auto-item{
+      flex:0 0 33.3333%;
+      text-align:center;
+      padding:0 10px;
+    }
+    @keyframes slide{
+      0% {transform:translateX(0);}
+      33% {transform:translateX(-33.3333%);}
+      66% {transform:translateX(-66.6666%);}
+      100% {transform:translateX(0);}
+    }
+    .benefit-box {
+      background-color:#222;
+      border-radius:12px;
+      padding:20px;
+      margin:10px;
+    }
+    .carousel-container {
+      display:flex;
+      overflow-x:auto;
+      scroll-behavior:smooth;
+      padding:20px 0;
+    }
+    .carousel-container::-webkit-scrollbar{
+      display:none;
+    }
+  </style>
 </head>
 <body>
 
-<!-- Banner principal -->
-<div class="banner"></div>
-
-<!-- Parte 1 – Frase chamativa -->
-<section class="section" style="padding-top:80px;">
-  <h1>Você já imaginou <span class="gold">transformar sua vida</span>?</h1>
-  <p>Conquistar <span class="gold">viagens, prêmios</span> e <span class="gold">lucros de 100%</span> vendendo produtos de luxo?</p>
-  <p><strong>Na Vivarth é possível!</strong></p>
+<!-- Banner Principal -->
+<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
 </section>
 
-<!-- Parte 2 – Pergunta persuasiva com carrossel de sonhos -->
-<section class="section" style="background-color:#111; padding-top:80px;">
-  <h1>Quais são os seus sonhos?</h1>
-  <p>Escolha o que você deseja alcançar:</p>
-
-  <div class="carousel-container">
-    <div class="carousel-item">Viajar pelo mundo</div>
-    <div class="carousel-item">Ter uma aposentadoria confortável</div>
-    <div class="carousel-item">Comprar uma casa própria</div>
-    <div class="carousel-item">Ter um carro de luxo</div>
-    <div class="carousel-item">Realizar estudos ou cursos</div>
-    <div class="carousel-item">Construir um negócio próprio</div>
-    <div class="carousel-item">Ganhar liberdade financeira</div>
-    <div class="carousel-item">Surpreender a família com conquistas</div>
-  </div>
-
-  <p>Na <strong>Vivarth</strong> você pode alcançar resultados reais, rápidos e consistentes.</p>
-</section>
-
-<!-- Parte 3 – Benefícios e Formas de Ganho (Carrossel) -->
-<section class="section" style="background-color:#111; padding:80px 20px;">
-  <h1 style="font-size:36px; margin-bottom:40px;">Benefícios e Formas de Ganho</h1>
-  
-  <div class="carousel-container">
-
-    <div class="benefit-box">
-      <h2>100% de Lucro</h2>
-      <p>Venda nossos produtos de luxo e ganhe <strong>100% de lucro</strong> sobre cada venda.</p>
-    </div>
-
-    <div class="benefit-box">
-      <h2>Bônus por Indicação</h2>
-      <p>Indique novos membros e receba <strong>bonificações diretas</strong> para sua conta.</p>
-    </div>
-
-    <div class="benefit-box">
-      <h2>Premiações Mensais</h2>
-      <p>Participe de metas e conquiste <strong>prêmios exclusivos</strong> todo mês.</p>
-    </div>
-
-    <div class="benefit-box">
-      <h2>Pontos que Valem Dinheiro</h2>
-      <p>Acumule pontos e transforme cada conquista em <strong>dinheiro real</strong>.</p>
-    </div>
-
-    <div class="benefit-box">
-      <h2>Premiações Exclusivas</h2>
-      <p>Alcance metas e ganhe <strong>prêmios luxuosos</strong> todo mês, surpreendendo-se a cada nível.</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- Parte 4 – Sobre a empresa -->
+<!-- Parte 1 – Frase Chamativa -->
 <section class="section">
-  <div class="company-box">
+  <h1>Você já imaginou transformar sua vida?</h1>
+  <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de luxo?</p>
+  <p>Na Vivarth é possível!</p>
+</section>
+
+<!-- Parte 2 – Pergunta Persuasiva -->
+<section class="section" style="background-color:#222;">
+  <h1>Quais são os seus sonhos?</h1>
+  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
+  <div class="carousel-container">
+    <div class="benefit-box">Ter uma aposentadoria confortável</div>
+    <div class="benefit-box">Viajar pelo mundo</div>
+    <div class="benefit-box">Comprar sua casa própria</div>
+    <div class="benefit-box">Ter um carro de luxo</div>
+    <div class="benefit-box">Ter liberdade financeira</div>
+  </div>
+  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
+</section>
+
+<!-- Parte 3 – Benefícios e Formas de Ganho -->
+<section class="section">
+  <h1>Benefícios e Formas de Ganho</h1>
+  <div class="carousel-container">
+    <div class="benefit-box">
+      <h2>100% de lucro</h2>
+      <p>Vendendo produtos de luxo, você garante lucro total.</p>
+    </div>
+    <div class="benefit-box">
+      <h2>Bônus por indicação</h2>
+      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
+    </div>
+    <div class="benefit-box">
+      <h2>Bonificações por metas</h2>
+      <p>Alcance metas e receba premiações incríveis.</p>
+    </div>
+    <div class="benefit-box">
+      <h2>Prêmios mensais</h2>
+      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
+    </div>
+    <div class="benefit-box">
+      <h2>Pontos que valem dinheiro</h2>
+      <p>Acumule pontos com suas vendas e equipe.</p>
+    </div>
+  </div>
+</section>
+
+<!-- Parte 4 – Sobre a Empresa e Imprensa -->
+<section class="section">
+  <div class="company-box" style="background-color:#111; border:2px solid #FFD700; border-radius:12px; padding:40px 30px; max-width:800px; margin:0 auto 60px auto;">
     <h1>Sobre a Vivarth</h1>
     <p>Vivarth é uma empresa brasileira no setor de cosméticos desde 2021. Entrando agora no ramo de marketing de venda direta, sólida, confiável e pronta para transformar vidas.</p>
+    <p>Somos reconhecidos na imprensa por nosso compromisso com qualidade e resultados reais. Nossos produtos e modelos de negócio já foram destaque em revistas e sites especializados, reforçando nossa credibilidade e confiança.</p>
+    <p>Escolher a Vivarth é investir em um futuro de sucesso, com suporte, transparência e oportunidades reais de crescimento.</p>
+  </div>
+</section>
+
+<!-- Parte 5 – Produtos: Carrossel Automático -->
+<section class="section">
+  <h1 style="font-size:36px; margin-bottom:20px;">Nossos Perfumes de Luxo</h1>
+  <p style="max-width:800px; margin:0 auto 40px auto; font-size:18px; line-height:1.5;">
+    Perfumes de luxo com inspiração árabe, aromas incomparáveis e alta perfumaria. Produtos exclusivos que encantam você e seu cliente.
+  </p>
+
+  <div class="carousel-auto-container">
+    <div class="carousel-auto-track">
+
+      <!-- Produto 1 -->
+      <div class="carousel-auto-item">
+        <img src="01.jpeg" alt="Perfume 1" style="width:100%; border-radius:12px; margin-bottom:10px;">
+        <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 1</h2>
+        <p>Fragrância elegante, exclusiva e sofisticada.</p>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="carousel-auto-item">
+        <img src="02.jpeg" alt="Perfume 2" style="width:100%; border-radius:12px; margin-bottom:10px;">
+        <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 2</h2>
+        <p>Alta perfumaria com inspiração árabe, aroma intenso e marcante.</p>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="carousel-auto-item">
+        <img src="03.jpeg" alt="Perfume 3" style="width:100%; border-radius:12px; margin-bottom:10px;">
+        <h2 style="color:#FFD700; font-size:20px;">Perfume Luxo 3</h2>
+        <p>Produto premium, ideal para clientes exigentes que buscam sofisticação.</p>
+      </div>
+
+    </div>
   </div>
 </section>
 
