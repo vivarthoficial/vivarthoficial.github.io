@@ -5,51 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth - Transforme sua Vida</title>
 <style>
-  body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
-  h1,h2 {color:#FFD700; margin-bottom:15px;}
-  p {margin-bottom:15px;}
-  .section {padding:60px 20px; text-align:center;}
-  
-  /* Carrossel e caixas */
-  .carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
-  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
-  
-  .box, .profit-box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
-  .box img, .profit-box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-  
-  .products-container img {width:250px; border-radius:12px; margin-right:20px;}
-  .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
-  .comparison-item {flex:0 0 300px; text-align:center;}
-  .comparison-item img {width:100%; border-radius:12px;}
-  
-  /* Formulário */
-  .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-  .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
-  .form-section label {display:block; text-align:left; margin-top:10px;}
-  .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
-  
-  /* Pagamento */
-  .payment-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-  .payment-section img {width:200px; border-radius:12px; margin-bottom:10px;}
-  .pix-code {background:#111; color:#FFD700; padding:10px; border-radius:8px; font-family:monospace; margin-bottom:10px; user-select: all;}
-  .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer;}
-  
-  /* WhatsApp */
-  .whatsapp-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-  .whatsapp-section button {padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer; font-size:18px;}
-  
-  @media(max-width:768px){
-    .comparison-item{flex:0 0 80%;}
-    .box, .profit-box, .kit-box{min-width:150px;}
-    .products-container img{width:80%;}
-  }
+body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
+h1,h2 {color:#FFD700; margin-bottom:15px;}
+p {margin-bottom:15px;}
+.section {padding:60px 20px; text-align:center;}
+
+/* Carrossel e caixas */
+.carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+.carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
+
+.box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer; transition: transform 0.2s;}
+.box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+.box:hover, .kit-box:hover {transform:scale(1.05);}
+
+.products-container img {width:250px; border-radius:12px; margin-right:20px;}
+.comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
+.comparison-item {flex:0 0 300px; text-align:center;}
+.comparison-item img {width:100%; border-radius:12px;}
+
+/* Formulário */
+.form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+.form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+.form-section label {display:block; text-align:left; margin-top:10px;}
+.form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
+
+/* Pagamento */
+.payment-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+.payment-section img {width:200px; border-radius:12px; margin-bottom:10px;}
+.pix-code {background:#111; color:#FFD700; padding:10px; border-radius:8px; font-family:monospace; margin-bottom:10px; user-select: all;}
+.copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer;}
+
+/* WhatsApp */
+.whatsapp-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+.whatsapp-section button {padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer; font-size:18px;}
+
+@media(max-width:768px){
+  .comparison-item{flex:0 0 80%;}
+  .box, .kit-box{min-width:150px;}
+  .products-container img{width:80%;}
+}
 </style>
 </head>
 <body>
 
 <!-- Banner Principal -->
-<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
-</section>
+<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;"></section>
 
 <!-- Parte 1 – Frase Chamativa -->
 <section class="section">
@@ -161,17 +161,17 @@
   <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
   <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
   <div class="kits-container">
-    <div class="kit-box" onclick="selectKit('kit1')">
+    <div class="kit-box" data-kit="kit1">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
       <p>R$300 - Ganhe 500 pontos - Pontos acumulativos, rumo ao sucesso!</p>
     </div>
-    <div class="kit-box" onclick="selectKit('kit2')">
+    <div class="kit-box" data-kit="kit2">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
       <p>R$500 - Ganhe 700 pontos - Pontos acumulativos, continue crescendo!</p>
     </div>
-    <div class="kit-box" onclick="selectKit('kit3')">
+    <div class="kit-box" data-kit="kit3">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
       <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder e aproveite todos os benefícios!</p>
@@ -213,7 +213,7 @@
   <label>E-mail</label>
   <input type="email" id="email" required>
   
-  <button onclick="showPayment()">Prosseguir para Pagamento</button>
+  <button id="form-submit">Prosseguir para Pagamento</button>
 </section>
 
 <!-- Pagamento -->
@@ -234,54 +234,48 @@
 </section>
 
 <script>
-  document.getElementById('consultor').addEventListener('change', function(){
-    document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
+  const consultor = document.getElementById('consultor');
+  const nomeConsultor = document.getElementById('nome-consultor');
+  consultor.addEventListener('change',()=>{nomeConsultor.style.display=consultor.value==='sim'?'block':'none';});
+
+  const kits = document.querySelectorAll('.kit-box');
+  const formSection = document.getElementById('form-section');
+  const paymentSection = document.getElementById('payment-section');
+  const whatsappSection = document.getElementById('whatsapp-section');
+  const pixImage = document.getElementById('pix-image');
+  const pixCode = document.getElementById('pix-code');
+  let selectedKit='';
+
+  kits.forEach(kit=>{
+    kit.addEventListener('click', ()=>{
+      selectedKit = kit.dataset.kit;
+      formSection.style.display='flex';
+      paymentSection.style.display='none';
+      whatsappSection.style.display='none';
+      formSection.scrollIntoView({behavior:'smooth'});
+    });
   });
 
-  let selectedKit = '';
+  document.getElementById('form-submit').addEventListener('click', ()=>{
+    formSection.style.display='none';
+    paymentSection.style.display='block';
+    whatsappSection.style.display='block';
+    if(selectedKit==='kit1'){pixImage.src='pagamento01.jpeg'; pixCode.textContent='00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1';}
+    else if(selectedKit==='kit2'){pixImage.src='pagamento02.jpeg'; pixCode.textContent='00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB';}
+    else if(selectedKit==='kit3'){pixImage.src='pagamento03.jpeg'; pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';}
+    paymentSection.scrollIntoView({behavior:'smooth'});
+  });
 
-  function selectKit(kit){
-    selectedKit = kit;
-    document.getElementById('form-section').style.display = 'flex';
-    document.getElementById('payment-section').style.display = 'none';
-    document.getElementById('whatsapp-section').style.display = 'none';
-    window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
-  }
-
-  function showPayment(){
-    let pixImage = document.getElementById('pix-image');
-    let pixCode = document.getElementById('pix-code');
-    document.getElementById('form-section').style.display = 'none';
-    document.getElementById('payment-section').style.display = 'block';
-    window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior: 'smooth' });
-    
-    if(selectedKit==='kit1'){
-      pixImage.src='pagamento01.jpeg';
-      pixCode.textContent='00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1';
-    } else if(selectedKit==='kit2'){
-      pixImage.src='pagamento02.jpeg';
-      pixCode.textContent='00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB';
-    } else if(selectedKit==='kit3'){
-      pixImage.src='pagamento03.jpeg';
-      pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
-    }
-
-    document.getElementById('whatsapp-section').style.display='block';
-  }
-
-  function copyPix(){
-    const code = document.getElementById('pix-code').textContent;
-    navigator.clipboard.writeText(code).then(()=>{alert('Código Pix copiado!');});
-  }
+  function copyPix(){navigator.clipboard.writeText(pixCode.textContent).then(()=>alert('Código Pix copiado!'));}
 
   function openWhatsApp(){
-    const nome = document.getElementById('nome').value;
-    let kitText = '';
+    const nome=document.getElementById('nome').value;
+    let kitText='';
     if(selectedKit==='kit1') kitText='Kit Inicial';
     else if(selectedKit==='kit2') kitText='Kit Intermediário';
     else if(selectedKit==='kit3') kitText='Kit Avançado';
-    const mensagem = Olá, meu nome é ${nome}, adquiri o ${kitText}, quero mais informações.;
-    window.open(https://wa.me/51920012441?text=${encodeURIComponent(mensagem)}, '_blank');
+    const mensagem=Olá, meu nome é ${nome}, adquiri o ${kitText}, quero mais informações.;
+    window.open(https://wa.me/51920012441?text=${encodeURIComponent(mensagem)},'_blank');
   }
 </script>
 
