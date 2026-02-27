@@ -9,28 +9,27 @@
   h1,h2 {color:#FFD700; margin-bottom:15px;}
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
-  
-  /* Carrossel e caixas */
-  .carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
-  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
-  
-  .box, .profit-box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
-  .box img, .profit-box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-  
+
+  /* Carrosséis e caixas */
+  .carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
+
+  .box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
+  .box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
-  .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
-  
+
   /* Formulário */
   .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
   .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
   .form-section label {display:block; text-align:left; margin-top:10px;}
   .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
-  
+
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
-    .box, .profit-box, .kit-box{min-width:150px;}
+    .box, .kit-box{min-width:150px;}
     .products-container img{width:80%;}
   }
 </style>
@@ -41,14 +40,14 @@
 <section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
 </section>
 
-<!-- Parte 1 – Frase Chamativa -->
+<!-- Frase Chamativa -->
 <section class="section">
   <h1>Você já imaginou transformar sua vida?</h1>
   <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de luxo?</p>
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Quais são os seus sonhos? -->
+<!-- Pergunta Persuasiva -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
@@ -62,7 +61,7 @@
   <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
-<!-- Parte 3 – Benefícios e Formas de Ganho -->
+<!-- Benefícios -->
 <section class="section">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
@@ -89,13 +88,13 @@
   </div>
 </section>
 
-<!-- Parte 4 – Sobre a Empresa -->
+<!-- Sobre a Empresa -->
 <section class="section">
   <h1>Sobre a Vivarth</h1>
   <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
 </section>
 
-<!-- Parte 5 – Produtos (Perfumes) -->
+<!-- Produtos (Perfumes) -->
 <section class="section" style="background-color:#111;">
   <h1>Perfumes de Alto Luxo</h1>
   <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
@@ -106,28 +105,28 @@
   </div>
 </section>
 
-<!-- Parte 6 – Estrutura de Níveis -->
+<!-- Estrutura de Níveis -->
 <section class="section">
   <h1>Estrutura de Níveis</h1>
   <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
-<!-- Parte 7 – Bônus Inteligente -->
+<!-- Bônus Inteligente -->
 <section class="section" style="background-color:#222;">
   <h1>Bônus Inteligente</h1>
   <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
 </section>
 
-<!-- Parte 8 – Bônus da Equipe -->
+<!-- Bônus da Equipe -->
 <section class="section">
   <h1>Bônus da Equipe</h1>
   <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
 </section>
 
-<!-- Parte 9 – Premiações e Conquistas -->
+<!-- Premiações -->
 <section class="section" style="background-color:#222;">
   <h1>Premiações e Conquistas</h1>
   <div class="products-container">
@@ -154,22 +153,22 @@
     <div class="kit-box" onclick="selectKit('kit1')">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
-      <p>R$300 - Ganhe 500 pontos - Pontos acumulativos, rumo ao sucesso!</p>
+      <p>R$300 - Ganhe 500 pontos - Pontos acumulativos!</p>
     </div>
     <div class="kit-box" onclick="selectKit('kit2')">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
-      <p>R$500 - Ganhe 700 pontos - Pontos acumulativos, continue crescendo!</p>
+      <p>R$500 - Ganhe 700 pontos - Continue crescendo!</p>
     </div>
     <div class="kit-box" onclick="selectKit('kit3')">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
-      <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder e aproveite todos os benefícios!</p>
+      <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder!</p>
     </div>
   </div>
 </section>
 
-<!-- Formulário (aparece ao clicar no kit) -->
+<!-- Formulário -->
 <section class="form-section" id="form-section">
   <h1>Preencha seus dados</h1>
   <label>Teve indicação de algum consultor?</label>
@@ -203,7 +202,7 @@
   <label>E-mail</label>
   <input type="email" id="email" required>
   
-  <button onclick="alert('Formulário enviado!');">Enviar Dados</button>
+  <button onclick="alert('Formulário enviado! Agora você verá a próxima etapa de pagamento.')">Enviar e Prosseguir</button>
 </section>
 
 <script>
@@ -217,66 +216,6 @@
     window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
   }
 </script>
-<!-- Seção de pagamento (Pix) -->
-<section class="payment-section" id="payment-section" style="display:none;">
-  <h1>Pagamento via Pix</h1>
-  <p>Use o QR Code ou copie o código abaixo para pagar diretamente para a Vivarth.</p>
-  <img id="pix-image" src="" alt="QR Code" style="width:200px; border-radius:12px; margin-bottom:10px;">
-  <div class="pix-code" id="pix-code"></div>
-  <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
-</section>
 
-<script>
-  // Pix de cada kit
-  const pixData = {
-    kit1: {
-      image: 'pagamento01.jpeg',
-      code: '00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1'
-    },
-    kit2: {
-      image: 'pagamento02.jpeg',
-      code: '00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB'
-    },
-    kit3: {
-      image: 'pagamento03.jpeg',
-      code: '00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E'
-    }
-  };
-
-  let selectedKit = '';
-
-  // Quando o usuário seleciona o kit
-  function selectKit(kit){
-    selectedKit = kit;
-    document.getElementById('form-section').style.display = 'flex';
-    window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
-  }
-
-  // Após preencher o formulário → mostrar pagamento
-  function showPayment(){
-    if(!selectedKit){
-      alert('Selecione um kit primeiro!');
-      return;
-    }
-    const pixImage = document.getElementById('pix-image');
-    const pixCode = document.getElementById('pix-code');
-    const paymentSection = document.getElementById('payment-section');
-
-    pixImage.src = pixData[selectedKit].image;
-    pixCode.textContent = pixData[selectedKit].code;
-
-    paymentSection.style.display = 'block';
-    window.scrollTo({ top: paymentSection.offsetTop, behavior: 'smooth' });
-  }
-
-  // Copiar Pix
-  function copyPix(){
-    const code = document.getElementById('pix-code').textContent;
-    navigator.clipboard.writeText(code).then(()=>{alert('Código Pix copiado!');});
-  }
-</script>
-
-<!-- Alteração no botão do formulário -->
-<button onclick="showPayment()">Prosseguir para Pagamento</button>
 </body>
 </html>
