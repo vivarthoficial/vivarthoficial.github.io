@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Vivart - Transforme sua Vida</title>
+<title>Vivarth - Transforme sua Vida</title>
 <style>
   body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
   h1,h2 {color:#FFD700; margin-bottom:15px;}
@@ -14,7 +14,7 @@
   .carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
 
-  .box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
+  .box, .kit-box, .info-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
   .box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
 
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
@@ -22,17 +22,25 @@
   .comparison-item img {width:100%; border-radius:12px;}
 
   /* Formulário */
-  .form-section, .payment-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
   .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
   .form-section label {display:block; text-align:left; margin-top:10px;}
   .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
 
-  .pix-code {background:#111; color:#fff; padding:15px; border-radius:12px; margin:10px 0; word-break:break-all; text-align:left;}
-  .copy-btn {padding:10px 20px; margin-bottom:10px; border:none; border-radius:12px; cursor:pointer; background:#FFD700; color:#111;}
+  /* Pagamento */
+  .payment-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .payment-section img {width:200px; margin:20px 0;}
+  .pix-code {background:#111; color:#fff; padding:15px; border-radius:12px; width:100%; word-break:break-all; margin-bottom:10px;}
+  .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-bottom:20px;}
+
+  /* WhatsApp / aba final */
+  .whatsapp-section {display:none; flex-direction:column; align-items:center; padding:30px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .whatsapp-btn {padding:15px 25px; background:#00FF00; color:#111; border:none; border-radius:12px; cursor:pointer; font-size:16px; margin-bottom:15px;}
+  .whatsapp-text {color:#FFD700; font-weight:bold; text-align:center;}
 
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
-    .box, .kit-box{min-width:150px;}
+    .box, .kit-box, .info-box{min-width:150px;}
     .products-container img{width:80%;}
   }
 </style>
@@ -46,23 +54,33 @@
 <!-- Frase Chamativa -->
 <section class="section">
   <h1>Você já imaginou transformar sua vida?</h1>
-  <p>Conquistar viagens, prêmios e lucros de 100%, vendendo produtos de alta demanda!</p>
+  <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de alta demanda.</p>
 </section>
 
-<!-- Seus Sonhos -->
-<section class="section" style="background-color:#222;">
+<!-- Pergunta Persuasiva -->
+<section class="section" style="background-color:#111;">
   <h1>Quais são os seus sonhos?</h1>
   <div class="carousel-container">
-    <div class="box">Aposentadoria confortável</div>
-    <div class="box">Viajar pelo mundo</div>
-    <div class="box">Comprar casa própria</div>
-    <div class="box">Ter um carro de luxo</div>
-    <div class="box">Liberdade financeira</div>
+    <div class="box">
+      <h2>Aposentadoria confortável</h2>
+    </div>
+    <div class="box">
+      <h2>Viajar pelo mundo</h2>
+    </div>
+    <div class="box">
+      <h2>Comprar casa própria</h2>
+    </div>
+    <div class="box">
+      <h2>Ter um carro de luxo</h2>
+    </div>
+    <div class="box">
+      <h2>Liberdade financeira</h2>
+    </div>
   </div>
 </section>
 
 <!-- Benefícios -->
-<section class="section">
+<section class="section" style="background-color:#111;">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
     <div class="box">
@@ -88,23 +106,17 @@
   </div>
 </section>
 
-<!-- Acompanhamento Vivart -->
-<section class="section" style="background-color:#222;">
-  <div class="box">
-    <p>Aqui na Vivart você tem acompanhamento do início ao fim e pode participar de eventos exclusivos, online e presencial, além de treinamentos semanais.</p>
-  </div>
-</section>
-
 <!-- Sobre a Empresa -->
 <section class="section">
-  <h1>Sobre a Vivart</h1>
-  <p>A Vivart surge com foco em vender produtos exclusivos e de qualidade, acessíveis para todos. Temos um portfólio com mais de 100 produtos à sua escolha, com lançamentos semanais.</p>
+  <h1>Sobre a Vivarth</h1>
+  <p>A Vivarth surge com foco em produtos exclusivos, de alta qualidade e acessíveis, que todos podem ter acesso.</p>
+  <p>Temos um portfólio com mais de 100 produtos à sua escolha, com lançamentos semanais.</p>
 </section>
 
 <!-- Produtos (Perfumes) -->
 <section class="section" style="background-color:#111;">
   <h1>Perfumes de Nicho</h1>
-  <p>Perfumes exclusivos com inspiração nos maiores do mundo. Qualidade incomparável.</p>
+  <p>Perfumes exclusivos com inspiração nos maiores perfumes do mundo e qualidade incomparável.</p>
   <div class="products-container">
     <img src="01.jpeg" alt="Perfume 1">
     <img src="02.jpeg" alt="Perfume 2">
@@ -116,58 +128,66 @@
 <section class="section">
   <h1>Estrutura de Níveis</h1>
   <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Cada nível alcança reconhecimento e bônus. Comece com qualquer kit e evolua conforme sua dedicação.</p>
+  <p>Cada nível alcança reconhecimento, bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
 <!-- Bônus Inteligente -->
-<section class="section" style="background-color:#222;">
+<section class="section" style="background-color:#111;">
   <h1>Bônus Inteligente</h1>
   <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Você ganha pontos das duas equipes, lado a lado.</p>
+  <p>Diferente de todas as empresas, você ganha pontos das duas equipes simultaneamente.</p>
 </section>
 
 <!-- Bônus da Equipe -->
 <section class="section">
   <h1>Bônus da Equipe</h1>
   <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Toda sua equipe gera pontos que valem dinheiro.</p>
+  <p>Sua equipe gera pontos que valem dinheiro. Quanto mais pessoas entram, mais você ganha.</p>
 </section>
 
 <!-- Premiações -->
-<section class="section" style="background-color:#222;">
+<section class="section" style="background-color:#111;">
   <h1>Premiações e Conquistas</h1>
+  <p style="color:#fff;">Alcançando o nível Diamante, ganha uma viagem exclusiva em um cruzeiro.</p>
+  <p style="color:#fff;">Chegando no Diamante Elite, ganha viagem dos seus sonhos + iPhone.</p>
+  <p style="color:#fff;">Chegando no Diamante Supremo, você ganha um carro de luxo 100% elétrico.</p>
+  <p style="color:#fff;">Chegando no Diamante Imperial, ganha viagem dos sonhos para a Disney com acompanhante.</p>
+  <p style="color:#fff;">Além disso, participe de sorteios semanais de premiações em dinheiro, produtos e viagens.</p>
   <div class="products-container">
     <img src="cruzeiro01.jpeg" alt="Cruzeiro">
     <img src="viagens07.jpeg" alt="Viagem">
     <img src="carro01.jpeg" alt="Carro">
     <img src="disney01.jpeg" alt="Disney">
   </div>
-  <p>Alcançando o nível Diamante, ganha uma viagem exclusiva em um cruzeiro.</p>
-  <p>Chegando ao Diamante Elite, ganha viagem dos seus sonhos e um iPhone.</p>
-  <p>Chegando ao Diamante Supremo, ganha um carro de luxo 100% elétrico.</p>
-  <p>Chegando ao Diamante Imperial, ganha uma viagem para a Disney com acompanhante.</p>
-  <p>Além de participar de sorteios semanais de premiações em dinheiro, produtos e viagens.</p>
+</section>
+
+<!-- Nova Caixinha Persuasiva -->
+<section class="section" style="background-color:#111;">
+  <div class="info-box">
+    <h2>Acompanhamento Completo</h2>
+    <p style="color:#FFD700;">Aqui na Vivart você tem acompanhamento do início ao fim e a oportunidade de participar de eventos exclusivos, online e presenciais, além de treinamentos semanais que te ajudam a alcançar resultados reais.</p>
+  </div>
 </section>
 
 <!-- Kits -->
 <section class="section" style="background-color:#111;">
-  <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
-  <p>Aproveite a oportunidade e frete grátis para todo o Brasil.</p>
+  <h1>Escolha um dos três kits e comece a mudar a sua vida ainda hoje</h1>
+  <p>Aproveite a oportunidade! Frete grátis para todo o Brasil.</p>
   <div class="kits-container">
     <div class="kit-box" onclick="selectKit('kit1')">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
-      <p>Compre R$300 em produtos e ganhe R$500 em produtos. Mais 500 pontos acumulativos.</p>
+      <p>Compre R$300 em produtos, ganhe R$500 em produtos + 500 pontos acumulativos.</p>
     </div>
     <div class="kit-box" onclick="selectKit('kit2')">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
-      <p>Compre R$500 em produtos e ganhe R$700 em produtos. Mais 700 pontos acumulativos.</p>
+      <p>Compre R$500 em produtos, ganhe R$700 em produtos + 700 pontos.</p>
     </div>
     <div class="kit-box" onclick="selectKit('kit3')">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
-      <p>Compre R$1.000 em produtos e ganhe R$1.300 em produtos. Mais 1.100 pontos acumulativos.</p>
+      <p>Compre R$1.000 em produtos, ganhe R$1.300 em produtos + 1.100 pontos.</p>
     </div>
   </div>
 </section>
@@ -216,53 +236,61 @@
   <img id="pix-image" src="" alt="QR Code">
   <div class="pix-code" id="pix-code"></div>
   <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
+</section>
 
-  <button class="whatsapp-btn" onclick="openWhatsApp()" style="margin-top:20px; background:#25D366; color:#fff; border:none; padding:15px 25px; border-radius:12px; cursor:pointer;">
-    Clique aqui para WhatsApp
-  </button>
+<!-- WhatsApp / aba final -->
+<section class="whatsapp-section" id="whatsapp-section">
+  <button class="whatsapp-btn" onclick="openWhatsApp()">Clique aqui</button>
+  <p class="whatsapp-text">Você acaba de dar o primeiro passo rumo ao sucesso! Obrigado por fazer parte da Vivart.</p>
 </section>
 
 <script>
-let selectedKit='kit1';
-document.getElementById('consultor').addEventListener('change',function(){
-  document.getElementById('nome-consultor').style.display=this.value==='sim'?'block':'none';
-});
+let selectedKit = 'kit1';
 
 function selectKit(kit){
-  selectedKit=kit;
+  selectedKit = kit;
   document.getElementById('form-section').style.display='flex';
-  window.scrollTo({top:document.getElementById('form-section').offsetTop,behavior:'smooth'});
+  window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior:'smooth' });
 }
 
+document.getElementById('consultor').addEventListener('change', function(){
+  document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
+});
+
 function showPayment(){
-  const nome=document.getElementById('nome').value;
-  if(!nome){alert('Preencha seu nome antes de prosseguir.');return;}
+  const nome = document.getElementById('nome').value;
+  if(!nome){alert('Preencha seu nome antes de prosseguir.'); return;}
   document.getElementById('form-section').style.display='none';
   document.getElementById('payment-section').style.display='flex';
-  window.scrollTo({top:document.getElementById('payment-section').offsetTop,behavior:'smooth'});
+  window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior:'smooth' });
 
-  const pixImage=document.getElementById('pix-image');
-  const pixCode=document.getElementById('pix-code');
+  const pixImage = document.getElementById('pix-image');
+  const pixCode = document.getElementById('pix-code');
 
   if(selectedKit==='kit1'){
     pixImage.src='pagamento01.jpeg';
     pixCode.textContent='00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1';
-  }else if(selectedKit==='kit2'){
+  } else if(selectedKit==='kit2'){
     pixImage.src='pagamento02.jpeg';
     pixCode.textContent='00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB';
-  }else if(selectedKit==='kit3'){
+  } else if(selectedKit==='kit3'){
     pixImage.src='pagamento03.jpeg';
     pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
   }
+
+  // Exibe a aba WhatsApp
+  document.getElementById('whatsapp-section').style.display='flex';
+  window.scrollTo({ top: document.getElementById('whatsapp-section').offsetTop, behavior:'smooth' });
 }
 
-function copyPix(){navigator.clipboard.writeText(document.getElementById('pix-code').textContent).then(()=>{alert('Código Pix copiado!');});}
+function copyPix(){
+  navigator.clipboard.writeText(document.getElementById('pix-code').textContent).then(()=>{alert('Código Pix copiado!');});
+}
 
 function openWhatsApp(){
-  let kitName=selectedKit==='kit1'?'Kit Inicial':selectedKit==='kit2'?'Kit Intermediário':'Kit Avançado';
-  let mensagem=Olá! Acabei de realizar meu pedido do ${kitName} via Vivart. Já realizei o pagamento pelo Pix.;
-  let numeroWhats='5511999999999';
-  window.open(https://api.whatsapp.com/send?phone=${numeroWhats}&text=${encodeURIComponent(mensagem)},'_blank');
+  const numero = '5511999999999'; // coloque o número do WhatsApp aqui
+  const mensagem = encodeURIComponent('Olá, acabei de realizar meu pedido na Vivart!');
+  window.open(https://wa.me/${numero}?text=${mensagem}, '_blank');
 }
 </script>
 
