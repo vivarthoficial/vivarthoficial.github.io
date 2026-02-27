@@ -33,11 +33,6 @@
   .pix-code {background:#111; color:#fff; padding:15px; border-radius:12px; width:100%; word-break:break-all; margin-bottom:10px;}
   .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer;}
 
-  /* WhatsApp / Mensagem de agradecimento */
-  .whatsapp-section {display:none; background:#222; padding:30px 20px; margin-top:20px; border-radius:12px; max-width:600px; margin-left:auto; margin-right:auto;}
-  .whatsapp-section p {margin-bottom:10px; line-height:1.5;}
-  .whatsapp-number {color:#00FF00; font-weight:bold; font-size:18px;}
-
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
     .box, .kit-box, .info-box{min-width:150px;}
@@ -236,14 +231,15 @@
   <img id="pix-image" src="" alt="QR Code">
   <div class="pix-code" id="pix-code"></div>
   <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
-</section>
-
-<!-- WhatsApp / Mensagem final (aparece por último) -->
-<section class="whatsapp-section" id="whatsapp-section">
-  <p>🎉 Obrigado por fazer parte da Vivarte! Você acaba de dar o primeiro passo rumo ao sucesso.</p>
-  <p>Agora você tem <strong>contato direto com o suporte</strong>.</p>
-  <p>Entre em contato via WhatsApp: <span class="whatsapp-number">+55 51 92001-2441</span></p>
-  <p>Nosso time entrará em contato com você em até 24 horas. Sua confirmação será enviada no seu e-mail.</p>
+  
+  <!-- Mensagem final após o Pix -->
+  <div class="info-box" style="margin-top:20px;">
+    <p style="color:#FFD700; font-size:18px; line-height:1.8; margin:0;">
+      Obrigado por fazer parte da Vivarte!<br>
+      Entre em contato com o suporte para tirar suas dúvidas e garantir sua vaga no treinamento:<br>
+      <strong>WhatsApp: +55 51 92001-2441</strong>
+    </p>
+  </div>
 </section>
 
 <script>
@@ -262,9 +258,9 @@ document.getElementById('consultor').addEventListener('change', function(){
 function showPayment(){
   const nome = document.getElementById('nome').value;
   if(!nome){alert('Preencha seu nome antes de prosseguir.'); return;}
-  
   document.getElementById('form-section').style.display='none';
   document.getElementById('payment-section').style.display='flex';
+  window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior:'smooth' });
 
   const pixImage = document.getElementById('pix-image');
   const pixCode = document.getElementById('pix-code');
@@ -279,10 +275,6 @@ function showPayment(){
     pixImage.src='pagamento03.jpeg';
     pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
   }
-
-  // Exibe a mensagem do WhatsApp por último
-  document.getElementById('whatsapp-section').style.display='flex';
-  window.scrollTo({ top: document.getElementById('whatsapp-section').offsetTop, behavior:'smooth' });
 }
 
 function copyPix(){
