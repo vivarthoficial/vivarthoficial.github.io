@@ -5,46 +5,32 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth - Transforme sua Vida</title>
 <style>
-  body {margin:0; font-family: Arial, sans-serif; background:#111; color:#fff;}
+  body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
   h1,h2 {color:#FFD700; margin-bottom:15px;}
   p {margin-bottom:15px;}
-  .section {padding:60px 20px; text-align:center; background:#111;} /* fundo preto para todas as seções */
-
-  /* Containers */
+  .section {padding:60px 20px; text-align:center;}
+  
+  /* Carrosséis e caixas */
   .carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
-
-  /* Boxes */
+  
   .box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
   .box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
-  .comparison-item {flex:0 0 300px; text-align:center;}
-  .comparison-item img {width:100%; border-radius:12px;}
-
+  
   /* Formulário */
-  #form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-  #form-section input, #form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
-  #form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
-
+  .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+  .form-section label {display:block; text-align:left; margin-top:10px;}
+  .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
+  
   /* Pagamento */
-  #payment-section {display:none; padding:40px 20px; max-width:600px; margin:20px auto; background:#222; border-radius:12px;}
-  #payment-section img {width:250px; border-radius:12px; margin-bottom:15px;}
-  .pix-code {
-    background:#111;
-    color:#FFD700;
-    padding:15px;
-    border-radius:8px;
-    font-family:monospace;
-    margin:10px 0;
-    overflow-x:auto; /* permite rolagem horizontal para códigos grandes */
-    white-space:nowrap; /* não quebra linhas */
-    max-width:100%; /* não ultrapassa a largura da seção */
-  }
-  #payment-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:10px;}
-
+  .payment-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:700px; margin:20px auto;}
+  .payment-section img {width:250px; border-radius:12px; margin-bottom:15px;}
+  .pix-code {background:#111; color:#FFD700; padding:20px; border-radius:12px; font-family:monospace; font-size:14px; max-width:100%; overflow-x:auto; white-space:nowrap; height:80px; display:flex; align-items:center; margin-bottom:15px;}
+  .copy-btn {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-bottom:20px;}
+  
   @media(max-width:768px){
-    .comparison-item{flex:0 0 80%;}
     .box, .kit-box{min-width:150px;}
     .products-container img{width:80%;}
   }
@@ -63,7 +49,7 @@
 </section>
 
 <!-- Pergunta Persuasiva -->
-<section class="section">
+<section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
@@ -110,7 +96,7 @@
 </section>
 
 <!-- Produtos (Perfumes) -->
-<section class="section">
+<section class="section" style="background-color:#111;">
   <h1>Perfumes de Alto Luxo</h1>
   <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
   <div class="products-container">
@@ -120,52 +106,109 @@
   </div>
 </section>
 
-<!-- Kits -->
+<!-- Estrutura de Níveis -->
 <section class="section">
-  <h1>Escolha seu Kit</h1>
+  <h1>Estrutura de Níveis</h1>
+  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
+</section>
+
+<!-- Bônus Inteligente -->
+<section class="section" style="background-color:#222;">
+  <h1>Bônus Inteligente</h1>
+  <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
+</section>
+
+<!-- Bônus da Equipe -->
+<section class="section">
+  <h1>Bônus da Equipe</h1>
+  <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
+</section>
+
+<!-- Premiações -->
+<section class="section" style="background-color:#222;">
+  <h1>Premiações e Conquistas</h1>
+  <div class="products-container">
+    <img src="cruzeiro01.jpeg" alt="Cruzeiro">
+    <img src="viagens07.jpeg" alt="Viagem">
+    <img src="carro01.jpeg" alt="Carro">
+    <img src="disney01.jpeg" alt="Disney">
+  </div>
+</section>
+
+<!-- Kits -->
+<section class="section" style="background-color:#111;">
+  <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
+  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
   <div class="kits-container">
     <div class="kit-box">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
-      <p>R$300 - Ganhe 500 pontos</p>
-      <button onclick="selectKit('kit1')">Escolher Kit Inicial</button>
+      <p>R$300 - Ganhe 500 pontos - Pontos acumulativos!</p>
+      <button onclick="selectKit('kit1')" style="padding:10px 20px; margin-top:10px; border:none; border-radius:8px; background:#FFD700; color:#111; cursor:pointer;">Escolher Kit Inicial</button>
     </div>
     <div class="kit-box">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
-      <p>R$500 - Ganhe 700 pontos</p>
-      <button onclick="selectKit('kit2')">Escolher Kit Intermediário</button>
+      <p>R$500 - Ganhe 700 pontos - Continue crescendo!</p>
+      <button onclick="selectKit('kit2')" style="padding:10px 20px; margin-top:10px; border:none; border-radius:8px; background:#FFD700; color:#111; cursor:pointer;">Escolher Kit Intermediário</button>
     </div>
     <div class="kit-box">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
-      <p>R$1.000 - Ganhe 1.100 pontos</p>
-      <button onclick="selectKit('kit3')">Escolher Kit Avançado</button>
+      <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder!</p>
+      <button onclick="selectKit('kit3')" style="padding:10px 20px; margin-top:10px; border:none; border-radius:8px; background:#FFD700; color:#111; cursor:pointer;">Escolher Kit Avançado</button>
     </div>
   </div>
 </section>
 
 <!-- Formulário -->
-<section id="form-section">
+<section class="form-section" id="form-section">
   <h1>Preencha seus dados</h1>
-  <input type="text" id="nome" placeholder="Nome completo" required>
+  <label>Teve indicação de algum consultor?</label>
+  <select id="consultor">
+    <option value="nao">Não</option>
+    <option value="sim">Sim</option>
+  </select>
+  <input type="text" id="nome-consultor" placeholder="Nome ou código do consultor" style="display:none;">
+  
+  <label>Nome completo</label>
+  <input type="text" id="nome" required>
+  
+  <label>Data de nascimento</label>
   <input type="date" id="nascimento" required>
-  <input type="text" id="cpf" placeholder="CPF" required>
-  <input type="text" id="endereco" placeholder="Endereço completo" required>
-  <input type="text" id="cep" placeholder="CEP" required>
-  <input type="text" id="cidade" placeholder="Cidade" required>
-  <input type="tel" id="telefone" placeholder="Telefone" required>
-  <input type="email" id="email" placeholder="E-mail" required>
+  
+  <label>CPF</label>
+  <input type="text" id="cpf" required>
+  
+  <label>Endereço completo</label>
+  <input type="text" id="endereco" placeholder="Rua, número, complemento" required>
+  
+  <label>CEP</label>
+  <input type="text" id="cep" required>
+  
+  <label>Cidade</label>
+  <input type="text" id="cidade" required>
+  
+  <label>Telefone</label>
+  <input type="tel" id="telefone" required>
+  
+  <label>E-mail</label>
+  <input type="email" id="email" required>
+  
   <button onclick="showPayment()">Enviar e Prosseguir</button>
 </section>
 
 <!-- Pagamento -->
-<section id="payment-section">
+<section class="payment-section" id="payment-section">
   <h1>Pagamento via Pix</h1>
   <p>Use o QR Code abaixo ou copie o código:</p>
   <img id="pix-image" src="" alt="QR Code">
-  <div id="pix-code" class="pix-code"></div>
-  <button onclick="copyPix()">Copiar Código Pix</button>
+
+  <div class="pix-code" id="pix-code"></div>
+  <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
 </section>
 
 <script>
@@ -173,16 +216,21 @@ let selectedKit = '';
 
 function selectKit(kit){
   selectedKit = kit;
-  document.getElementById('form-section').style.display = 'flex';
+  document.getElementById('form-section').style.display='flex';
   window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
 }
 
+// Mostrar campo consultor
+document.getElementById('consultor').addEventListener('change', function(){
+  document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
+});
+
 function showPayment(){
   const nome = document.getElementById('nome').value;
-  if(!nome){ alert('Preencha seu nome'); return; }
+  if(!nome){ alert('Preencha seu nome antes de prosseguir.'); return; }
 
-  document.getElementById('form-section').style.display = 'none';
-  document.getElementById('payment-section').style.display = 'block';
+  document.getElementById('form-section').style.display='none';
+  document.getElementById('payment-section').style.display='block';
   window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior: 'smooth' });
 
   const pixImage = document.getElementById('pix-image');
