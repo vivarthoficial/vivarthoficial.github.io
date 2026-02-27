@@ -8,29 +8,32 @@
   body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
   h1,h2 {color:#FFD700; margin-bottom:15px;}
   p {margin-bottom:15px;}
-  .section {padding:60px 20px; text-align:center;}
-  
+  .section {padding:60px 20px; text-align:center; background:#111;}
+
   /* Carrosséis e caixas */
   .carousel-container, .products-container, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
-  
+
   .box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
   .box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
-  
+  .comparison-item {flex:0 0 300px; text-align:center;}
+  .comparison-item img {width:100%; border-radius:12px;}
+
   /* Formulário */
   .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
   .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
   .form-section label {display:block; text-align:left; margin-top:10px;}
   .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
-  
+
   /* Pagamento */
-  .payment-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:700px; margin:20px auto;}
-  .payment-section img {width:250px; border-radius:12px; margin-bottom:15px;}
-  .pix-code {background:#111; color:#FFD700; padding:20px; border-radius:12px; font-family:monospace; font-size:14px; max-width:100%; overflow-x:auto; white-space:nowrap; height:80px; display:flex; align-items:center; margin-bottom:15px;}
-  .copy-btn {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-bottom:20px;}
-  
+  .payment-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .pix-code {background:#333; padding:15px; border-radius:8px; word-break:break-all; color:#fff; margin:15px 0; font-size:14px; text-align:center;}
+  .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-bottom:20px;}
+
   @media(max-width:768px){
+    .comparison-item{flex:0 0 80%;}
     .box, .kit-box{min-width:150px;}
     .products-container img{width:80%;}
   }
@@ -39,7 +42,8 @@
 <body>
 
 <!-- Banner Principal -->
-<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;"></section>
+<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
+</section>
 
 <!-- Frase Chamativa -->
 <section class="section">
@@ -49,17 +53,30 @@
 </section>
 
 <!-- Pergunta Persuasiva -->
-<section class="section" style="background-color:#222;">
+<section class="section">
   <h1>Quais são os seus sonhos?</h1>
-  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
-    <div class="box">Aposentadoria confortável</div>
-    <div class="box">Viajar pelo mundo</div>
-    <div class="box">Comprar casa própria</div>
-    <div class="box">Ter um carro de luxo</div>
-    <div class="box">Liberdade financeira</div>
+    <div class="box">
+      <h2>Aposentadoria confortável</h2>
+      <p>Garanta segurança e liberdade financeira no futuro.</p>
+    </div>
+    <div class="box">
+      <h2>Viajar pelo mundo</h2>
+      <p>Conheça destinos incríveis sem se preocupar com custos.</p>
+    </div>
+    <div class="box">
+      <h2>Comprar casa própria</h2>
+      <p>Tenha seu imóvel dos sonhos com facilidade e planejamento.</p>
+    </div>
+    <div class="box">
+      <h2>Ter um carro de luxo</h2>
+      <p>Conquiste o carro que sempre desejou com seu lucro.</p>
+    </div>
+    <div class="box">
+      <h2>Liberdade financeira</h2>
+      <p>Ganhe independência e realize seus sonhos sem limites.</p>
+    </div>
   </div>
-  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
 <!-- Benefícios -->
@@ -90,13 +107,14 @@
 </section>
 
 <!-- Sobre a Empresa -->
-<section class="section">
+<section class="section" style="background-color:#111;">
   <h1>Sobre a Vivarth</h1>
-  <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
+  <p>Vivarth é uma empresa brasileira desde 2021 no mercado no segmento de perfumaria e cosméticos.</p>
+  <p>Temos um portfólio de mais de 100 produtos à sua escolha.</p>
 </section>
 
 <!-- Produtos (Perfumes) -->
-<section class="section" style="background-color:#111;">
+<section class="section">
   <h1>Perfumes de Alto Luxo</h1>
   <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
   <div class="products-container">
@@ -107,28 +125,28 @@
 </section>
 
 <!-- Estrutura de Níveis -->
-<section class="section">
+<section class="section" style="background-color:#111;">
   <h1>Estrutura de Níveis</h1>
   <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
 <!-- Bônus Inteligente -->
-<section class="section" style="background-color:#222;">
+<section class="section">
   <h1>Bônus Inteligente</h1>
   <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
 </section>
 
 <!-- Bônus da Equipe -->
-<section class="section">
+<section class="section" style="background-color:#111;">
   <h1>Bônus da Equipe</h1>
   <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
   <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
 </section>
 
 <!-- Premiações -->
-<section class="section" style="background-color:#222;">
+<section class="section">
   <h1>Premiações e Conquistas</h1>
   <div class="products-container">
     <img src="cruzeiro01.jpeg" alt="Cruzeiro">
@@ -136,30 +154,31 @@
     <img src="carro01.jpeg" alt="Carro">
     <img src="disney01.jpeg" alt="Disney">
   </div>
+  <p style="color:#fff;">Nível Diamante: Ganha um cruzeiro</p>
+  <p style="color:#fff;">Próximo nível: Ganha viagem</p>
+  <p style="color:#fff;">Próximo nível: Ganha carro zero quilômetro</p>
+  <p style="color:#fff;">Último nível: Ganha viagem para Disney</p>
 </section>
 
 <!-- Kits -->
 <section class="section" style="background-color:#111;">
   <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
-  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
+  <p>Aproveite a oportunidade de frete grátis para todo o Brasil!</p>
   <div class="kits-container">
-    <div class="kit-box">
+    <div class="kit-box" onclick="selectKit('kit1')">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
-      <p>R$300 - Ganhe 500 pontos - Pontos acumulativos!</p>
-      <button onclick="selectKit('kit1')" style="padding:10px 20px; margin-top:10px; border:none; border-radius:8px; background:#FFD700; color:#111; cursor:pointer;">Escolher Kit Inicial</button>
+      <p>Compre R$300 em produtos, ganhe R$500 em produtos + 500 pontos acumulativos</p>
     </div>
-    <div class="kit-box">
+    <div class="kit-box" onclick="selectKit('kit2')">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
-      <p>R$500 - Ganhe 700 pontos - Continue crescendo!</p>
-      <button onclick="selectKit('kit2')" style="padding:10px 20px; margin-top:10px; border:none; border-radius:8px; background:#FFD700; color:#111; cursor:pointer;">Escolher Kit Intermediário</button>
+      <p>Compre R$500 em produtos, ganhe R$700 em produtos + 700 pontos acumulativos</p>
     </div>
-    <div class="kit-box">
+    <div class="kit-box" onclick="selectKit('kit3')">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
-      <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder!</p>
-      <button onclick="selectKit('kit3')" style="padding:10px 20px; margin-top:10px; border:none; border-radius:8px; background:#FFD700; color:#111; cursor:pointer;">Escolher Kit Avançado</button>
+      <p>Compre R$1.000 em produtos, ganhe R$1.300 em produtos + 1.100 pontos acumulativos</p>
     </div>
   </div>
 </section>
@@ -204,15 +223,17 @@
 <!-- Pagamento -->
 <section class="payment-section" id="payment-section">
   <h1>Pagamento via Pix</h1>
-  <p>Use o QR Code abaixo ou copie o código:</p>
-  <img id="pix-image" src="" alt="QR Code">
-
+  <p>Use o QR Code ou copie o código abaixo para pagar diretamente para a Vivarth.</p>
+  <img id="pix-image" src="" alt="QR Code" style="max-width:250px;">
   <div class="pix-code" id="pix-code"></div>
   <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
+  
+  <p>Após copiar o código ou concluir o pagamento, clique no botão abaixo para enviar seus dados pelo WhatsApp (em breve).</p>
+  <button style="padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer;">Clique aqui</button>
 </section>
 
 <script>
-let selectedKit = '';
+let selectedKit = 'kit1'; 
 
 function selectKit(kit){
   selectedKit = kit;
@@ -220,17 +241,15 @@ function selectKit(kit){
   window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
 }
 
-// Mostrar campo consultor
 document.getElementById('consultor').addEventListener('change', function(){
   document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
 });
 
 function showPayment(){
   const nome = document.getElementById('nome').value;
-  if(!nome){ alert('Preencha seu nome antes de prosseguir.'); return; }
-
+  if(!nome){alert('Preencha seu nome antes de prosseguir.'); return;}
   document.getElementById('form-section').style.display='none';
-  document.getElementById('payment-section').style.display='block';
+  document.getElementById('payment-section').style.display='flex';
   window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior: 'smooth' });
 
   const pixImage = document.getElementById('pix-image');
