@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth Oficial</title>
 <style>
-body {margin:0; font-family:Arial,sans-serif; background:#0a0a0a; color:#fff;}
+body {margin:0; font-family: Arial, sans-serif; background:#0a0a0a; color:#fff;}
 h1,h2,h3{color:#FFD700; margin-bottom:20px;}
 p{margin-bottom:10px;}
 .section{padding:60px 20px; text-align:center;}
@@ -13,13 +13,14 @@ p{margin-bottom:10px;}
 .slider::-webkit-scrollbar{display:none;}
 .card{background:#111; border-radius:15px; padding:20px; flex:0 0 280px; box-shadow:0 5px 20px rgba(0,0,0,0.5);}
 .card img{width:100%; border-radius:12px; margin-bottom:15px;}
+img.full{width:70%; max-width:600px; border-radius:15px; display:block; margin:20px auto;}
 .btn{background:#FFD700; color:#000; border:none; padding:12px 18px; border-radius:10px; font-weight:bold; cursor:pointer;}
 </style>
 </head>
 <body>
 
 <!-- 1. Banner Principal -->
-<section class="section" style="background:url('banner.jpeg')center/cover no-repeat;height:350px;">
+<section class="section" style="background:url('banner.jpeg')center/cover no-repeat;height:350px; display:flex; flex-direction:column; justify-content:center; align-items:center;">
   <h1>Você já imaginou transformar sua vida?</h1>
   <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de luxo?</p>
   <p>Na Vivarth é possível!</p>
@@ -55,27 +56,27 @@ p{margin-bottom:10px;}
 <h2>Conheça nossos perfumes</h2>
 <p>Perfumes de luxo, alta perfumaria, aroma incomparável, produtos de alta procura. Qualidade que encanta você e seu cliente.</p>
 <div class="slider">
-  <div class="card"><img src="01.jpeg" alt=""></div>
-  <div class="card"><img src="02.jpeg" alt=""></div>
-  <div class="card"><img src="03.jpeg" alt=""></div>
+  <div class="card"><img src="01.jpeg" alt="Perfume 1"></div>
+  <div class="card"><img src="02.jpeg" alt="Perfume 2"></div>
+  <div class="card"><img src="03.jpeg" alt="Perfume 3"></div>
 </div>
 </section>
 
 <!-- 6. Estrutura de Níveis -->
 <section class="section">
-<img src="pins01.jpeg" alt="Níveis" style="width:70%; max-width:600px; border-radius:15px;">
+<img src="pins01.jpeg" alt="Níveis" class="full">
 <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
 <!-- 7. Bônus Inteligente -->
 <section class="section">
-<img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:70%; max-width:600px; border-radius:15px;">
+<img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" class="full">
 <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
 </section>
 
 <!-- 8. Bônus da Equipe -->
 <section class="section">
-<img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:70%; max-width:600px; border-radius:15px;">
+<img src="pontos01.jpeg" alt="Bônus da Equipe" class="full">
 <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
 </section>
 
@@ -83,10 +84,10 @@ p{margin-bottom:10px;}
 <section class="section">
 <h2>Premiações e Conquistas</h2>
 <div class="slider">
-  <div class="card"><img src="cruzeiro01.jpeg" alt=""><p>Chegando ao nível Diamante, você ganha um cruzeiro com acompanhante totalmente pago.</p></div>
-  <div class="card"><img src="viagens07.jpeg" alt=""><p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p></div>
-  <div class="card"><img src="carro01.jpeg" alt=""><p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p></div>
-  <div class="card"><img src="disney01.jpeg" alt=""><p>Último nível: viagem para Disney totalmente gratuita.</p></div>
+  <div class="card"><img src="cruzeiro01.jpeg" alt="Cruzeiro"><p>Chegando ao nível Diamante, você ganha um cruzeiro com acompanhante totalmente pago.</p></div>
+  <div class="card"><img src="viagens07.jpeg" alt="Maldivas"><p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p></div>
+  <div class="card"><img src="carro01.jpeg" alt="Carro"><p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p></div>
+  <div class="card"><img src="disney01.jpeg" alt="Disney"><p>Último nível: viagem para Disney totalmente gratuita.</p></div>
 </div>
 <p>Em breve: novas conquistas e sorteios mensais com prêmios e viagens.</p>
 </section>
