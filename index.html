@@ -22,12 +22,16 @@
   .comparison-item img {width:100%; border-radius:12px;}
 
   /* Formulário */
-  .form-section, .payment-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
   .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
   .form-section label {display:block; text-align:left; margin-top:10px;}
-  .form-section button, .payment-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
+  .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
 
-  .pix-code {background:#333; color:#fff; padding:15px; border-radius:12px; margin:10px 0; word-break: break-all; width:90%; text-align:center; font-family: monospace; font-size:14px;}
+  /* Pagamento */
+  .payment-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .payment-section img {width:200px; margin:20px 0;}
+  .pix-code {background:#111; color:#fff; padding:15px; border-radius:12px; width:100%; word-break:break-all; margin-bottom:10px;}
+  .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer;}
 
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
@@ -45,30 +49,38 @@
 <!-- Frase Chamativa -->
 <section class="section">
   <h1>Você já imaginou transformar sua vida?</h1>
-  <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de alta demanda!</p>
+  <p>Conquistar viagens, prêmios e lucros de 100% vendendo produtos de alta demanda.</p>
 </section>
 
 <!-- Pergunta Persuasiva -->
-<section class="section" style="background-color:#222;">
+<section class="section" style="background-color:#111;">
   <h1>Quais são os seus sonhos?</h1>
-  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
-    <div class="box">Aposentadoria confortável</div>
-    <div class="box">Viajar pelo mundo</div>
-    <div class="box">Comprar casa própria</div>
-    <div class="box">Ter um carro de luxo</div>
-    <div class="box">Liberdade financeira</div>
+    <div class="box">
+      <h2>Aposentadoria confortável</h2>
+    </div>
+    <div class="box">
+      <h2>Viajar pelo mundo</h2>
+    </div>
+    <div class="box">
+      <h2>Comprar casa própria</h2>
+    </div>
+    <div class="box">
+      <h2>Ter um carro de luxo</h2>
+    </div>
+    <div class="box">
+      <h2>Liberdade financeira</h2>
+    </div>
   </div>
-  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
 <!-- Benefícios -->
-<section class="section">
+<section class="section" style="background-color:#111;">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
     <div class="box">
       <h2>100% de lucro</h2>
-      <p>Vendendo produtos de luxo, você garante lucro total.</p>
+      <p>Vendendo produtos, você garante lucro total.</p>
     </div>
     <div class="box">
       <h2>Bônus por indicação</h2>
@@ -92,14 +104,14 @@
 <!-- Sobre a Empresa -->
 <section class="section">
   <h1>Sobre a Vivarth</h1>
-  <p>A Vivarth surge com o foco de oferecer produtos exclusivos, com qualidade incomparável e valores acessíveis, que todos podem ter acesso.</p>
-  <p>Temos um portfólio com mais de 100 produtos à sua escolha, com novidades e lançamentos todas as semanas.</p>
+  <p>A Vivarth surge com foco em vender produtos exclusivos de alta qualidade e acessíveis, que todos podem ter acesso.</p>
+  <p>Temos um portfólio com mais de 100 produtos à sua escolha, com lançamentos semanais.</p>
 </section>
 
 <!-- Produtos (Perfumes) -->
 <section class="section" style="background-color:#111;">
   <h1>Perfumes de Nicho</h1>
-  <p style="color:#fff;">Perfumes exclusivos com inspiração nos maiores perfumes do mundo. Qualidade incomparável.</p>
+  <p>Perfumes exclusivos com inspiração nos maiores perfumes do mundo e qualidade incomparável.</p>
   <div class="products-container">
     <img src="01.jpeg" alt="Perfume 1">
     <img src="02.jpeg" alt="Perfume 2">
@@ -111,57 +123,57 @@
 <section class="section">
   <h1>Estrutura de Níveis</h1>
   <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Cada nível que você alcança traz mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
+  <p>Cada nível alcança reconhecimento, bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
 <!-- Bônus Inteligente -->
-<section class="section" style="background-color:#222;">
+<section class="section" style="background-color:#111;">
   <h1>Bônus Inteligente</h1>
   <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
+  <p>Diferente de todas as empresas, você ganha pontos das duas equipes simultaneamente.</p>
 </section>
 
 <!-- Bônus da Equipe -->
 <section class="section">
   <h1>Bônus da Equipe</h1>
   <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Toda sua equipe gera pontos. Quanto mais pessoas entrarem, mais você ganha.</p>
+  <p>Sua equipe gera pontos que valem dinheiro. Quanto mais pessoas entram, mais você ganha.</p>
 </section>
 
-<!-- Premiações e Conquistas -->
-<section class="section" style="background-color:#222;">
+<!-- Premiações -->
+<section class="section" style="background-color:#111;">
   <h1>Premiações e Conquistas</h1>
+  <p style="color:#fff;">Alcançando o nível Diamante, ganha uma viagem exclusiva em um cruzeiro.</p>
+  <p style="color:#fff;">Chegando no Diamante Elite, ganha viagem dos seus sonhos + iPhone.</p>
+  <p style="color:#fff;">Chegando no Diamante Supremo, ganha carro sedan 100% automático.</p>
+  <p style="color:#fff;">Chegando no Diamante Imperial, ganha viagem dos sonhos para a Disney com acompanhante.</p>
   <div class="products-container">
     <img src="cruzeiro01.jpeg" alt="Cruzeiro">
     <img src="viagens07.jpeg" alt="Viagem">
     <img src="carro01.jpeg" alt="Carro">
     <img src="disney01.jpeg" alt="Disney">
   </div>
-  <p style="color:#fff;">Alcançando o nível Diamante, você ganha uma viagem exclusiva em um cruzeiro.</p>
-  <p style="color:#fff;">Chegando no Diamante Elite, você ganha a viagem dos seus sonhos mais um iPhone topo de linha.</p>
-  <p style="color:#fff;">Chegando no Diamante Supremo, você ganha um carro sedan 100% automático.</p>
-  <p style="color:#fff;">Chegando no Diamante Imperial, você ganha uma viagem com acompanhante para a Disney.</p>
 </section>
 
-<!-- Escolha seu Kit -->
+<!-- Kits -->
 <section class="section" style="background-color:#111;">
   <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
-  <p>Aproveite a oportunidade e receba frete grátis para todo o Brasil!</p>
+  <p>Aproveite a oportunidade para todo o Brasil!</p>
   <div class="kits-container">
     <div class="kit-box" onclick="selectKit('kit1')">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
-      <p>Compre R$300 em produtos e ganhe R$500 em produtos + 500 pontos acumulativos</p>
+      <p>Compre R$300 em produtos, ganhe R$500 em produtos + 500 pontos acumulativos.</p>
     </div>
     <div class="kit-box" onclick="selectKit('kit2')">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
-      <p>Compre R$500 em produtos e ganhe R$700 em produtos + 700 pontos acumulativos</p>
+      <p>Compre R$500 em produtos, ganhe R$700 em produtos + 700 pontos.</p>
     </div>
     <div class="kit-box" onclick="selectKit('kit3')">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
-      <p>Compre R$1.000 em produtos e ganhe R$1.300 em produtos + 1.100 pontos acumulativos</p>
+      <p>Compre R$1.000 em produtos, ganhe R$1.300 em produtos + 1.100 pontos.</p>
     </div>
   </div>
 </section>
@@ -206,13 +218,10 @@
 <!-- Pagamento -->
 <section class="payment-section" id="payment-section">
   <h1>Pagamento via Pix</h1>
-  <p>Use o QR Code ou copie o código abaixo para pagar diretamente para a Vivarth.</p>
-  <img id="pix-image" src="" alt="QR Code" style="width:200px; margin-bottom:10px;">
+  <p>Use o QR Code ou copie o código abaixo:</p>
+  <img id="pix-image" src="" alt="QR Code">
   <div class="pix-code" id="pix-code"></div>
   <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
-  
-  <p style="margin-top:20px;">Após copiar o código ou concluir o pagamento, clique no botão abaixo para enviar seus dados pelo WhatsApp:</p>
-  <button onclick="openWhatsApp()" style="padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer;">Clique aqui</button>
 </section>
 
 <script>
@@ -220,8 +229,8 @@ let selectedKit = 'kit1';
 
 function selectKit(kit){
   selectedKit = kit;
-  document.getElementById('form-section').style.display = 'flex';
-  window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
+  document.getElementById('form-section').style.display='flex';
+  window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior:'smooth' });
 }
 
 document.getElementById('consultor').addEventListener('change', function(){
@@ -230,11 +239,10 @@ document.getElementById('consultor').addEventListener('change', function(){
 
 function showPayment(){
   const nome = document.getElementById('nome').value;
-  if(!nome){ alert('Preencha seu nome antes de prosseguir.'); return; }
-  
+  if(!nome){alert('Preencha seu nome antes de prosseguir.'); return;}
   document.getElementById('form-section').style.display='none';
   document.getElementById('payment-section').style.display='flex';
-  window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior: 'smooth' });
+  window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior:'smooth' });
 
   const pixImage = document.getElementById('pix-image');
   const pixCode = document.getElementById('pix-code');
@@ -252,15 +260,7 @@ function showPayment(){
 }
 
 function copyPix(){
-  const code = document.getElementById('pix-code').textContent;
-  navigator.clipboard.writeText(code).then(()=>{alert('Código Pix copiado!');});
-}
-
-function openWhatsApp(){
-  const nome = document.getElementById('nome').value;
-  let kitText = selectedKit==='kit1'?'Kit Inicial': selectedKit==='kit2'?'Kit Intermediário':'Kit Avançado';
-  const mensagem = Olá, meu nome é ${nome}, adquiri o ${kitText}, quero mais informações.;
-  window.open(https://wa.me/55191920012441?text=${encodeURIComponent(mensagem)}, '_blank');
+  navigator.clipboard.writeText(document.getElementById('pix-code').textContent).then(()=>{alert('Código Pix copiado!');});
 }
 </script>
 
