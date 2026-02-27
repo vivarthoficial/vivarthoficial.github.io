@@ -9,19 +9,19 @@
   h1,h2 {color:#FFD700; margin-bottom:20px;}
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
-  .carousel-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
-  .carousel-container::-webkit-scrollbar{display:none;}
-  .box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
-  .box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  
+  /* Scroll horizontal para carrossel de caixinhas */
+  .carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
+  
+  .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
+  .box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  
+  .products-container img {width:250px; border-radius:12px; margin-right:20px;}
   .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
-  .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px auto; min-width:180px;}
-  .profit-carousel {display:flex; overflow-x:auto; gap:20px; padding:20px 0;}
-  .profit-carousel::-webkit-scrollbar{display:none;}
-  .products-container {display:flex; overflow-x:auto; gap:20px; padding:20px 0;}
-  .products-container::-webkit-scrollbar{display:none;}
-  .products-container img {width:250px; border-radius:12px;}
+  
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
     .box{min-width:150px;}
@@ -43,7 +43,7 @@
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Quais são os seus sonhos? (Atualizada com caixinhas) -->
+<!-- Parte 2 – Quais são os seus sonhos? -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
@@ -118,26 +118,14 @@
   </div>
 </section>
 
-<!-- Parte 5 – Lucros e Ganhos -->
-<section class="section" style="background-color:#222;">
-  <h1>Ganhos Reais</h1>
-  <div class="profit-carousel">
-    <div class="profit-box">
-      <h2>1 perfume/dia</h2>
-      <p>Compra R$60, vende R$120 → lucro R$1.800/mês</p>
-    </div>
-    <div class="profit-box">
-      <h2>2 perfumes/dia</h2>
-      <p>Compra R$120, vende R$240 → lucro R$3.600/mês</p>
-    </div>
-    <div class="profit-box">
-      <h2>3 perfumes/dia</h2>
-      <p>Compra R$180, vende R$360 → lucro R$5.400/mês</p>
-    </div>
-    <div class="profit-box">
-      <h2>Ganhos ilimitados</h2>
-      <p>Seu potencial é infinito!</p>
-    </div>
+<!-- Parte 5 – Produtos (Perfumes) -->
+<section class="section" style="background-color:#111;">
+  <h1>Perfumes de Alto Luxo</h1>
+  <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
+  <div class="products-container">
+    <img src="01.jpeg" alt="Perfume 1">
+    <img src="02.jpeg" alt="Perfume 2">
+    <img src="03.jpeg" alt="Perfume 3">
   </div>
 </section>
 
