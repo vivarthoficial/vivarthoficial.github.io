@@ -5,48 +5,27 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth - Transforme sua Vida</title>
 <style>
-body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
-h1,h2 {color:#FFD700; margin-bottom:15px;}
-p {margin-bottom:15px;}
-.section {padding:60px 20px; text-align:center;}
+  body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
+  h1,h2 {color:#FFD700; margin-bottom:15px;}
+  p {margin-bottom:15px;}
+  .section {padding:40px 20px; text-align:center;}
 
-/* Carrossel e caixas */
-.carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
-.carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
+  /* Kits */
+  .kits-container {display:flex; justify-content:center; flex-wrap:wrap; gap:20px; margin-top:30px;}
+  .kit-box {background:#222; border-radius:12px; padding:20px; text-align:center; min-width:250px;}
+  .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  .kit-box button {margin-top:10px; padding:12px 20px; background:#FFD700; color:#111; border:none; border-radius:10px; cursor:pointer; font-weight:bold;}
 
-.box, .profit-box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
-.box img, .profit-box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-
-.products-container img {width:250px; border-radius:12px; margin-right:20px;}
-.comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
-.comparison-item {flex:0 0 300px; text-align:center;}
-.comparison-item img {width:100%; border-radius:12px;}
-
-/* Kits */
-.kits-container {justify-content:center; flex-wrap:wrap;}
-.kits-container button {background:#FFD700; color:#111; border:none; border-radius:12px; padding:20px 30px; font-size:16px; cursor:pointer; margin:10px;}
-
-/* Formulário */
-.form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-.form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
-.form-section label {display:block; text-align:left; margin-top:10px;}
-.form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
-
-/* Pagamento */
-.payment-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-.payment-section img {width:200px; border-radius:12px; margin-bottom:10px;}
-.pix-code {background:#111; color:#FFD700; padding:10px; border-radius:8px; font-family:monospace; margin-bottom:10px; user-select: all;}
-.copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer;}
-
-/* WhatsApp */
-.whatsapp-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
-.whatsapp-section button {padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer; font-size:18px;}
-
-@media(max-width:768px){
-  .comparison-item{flex:0 0 80%;}
-  .box, .profit-box, .kit-box{min-width:150px;}
-  .products-container img{width:80%;}
-}
+  /* Formulário */
+  .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+  .form-section label {display:block; text-align:left; margin-top:10px;}
+  .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
+  
+  @media(max-width:768px){
+    .kits-container {flex-direction:column; align-items:center;}
+    .kit-box {min-width:80%;}
+  }
 </style>
 </head>
 <body>
@@ -66,109 +45,27 @@ p {margin-bottom:15px;}
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
   <p>Quanto tempo você acha que vai levar para realizá-los?</p>
-  <div class="carousel-container">
-    <div class="box">Aposentadoria confortável</div>
-    <div class="box">Viajar pelo mundo</div>
-    <div class="box">Comprar casa própria</div>
-    <div class="box">Ter um carro de luxo</div>
-    <div class="box">Liberdade financeira</div>
-  </div>
-  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
-</section>
-
-<!-- Parte 3 – Benefícios e Formas de Ganho -->
-<section class="section">
-  <h1>Benefícios e Formas de Ganho</h1>
-  <div class="carousel-container">
-    <div class="box">
-      <h2>100% de lucro</h2>
-      <p>Vendendo produtos de luxo, você garante lucro total.</p>
-    </div>
-    <div class="box">
-      <h2>Bônus por indicação</h2>
-      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
-    </div>
-    <div class="box">
-      <h2>Bonificações por metas</h2>
-      <p>Alcance metas e receba premiações incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Prêmios mensais</h2>
-      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
-    </div>
-    <div class="box">
-      <h2>Pontos que valem dinheiro</h2>
-      <p>Acumule pontos com suas vendas e equipe.</p>
-    </div>
-  </div>
-</section>
-
-<!-- Parte 4 – Sobre a Empresa -->
-<section class="section">
-  <h1>Sobre a Vivarth</h1>
-  <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
-</section>
-
-<!-- Parte 5 – Produtos (Perfumes) -->
-<section class="section" style="background-color:#111;">
-  <h1>Perfumes de Alto Luxo</h1>
-  <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
-  <div class="products-container">
-    <img src="01.jpeg" alt="Perfume 1">
-    <img src="02.jpeg" alt="Perfume 2">
-    <img src="03.jpeg" alt="Perfume 3">
-  </div>
-</section>
-
-<!-- Parte 6 – Estrutura de Níveis -->
-<section class="section">
-  <h1>Estrutura de Níveis</h1>
-  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
-</section>
-
-<!-- Parte 7 – Bônus Inteligente -->
-<section class="section" style="background-color:#222;">
-  <h1>Bônus Inteligente</h1>
-  <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
-</section>
-
-<!-- Parte 8 – Bônus da Equipe -->
-<section class="section">
-  <h1>Bônus da Equipe</h1>
-  <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
-</section>
-
-<!-- Parte 9 – Premiações e Conquistas -->
-<section class="section" style="background-color:#222;">
-  <h1>Premiações e Conquistas</h1>
-  <div class="products-container">
-    <img src="cruzeiro01.jpeg" alt="Cruzeiro">
-    <img src="viagens07.jpeg" alt="Viagem">
-    <img src="carro01.jpeg" alt="Carro">
-    <img src="disney01.jpeg" alt="Disney">
-  </div>
-  <p>Chegando ao nível Diamante, você ganha um cruzeiro com acompanhante totalmente pago.</p>
-  <p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p>
-  <p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p>
-  <p>Último nível: viagem para Disney totalmente gratuita.</p>
-  <div class="box" style="margin-top:20px;">
-    <h2>Em breve:</h2>
-    <p>Novas conquistas e sorteios mensais com prêmios e viagens.</p>
-  </div>
-</section>
-
-<!-- Kits -->
-<section class="section" style="background-color:#111;">
-  <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
-  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
   <div class="kits-container">
-    <button onclick="showForm('kit1')">Kit Inicial - R$300 - 500 pontos</button>
-    <button onclick="showForm('kit2')">Kit Intermediário - R$500 - 700 pontos</button>
-    <button onclick="showForm('kit3')">Kit Avançado - R$1.000 - 1.100 pontos (já entra como líder)</button>
+    <div class="kit-box">
+      <img src="kit01.jpeg" alt="Kit 1">
+      <h2>Kit Inicial</h2>
+      <p>R$300 - Ganhe 500 pontos - Pontos acumulativos!</p>
+      <button onclick="openForm('kit1')">Escolher este Kit</button>
+    </div>
+    <div class="kit-box">
+      <img src="kit02.jpeg" alt="Kit 2">
+      <h2>Kit Intermediário</h2>
+      <p>R$500 - Ganhe 700 pontos - Pontos acumulativos!</p>
+      <button onclick="openForm('kit2')">Escolher este Kit</button>
+    </div>
+    <div class="kit-box">
+      <img src="kit03.jpeg" alt="Kit 3">
+      <h2>Kit Avançado</h2>
+      <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder!</p>
+      <button onclick="openForm('kit3')">Escolher este Kit</button>
+    </div>
   </div>
+  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
 </section>
 
 <!-- Formulário -->
@@ -205,75 +102,22 @@ p {margin-bottom:15px;}
   <label>E-mail</label>
   <input type="email" id="email" required>
 
-  <button onclick="showPayment()">Enviar e Prosseguir para Pagamento</button>
-</section>
-
-<!-- Pagamento -->
-<section class="payment-section" id="payment-section">
-  <h1>Pagamento via Pix</h1>
-  <p>Use o QR Code ou copie o código abaixo para pagar diretamente para o CNPJ da Vivarth.</p>
-  <img id="pix-image" src="" alt="QR Code">
-  <div class="pix-code" id="pix-code"></div>
-  <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
-</section>
-
-<!-- WhatsApp -->
-<section class="whatsapp-section" id="whatsapp-section">
-  <h2>Obrigado por fazer parte da Vivarth!</h2>
-  <p>Seu futuro começa agora. Vamos juntos nessa caminhada.</p>
-  <p>Após adquirir seu kit, entre em contato para mais informações:</p>
-  <button onclick="openWhatsApp()">Clique aqui</button>
+  <button onclick="alert('Formulário enviado! (Próximo: pagamento)')">Enviar e Continuar</button>
 </section>
 
 <script>
-document.getElementById('consultor').addEventListener('change', function(){
-  document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
-});
+  // Mostra campo do consultor
+  document.getElementById('consultor').addEventListener('change', function(){
+    document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
+  });
 
-let selectedKit = '';
-
-function showForm(kit){
-  selectedKit = kit;
-  document.getElementById('form-section').style.display = 'flex';
-  document.getElementById('payment-section').style.display = 'none';
-  document.getElementById('whatsapp-section').style.display = 'none';
-  window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
-}
-
-function showPayment(){
-  let pixImage = document.getElementById('pix-image');
-  let pixCode = document.getElementById('pix-code');
-  document.getElementById('form-section').style.display = 'none';
-  document.getElementById('payment-section').style.display = 'block';
-  document.getElementById('whatsapp-section').style.display = 'block';
-  window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior: 'smooth' });
-
-  if(selectedKit==='kit1'){
-    pixImage.src='pagamento01.jpeg';
-    pixCode.textContent='00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1';
-  } else if(selectedKit==='kit2'){
-    pixImage.src='pagamento02.jpeg';
-    pixCode.textContent='00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB';
-  } else if(selectedKit==='kit3'){
-    pixImage.src='pagamento03.jpeg';
-    pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
+  // Abre o formulário ao escolher o kit
+  let selectedKit = '';
+  function openForm(kit){
+    selectedKit = kit;
+    document.getElementById('form-section').style.display = 'flex';
+    window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
   }
-}
-
-function copyPix(){
-  const code = document.getElementById('pix-code').textContent;
-  navigator.clipboard.writeText(code).then(()=>{alert('Código Pix copiado!');});
-}
-
-function openWhatsApp(){
-  const nome = document.getElementById('nome').value;
-  let kitText = '';
-  if(selectedKit==='kit1') kitText='Kit Inicial';
-  else if(selectedKit==='kit2') kitText='Kit Intermediário';
-  else if(selectedKit==='kit3') kitText='Kit Avançado';
-  const mensagem = Olá, meu nome é ${nome}, adquiri o ${kitText}, quero mais informações.;
-  window.open(https://wa.me/5551920012441?text=${encodeURIComponent(mensagem)}, '_blank');
-}
 </script>
 
 </body>
