@@ -5,56 +5,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vivarth - Transforme sua Vida</title>
 <style>
-body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
-h1,h2 {color:#FFD700; margin-bottom:20px;}
-p {margin-bottom:15px;}
-.section {padding:60px 20px; text-align:center;}
-
-/* Carrosséis */
-.carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
-.carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
-
-.box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
-.box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-.products-container img {width:250px; border-radius:12px; margin-right:20px;}
-.comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
-.comparison-item {flex:0 0 300px; text-align:center;}
-.comparison-item img {width:100%; border-radius:12px;}
-
-/* Kits */
-.kit-container {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
-.kit {background:#222; border-radius:12px; padding:20px; text-align:center; width:300px;}
-.kit img {width:100%; border-radius:12px;}
-.kit button {background:#FFD700; color:#111; border:none; padding:10px 20px; margin-top:10px; cursor:pointer; border-radius:8px; font-weight:bold;}
-.kit p {margin:10px 0;}
-
-/* Formulário */
-form {background:#222; border-radius:12px; padding:20px; max-width:500px; margin:20px auto; display:none; text-align:left;}
-form label {display:block; margin-top:10px;}
-form input, form select, form textarea {width:100%; padding:8px; margin-top:5px; border-radius:8px; border:none;}
-
-/* Pagamento */
-.payment-section {background:#333; padding:40px 20px; display:none; text-align:center;}
-.payment-section img {width:200px; border-radius:12px; margin-bottom:10px;}
-.copy-button {background:#FFD700; color:#111; border:none; padding:8px 15px; cursor:pointer; border-radius:8px; font-weight:bold;}
-
-/* WhatsApp */
-.whatsapp-section {background:#222; padding:40px 20px; display:none; text-align:center;}
-.whatsapp-section a {background:#25D366; color:#fff; padding:15px 25px; border-radius:10px; font-size:18px; text-decoration:none; font-weight:bold; display:inline-block; margin-top:20px;}
-
-@media(max-width:768px){
-  .comparison-item{flex:0 0 80%;}
-  .box{min-width:150px;}
-  .profit-box{min-width:150px;}
-  .products-container img{width:80%;}
-  .kit {width:80%;}
-}
+  body {margin:0; font-family: Arial, sans-serif; background-color:#111; color:#fff;}
+  h1,h2 {color:#FFD700; margin-bottom:15px;}
+  p {margin-bottom:15px;}
+  .section {padding:60px 20px; text-align:center;}
+  
+  /* Carrossel e caixas */
+  .carousel-container, .products-container, .profit-carousel, .kits-container {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
+  .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar, .kits-container::-webkit-scrollbar{display:none;}
+  
+  .box, .profit-box, .kit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; cursor:pointer;}
+  .box img, .profit-box img, .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
+  
+  .products-container img {width:250px; border-radius:12px; margin-right:20px;}
+  .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
+  .comparison-item {flex:0 0 300px; text-align:center;}
+  .comparison-item img {width:100%; border-radius:12px;}
+  
+  /* Formulário */
+  .form-section {display:none; flex-direction:column; align-items:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .form-section input, .form-section select {width:90%; padding:10px; margin:10px 0; border-radius:8px; border:none;}
+  .form-section label {display:block; text-align:left; margin-top:10px;}
+  .form-section button {padding:15px 25px; background:#FFD700; color:#111; border:none; border-radius:12px; cursor:pointer; margin-top:20px;}
+  
+  /* Pagamento */
+  .payment-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .payment-section img {width:200px; border-radius:12px; margin-bottom:10px;}
+  .pix-code {background:#111; color:#FFD700; padding:10px; border-radius:8px; font-family:monospace; margin-bottom:10px; user-select: all;}
+  .copy-btn {padding:10px 20px; background:#FFD700; color:#111; border:none; border-radius:8px; cursor:pointer;}
+  
+  /* WhatsApp */
+  .whatsapp-section {display:none; text-align:center; padding:40px 20px; background:#222; border-radius:12px; max-width:600px; margin:20px auto;}
+  .whatsapp-section button {padding:15px 25px; background:#25D366; color:#fff; border:none; border-radius:12px; cursor:pointer; font-size:18px;}
+  
+  @media(max-width:768px){
+    .comparison-item{flex:0 0 80%;}
+    .box, .profit-box, .kit-box{min-width:150px;}
+    .products-container img{width:80%;}
+  }
 </style>
 </head>
 <body>
 
 <!-- Banner Principal -->
-<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;"></section>
+<section class="section" style="background-image:url('banner2.jpeg'); background-size:cover; background-position:center; height:400px;">
+</section>
 
 <!-- Parte 1 – Frase Chamativa -->
 <section class="section">
@@ -63,41 +58,57 @@ form input, form select, form textarea {width:100%; padding:8px; margin-top:5px;
   <p>Na Vivarth é possível!</p>
 </section>
 
-<!-- Parte 2 – Pergunta Persuasiva -->
+<!-- Parte 2 – Quais são os seus sonhos? -->
 <section class="section" style="background-color:#222;">
   <h1>Quais são os seus sonhos?</h1>
-  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
+  <p>Quanto tempo você acha que vai levar para realizá-los?</p>
   <div class="carousel-container">
-    <div class="box"><p>Aposentadoria confortável</p></div>
-    <div class="box"><p>Viajar pelo mundo</p></div>
-    <div class="box"><p>Comprar casa própria</p></div>
-    <div class="box"><p>Ter um carro de luxo</p></div>
-    <div class="box"><p>Liberdade financeira</p></div>
+    <div class="box">Aposentadoria confortável</div>
+    <div class="box">Viajar pelo mundo</div>
+    <div class="box">Comprar casa própria</div>
+    <div class="box">Ter um carro de luxo</div>
+    <div class="box">Liberdade financeira</div>
   </div>
+  <p>Na Vivarth você pode alcançar resultados reais, rápidos e consistentes.</p>
 </section>
 
 <!-- Parte 3 – Benefícios e Formas de Ganho -->
 <section class="section">
   <h1>Benefícios e Formas de Ganho</h1>
   <div class="carousel-container">
-    <div class="box"><h2>100% de lucro</h2><p>Vendendo produtos de luxo, você garante lucro total.</p></div>
-    <div class="box"><h2>Bônus por indicação</h2><p>Indique amigos e aumente seus ganhos instantaneamente.</p></div>
-    <div class="box"><h2>Bonificações por metas</h2><p>Alcance metas e receba premiações incríveis.</p></div>
-    <div class="box"><h2>Prêmios mensais</h2><p>Participe de sorteios exclusivos e viagens incríveis.</p></div>
-    <div class="box"><h2>Pontos que valem dinheiro</h2><p>Acumule pontos com suas vendas e equipe.</p></div>
+    <div class="box">
+      <h2>100% de lucro</h2>
+      <p>Vendendo produtos de luxo, você garante lucro total.</p>
+    </div>
+    <div class="box">
+      <h2>Bônus por indicação</h2>
+      <p>Indique amigos e aumente seus ganhos instantaneamente.</p>
+    </div>
+    <div class="box">
+      <h2>Bonificações por metas</h2>
+      <p>Alcance metas e receba premiações incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Prêmios mensais</h2>
+      <p>Participe de sorteios exclusivos e viagens incríveis.</p>
+    </div>
+    <div class="box">
+      <h2>Pontos que valem dinheiro</h2>
+      <p>Acumule pontos com suas vendas e equipe.</p>
+    </div>
   </div>
 </section>
 
 <!-- Parte 4 – Sobre a Empresa -->
 <section class="section">
   <h1>Sobre a Vivarth</h1>
-  <p>Vivarth é uma empresa brasileira desde 2021, sólida, confiável e pronta para transformar vidas.</p>
+  <p>Vivarth é uma empresa brasileira desde 2021, entrando agora no ramo de vendas diretas.</p>
 </section>
 
-<!-- Parte 5 – Produtos -->
+<!-- Parte 5 – Produtos (Perfumes) -->
 <section class="section" style="background-color:#111;">
   <h1>Perfumes de Alto Luxo</h1>
-  <p>Perfumes exclusivos, aroma incomparável, produtos de alta procura.</p>
+  <p>Perfumes exclusivos, inspiração árabe, qualidade incomparável.</p>
   <div class="products-container">
     <img src="01.jpeg" alt="Perfume 1">
     <img src="02.jpeg" alt="Perfume 2">
@@ -108,22 +119,22 @@ form input, form select, form textarea {width:100%; padding:8px; margin-top:5px;
 <!-- Parte 6 – Estrutura de Níveis -->
 <section class="section">
   <h1>Estrutura de Níveis</h1>
-  <img src="pins01.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades.</p>
+  <img src="pins.jpeg" alt="Estrutura de Níveis" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
+  <p>Cada nível que você alcança apresenta mais reconhecimento, mais bônus e novas oportunidades. Comece com qualquer kit e suba de nível conforme sua dedicação.</p>
 </section>
 
 <!-- Parte 7 – Bônus Inteligente -->
 <section class="section" style="background-color:#222;">
   <h1>Bônus Inteligente</h1>
   <img src="bonusinteligente03.jpeg" alt="Bônus Inteligente" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes.</p>
+  <p>Diferente de todas as empresas do mercado, você ganha pontos das duas equipes, lado a lado.</p>
 </section>
 
 <!-- Parte 8 – Bônus da Equipe -->
 <section class="section">
   <h1>Bônus da Equipe</h1>
   <img src="pontos01.jpeg" alt="Bônus da Equipe" style="width:80%; max-width:600px; border-radius:12px; margin-top:20px;">
-  <p>Quanto mais pessoas entrarem, mais você ganha.</p>
+  <p>Toda sua equipe gera pontos. Pontos que valem dinheiro. Quanto mais pessoas entrarem, mais você ganha.</p>
 </section>
 
 <!-- Parte 9 – Premiações e Conquistas -->
@@ -135,126 +146,142 @@ form input, form select, form textarea {width:100%; padding:8px; margin-top:5px;
     <img src="carro01.jpeg" alt="Carro">
     <img src="disney01.jpeg" alt="Disney">
   </div>
+  <p>Chegando ao nível Diamante, você ganha um cruzeiro com acompanhante totalmente pago.</p>
+  <p>Próximo nível: viagem para Maldivas + iPhone topo de linha.</p>
+  <p>Nível superior: carro elétrico automático sedã, 100% gratuito.</p>
+  <p>Último nível: viagem para Disney totalmente gratuita.</p>
   <div class="box" style="margin-top:20px;">
     <h2>Em breve:</h2>
     <p>Novas conquistas e sorteios mensais com prêmios e viagens.</p>
   </div>
 </section>
 
-<!-- Parte 10 – Kits -->
-<section class="section">
-  <h1>Escolha seu kit e comece a transformar sua vida hoje!</h1>
-  <p>Aproveite frete grátis para todo o Brasil</p>
-  <div class="kit-container">
-    <div class="kit" data-kit="1">
-      <h2>Kit Inicial</h2>
+<!-- Kits -->
+<section class="section" style="background-color:#111;">
+  <h1>Escolha seu Kit e Comece a Mudar de Vida</h1>
+  <p>Aproveite a oportunidade de <strong>frete grátis para todo o Brasil!</strong></p>
+  <div class="kits-container">
+    <div class="kit-box" onclick="selectKit('kit1')">
       <img src="kit01.jpeg" alt="Kit 1">
-      <p>Compre R$300 e ganhe R$500 em produtos</p>
-      <p>Pontos: 500 acumulativos</p>
-      <button onclick="selectKit(1)">Escolher Kit</button>
+      <h2>Kit Inicial</h2>
+      <p>R$300 - Ganhe 500 pontos - Pontos acumulativos, rumo ao sucesso!</p>
     </div>
-    <div class="kit" data-kit="2">
-      <h2>Kit Intermediário</h2>
+    <div class="kit-box" onclick="selectKit('kit2')">
       <img src="kit02.jpeg" alt="Kit 2">
-      <p>Compre R$500 e ganhe R$700 em produtos</p>
-      <p>Pontos: 700 acumulativos</p>
-      <button onclick="selectKit(2)">Escolher Kit</button>
+      <h2>Kit Intermediário</h2>
+      <p>R$500 - Ganhe 700 pontos - Pontos acumulativos, continue crescendo!</p>
     </div>
-    <div class="kit" data-kit="3">
-      <h2>Kit Avançado</h2>
+    <div class="kit-box" onclick="selectKit('kit3')">
       <img src="kit03.jpeg" alt="Kit 3">
-      <p>Compre R$1000 e ganhe R$1300 em produtos</p>
-      <p>Pontos: 1100 + já entra como líder</p>
-      <button onclick="selectKit(3)">Escolher Kit</button>
+      <h2>Kit Avançado</h2>
+      <p>R$1.000 - Ganhe 1.100 pontos - Já entra como líder e aproveite todos os benefícios!</p>
     </div>
   </div>
 </section>
 
-<!-- Formulário de Cadastro -->
-<form id="cadastroForm">
-  <h2>Preencha seus dados</h2>
+<!-- Formulário -->
+<section class="form-section" id="form-section">
+  <h1>Preencha seus dados</h1>
   <label>Teve indicação de algum consultor?</label>
-  <select id="indicacao" onchange="toggleIndicacao()">
+  <select id="consultor">
     <option value="nao">Não</option>
     <option value="sim">Sim</option>
   </select>
-  <div id="nomeConsultor" style="display:none; margin-top:10px;">
-    <label>Nome ou número do consultor</label>
-    <input type="text" id="consultor">
-  </div>
+  <input type="text" id="nome-consultor" placeholder="Nome ou código do consultor" style="display:none;">
+  
   <label>Nome completo</label>
-  <input type="text" required>
+  <input type="text" id="nome" required>
+  
   <label>Data de nascimento</label>
-  <input type="date" required>
+  <input type="date" id="nascimento" required>
+  
   <label>CPF</label>
-  <input type="text" required>
+  <input type="text" id="cpf" required>
+  
   <label>Endereço completo</label>
-  <input type="text" placeholder="Rua, Número, Bairro" required>
-  <input type="text" placeholder="Cidade, Estado, CEP" required>
+  <input type="text" id="endereco" placeholder="Rua, número, complemento" required>
+  
+  <label>CEP</label>
+  <input type="text" id="cep" required>
+  
+  <label>Cidade</label>
+  <input type="text" id="cidade" required>
+  
   <label>Telefone</label>
-  <input type="tel" required>
+  <input type="tel" id="telefone" required>
+  
   <label>E-mail</label>
-  <input type="email" required>
-  <button type="button" onclick="showPayment()">Prosseguir para Pagamento</button>
-</form>
+  <input type="email" id="email" required>
+  
+  <button onclick="showPayment()">Prosseguir para Pagamento</button>
+</section>
 
 <!-- Pagamento -->
-<section class="payment-section" id="paymentSection">
-  <h2>Pagamento via PIX</h2>
-  <p>Envie o pagamento diretamente para o CNPJ da Vivarth</p>
-  <img id="qrCode" src="" alt="QR Code">
-  <p>Código PIX:</p>
-  <input type="text" id="pixCode" readonly style="width:80%; text-align:center; border-radius:8px; padding:8px; border:none;">
-  <button class="copy-button" onclick="copyPix()">Copiar Código</button>
+<section class="payment-section" id="payment-section">
+  <h1>Pagamento via Pix</h1>
+  <p>Use o QR Code ou copie o código abaixo para pagar diretamente para o CNPJ da Vivarth.</p>
+  <img id="pix-image" src="" alt="QR Code">
+  <div class="pix-code" id="pix-code"></div>
+  <button class="copy-btn" onclick="copyPix()">Copiar Código Pix</button>
 </section>
 
 <!-- WhatsApp -->
-<section class="whatsapp-section" id="whatsappSection">
-  <p>Após adquirir o seu kit, entre em contato conosco e garanta mais informações.</p>
-  <a id="whatsappLink" href="" target="_blank">WhatsApp</a>
+<section class="whatsapp-section" id="whatsapp-section">
+  <h2>Obrigado por fazer parte da Vivarth!</h2>
+  <p>Seu futuro começa agora. Vamos juntos nessa caminhada.</p>
+  <p>Após adquirir seu kit, entre em contato para mais informações:</p>
+  <button onclick="openWhatsApp()">Clique aqui</button>
 </section>
 
 <script>
-let selectedKit = 0;
-const pixData = {
-  1: {img:'pagamento01.jpeg', code:'00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1'},
-  2: {img:'pagamento02.jpeg', code:'00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB'},
-  3: {img:'pagamento03.jpeg', code:'00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E'}
-};
+  // Mostra campo do consultor
+  document.getElementById('consultor').addEventListener('change', function(){
+    document.getElementById('nome-consultor').style.display = this.value==='sim'?'block':'none';
+  });
 
-function selectKit(kit){
-  selectedKit = kit;
-  document.getElementById('cadastroForm').style.display='block';
-  window.scrollTo(0,document.getElementById('cadastroForm').offsetTop-50);
-}
+  let selectedKit = '';
 
-function toggleIndicacao(){
-  const val = document.getElementById('indicacao').value;
-  document.getElementById('nomeConsultor').style.display = val==='sim'?'block':'none';
-}
+  function selectKit(kit){
+    selectedKit = kit;
+    document.getElementById('form-section').style.display = 'flex';
+    window.scrollTo({ top: document.getElementById('form-section').offsetTop, behavior: 'smooth' });
+  }
 
-function showPayment(){
-  if(selectedKit===0){ alert('Selecione um kit primeiro!'); return; }
-  const payment = pixData[selectedKit];
-  document.getElementById('qrCode').src = payment.img;
-  document.getElementById('pixCode').value = payment.code;
-  document.getElementById('paymentSection').style.display='block';
-  document.getElementById('whatsappSection').style.display='block';
+  function showPayment(){
+    let pixImage = document.getElementById('pix-image');
+    let pixCode = document.getElementById('pix-code');
+    document.getElementById('form-section').style.display = 'none';
+    document.getElementById('payment-section').style.display = 'block';
+    window.scrollTo({ top: document.getElementById('payment-section').offsetTop, behavior: 'smooth' });
+    
+    if(selectedKit==='kit1'){
+      pixImage.src='pagamento01.jpeg';
+      pixCode.textContent='00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1';
+    } else if(selectedKit==='kit2'){
+      pixImage.src='pagamento02.jpeg';
+      pixCode.textContent='00020126460014br.gov.bcb.pix0114419934770001000206kit 025204000053039865406500.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***63042CEB';
+    } else if(selectedKit==='kit3'){
+      pixImage.src='pagamento03.jpeg';
+      pixCode.textContent='00020126360014br.gov.bcb.pix01144199347700010052040000530398654071000.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304FC8E';
+    }
 
-  const kitNames = {1:'Kit Inicial',2:'Kit Intermediário',3:'Kit Avançado'};
-  const nameInput = document.querySelector('#cadastroForm input[type=text]').value;
-  const whatsappLink = https://wa.me/51920012441?text=Olá, meu nome é ${encodeURIComponent(nameInput)}. Adquiri o ${kitNames[selectedKit]} e quero mais informações.;
-  document.getElementById('whatsappLink').href = whatsappLink;
-  window.scrollTo(0,document.getElementById('paymentSection').offsetTop-50);
-}
+    document.getElementById('whatsapp-section').style.display='block';
+  }
 
-function copyPix(){
-  const pixInput = document.getElementById('pixCode');
-  pixInput.select();
-  pixInput.setSelectionRange(0, 99999);
-  document.execCommand("copy");
-  alert("Código PIX copiado!");
-}
+  function copyPix(){
+    const code = document.getElementById('pix-code').textContent;
+    navigator.clipboard.writeText(code).then(()=>{alert('Código Pix copiado!');});
+  }
+
+  function openWhatsApp(){
+    const nome = document.getElementById('nome').value;
+    let kitText = '';
+    if(selectedKit==='kit1') kitText='Kit Inicial';
+    else if(selectedKit==='kit2') kitText='Kit Intermediário';
+    else if(selectedKit==='kit3') kitText='Kit Avançado';
+    const mensagem = Olá, meu nome é ${nome}, adquiri o ${kitText}, quero mais informações.;
+    window.open(https://wa.me/51920012441?text=${encodeURIComponent(mensagem)}, '_blank');
+  }
 </script>
 
 </body>
