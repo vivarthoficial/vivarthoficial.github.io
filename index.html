@@ -9,24 +9,32 @@
   h1,h2 {color:#FFD700; margin-bottom:20px;}
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
-  
-  /* Containers */
+
+  /* Carrossel e containers */
   .carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
-  
   .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
   .box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
-  
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
   .comparison-box {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .comparison-item {flex:0 0 300px; text-align:center;}
   .comparison-item img {width:100%; border-radius:12px;}
-  
+
   /* Kits */
   .kits-container {display:flex; justify-content:center; gap:20px; flex-wrap:wrap; margin-top:40px;}
   .kit-box {background:#222; border-radius:12px; padding:20px; text-align:center; width:250px;}
   .kit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
   .kit-box button {background:#FFD700; color:#111; border:none; padding:10px 20px; border-radius:8px; cursor:pointer; margin-top:10px; font-weight:bold;}
+
+  /* Formulário */
+  form {background:#222; padding:20px; border-radius:12px; max-width:600px; margin:20px auto;}
+  form input, form select {width:100%; padding:10px; margin-bottom:15px; border-radius:8px; border:none; font-size:16px;}
+  form label {display:block; margin-bottom:5px;}
+  form button {background:#FFD700; color:#111; border:none; padding:12px 20px; border-radius:8px; cursor:pointer; font-weight:bold; font-size:16px;}
+
+  /* Pagamento */
+  .payment-section img {width:200px; border-radius:12px; margin-bottom:10px;}
+  .pix-code {word-break:break-word; background:#111; padding:10px; border-radius:8px; cursor:pointer; user-select: all;}
   
   @media(max-width:768px){
     .comparison-item{flex:0 0 80%;}
@@ -36,6 +44,18 @@
     .kit-box{width:80%;}
   }
 </style>
+<script>
+function copyPixCode() {
+  const code = document.getElementById("pixCode");
+  navigator.clipboard.writeText(code.innerText);
+  alert("Código Pix copiado!");
+}
+
+function showForm(kitId) {
+  document.getElementById('formSection').scrollIntoView({behavior:'smooth'});
+  document.getElementById('selectedKit').value = kitId;
+}
+</script>
 </head>
 <body>
 
@@ -93,7 +113,7 @@
   </div>
 </section>
 
-<!-- Parte 6 – Kits (Apenas Kit 1 para teste) -->
+<!-- Parte 6 – Kits -->
 <section class="section" style="background-color:#111;">
   <h1>Escolha seu kit e comece a mudar de vida hoje mesmo!</h1>
   <p>Aproveite a oportunidade de frete grátis para todo o Brasil</p>
@@ -106,20 +126,77 @@
       <p>Investimento: R$300</p>
       <p>Você ganha R$500 em produtos</p>
       <p>500 pontos acumulativos – rumo ao sucesso!</p>
-      <button onclick="document.getElementById('pagamento1').scrollIntoView({behavior:'smooth'});">Pagar com Pix</button>
+      <button onclick="showForm('Kit Inicial')">Escolher Kit</button>
+    </div>
+    <!-- Kit 2 -->
+    <div class="kit-box">
+      <img src="kit02.jpeg" alt="Kit 2">
+      <h2>Kit Intermediário</h2>
+      <p>Investimento: R$500</p>
+      <p>Você ganha R$700 em produtos</p>
+      <p>700 pontos acumulativos – rumo ao sucesso!</p>
+      <button onclick="showForm('Kit Intermediário')">Escolher Kit</button>
+    </div>
+    <!-- Kit 3 -->
+    <div class="kit-box">
+      <img src="kit03.jpeg" alt="Kit 3">
+      <h2>Kit Top</h2>
+      <p>Investimento: R$1.000</p>
+      <p>Você ganha R$1.300 em produtos</p>
+      <p>Já entra com 1.100 pontos – já como líder!</p>
+      <button onclick="showForm('Kit Top')">Escolher Kit</button>
     </div>
   </div>
 </section>
 
-<!-- Parte Pagamento (QR Code Kit 1) -->
-<section class="section" id="pagamento1" style="background-color:#222;">
-  <h1>Pagamento Kit 1</h1>
-  <p>Escaneie o QR Code abaixo ou copie o código Pix para realizar o pagamento:</p>
-  <img src="pagamento01.jpeg" alt="QR Code Kit 1" style="width:200px; border-radius:12px; margin-bottom:10px;">
-  <p style="word-break:break-word; background:#111; padding:10px; border-radius:8px;">
-00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1
-  </p>
-  <p>Após realizar o pagamento, envie o comprovante para o WhatsApp de atendimento.</p>
+<!-- Parte 7 – Formulário de Cadastro -->
+<section class="section" id="formSection" style="background-color:#222;">
+  <h1>Preencha seus dados para completar seu pedido</h1>
+  <form id="cadastroForm">
+    <input type="hidden" id="selectedKit" name="selectedKit">
+    
+    <label>Teve indicação de algum consultor?</label>
+    <select id="indicacao" name="indicacao">
+      <option value="não">Não</option>
+      <option value="sim">Sim</option>
+    </select>
+    
+    <label>Nome do consultor (se aplicável)</label>
+    <input type="text" id="nomeConsultor" name="nomeConsultor" placeholder="Nome ou código do consultor">
+
+    <label>Nome Completo</label>
+    <input type="text" name="nome" required>
+
+    <label>Data de Nascimento</label>
+    <input type="date" name="nascimento" required>
+
+    <label>CPF</label>
+    <input type="text" name="cpf" required>
+
+    <label>Endereço Completo</label>
+    <input type="text" name="endereco" placeholder="Rua, Número" required>
+    <input type="text" name="bairro" placeholder="Bairro" required>
+    <input type="text" name="cidade" placeholder="Cidade" required>
+    <input type="text" name="cep" placeholder="CEP" required>
+
+    <label>Telefone</label>
+    <input type="tel" name="telefone" required>
+
+    <label>E-mail</label>
+    <input type="email" name="email" required>
+
+    <button type="button" onclick="document.getElementById('pagamentoSection').scrollIntoView({behavior:'smooth'});">Finalizar Cadastro e Pagar</button>
+  </form>
+</section>
+
+<!-- Parte 8 – Pagamento Pix -->
+<section class="section payment-section" id="pagamentoSection" style="background-color:#111;">
+  <h1>Pagamento para a Vivarth (CNPJ)</h1>
+  <p>Realize o pagamento via Pix escaneando o QR Code abaixo ou copiando o código.</p>
+  <img src="pagamento01.jpeg" alt="QR Code Pix" style="width:200px;">
+  <p id="pixCode" class="pix-code">00020126560014br.gov.bcb.pix0114419934770001000216pagamento kit 015204000053039865406300.005802BR592541.993.477 MAICON AURELIO6008BRASILIA62070503***6304DFA1</p>
+  <button onclick="copyPixCode()">Copiar Código Pix</button>
+  <p>Após o pagamento, envie o comprovante para o WhatsApp de atendimento.</p>
 </section>
 
 </body>
