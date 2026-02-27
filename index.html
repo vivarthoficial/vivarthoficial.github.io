@@ -10,11 +10,11 @@
   p {margin-bottom:15px;}
   .section {padding:60px 20px; text-align:center;}
   
-  /* Scroll horizontal para carrossel de caixinhas */
+  /* Carrosséis horizontais */
   .carousel-container, .products-container, .profit-carousel {display:flex; overflow-x:auto; scroll-behavior:smooth; padding:20px 0;}
   .carousel-container::-webkit-scrollbar, .products-container::-webkit-scrollbar, .profit-carousel::-webkit-scrollbar{display:none;}
   
-  .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center;}
+  .box, .profit-box {background:#222; border-radius:12px; padding:20px; margin:10px; min-width:180px; text-align:center; flex:0 0 auto;}
   .box img, .profit-box img {width:100%; border-radius:12px; margin-bottom:10px;}
   
   .products-container img {width:250px; border-radius:12px; margin-right:20px;}
@@ -50,24 +50,24 @@
   
   <div class="carousel-container">
     <div class="box">
+      <h2>Aposentadoria confortável</h2>
       <img src="sonho1.jpeg" alt="Aposentadoria">
-      <p>Aposentadoria confortável</p>
     </div>
     <div class="box">
+      <h2>Viajar pelo mundo</h2>
       <img src="sonho2.jpeg" alt="Viagem">
-      <p>Viajar pelo mundo</p>
     </div>
     <div class="box">
+      <h2>Comprar casa própria</h2>
       <img src="sonho3.jpeg" alt="Casa">
-      <p>Comprar casa própria</p>
     </div>
     <div class="box">
+      <h2>Ter um carro de luxo</h2>
       <img src="sonho4.jpeg" alt="Carro">
-      <p>Ter um carro de luxo</p>
     </div>
     <div class="box">
+      <h2>Liberdade financeira</h2>
       <img src="sonho5.jpeg" alt="Liberdade">
-      <p>Liberdade financeira</p>
     </div>
   </div>
   
@@ -217,21 +217,16 @@
   <h1>Escolha seu kit e comece a mudar de vida hoje mesmo</h1>
   
   <div class="carousel-container">
-    <!-- Kit 1 -->
     <div class="box">
       <img src="kit01.jpeg" alt="Kit 1">
       <h2>Kit Inicial</h2>
       <p>Invista R$300 e receba R$500 em produtos</p>
     </div>
-    
-    <!-- Kit 2 -->
     <div class="box">
       <img src="kit02.jpeg" alt="Kit 2">
       <h2>Kit Intermediário</h2>
       <p>Invista R$500 e receba R$700 em produtos</p>
     </div>
-    
-    <!-- Kit 3 -->
     <div class="box">
       <img src="kit03.jpeg" alt="Kit 3">
       <h2>Kit Avançado</h2>
